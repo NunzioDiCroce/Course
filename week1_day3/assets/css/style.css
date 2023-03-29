@@ -1,42 +1,18 @@
 body {
-    background-image: linear-gradient(90deg, purple, pink);
     margin: 0;
-}
-
-#subtitle {
-    padding: 1.1em;
-    background-color: white;
-    text-align: center;
+    background-image: linear-gradient(90deg, purple, pink);
+    font-size: 0.8em;
 }
 
 #center {
     width: 50%;
-    margin: auto;
+    margin: 0 auto;
 }
 
-iframe {
-    width: 100%;
-}
-
-#label {
+header {
     text-align: center;
 }
 
-#featuring {
-    padding: 0 0 0 2em;
-
-}
-
-span {
-    color: orange;
-}
-
-form {
-    width: 50%;
-    margin: auto;
-}
-
-form div {
-    width: 50%;
-    margin: auto;
+video {
+    width: 100%;
 }
