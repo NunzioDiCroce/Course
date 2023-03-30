@@ -2,6 +2,26 @@ body {
     margin: 0;
     background-image: linear-gradient(90deg, purple, pink);
     font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+header {
+    text-align: center;
+}
+
+header img {
+    width: 10%;
+    padding: 1.5em 0em 0em 0em;
+}
+
+header p {
+    background-color: white;
+    padding: 1em 0em;
+}
+
+header span {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 #center {
@@ -9,10 +29,28 @@ body {
     margin: 0 auto;
 }
 
-header {
+h1 {
     text-align: center;
 }
 
 video {
     width: 100%;
+}
+
+main video + p {
+    text-align: center;
+}
+
+#feature {
+    padding: 0 1em;
+    border-left: solid;
+    border-left-color: white;
+}
+
+span {
+    color: orange;
+}
+
+form {
+    text-align: center;
 }
