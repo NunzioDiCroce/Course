@@ -10,7 +10,7 @@ html, body {
 header {
     width: 94%;
     margin: auto;
-    background-color: black;
+    background-image: linear-gradient(to bottom, rgba(0,160,198,1), rgba(3,109,134,1));
 }
 
 header p{
