@@ -64,6 +64,38 @@ code {
     padding: 0.2em;
 }
 
+table {
+    margin:auto;
+    border-collapse: collapse;
+}
+
+caption {
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+}
+
+th {
+    text-align: center;
+    background-color:cornflowerblue;
+    color:white;
+    padding: 1.2em 1.2em;
+}
+
+tr:nth-child(even) {
+    background-color:#e3e3e3;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+td {
+    text-align: center;
+}
+
+hr {
+    border: 1px solid cornflowerblue;;
+}
+
 a {
     color: #00A0C6;
 }
