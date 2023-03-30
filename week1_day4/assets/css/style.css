@@ -1,15 +1,12 @@
-/* IMPOSTAZIONI GENERALI */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: ;*/
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
 
-/* HEADER */
-
-/* MAIN */
-
-/* ELEMENTI NEL MAIN - ARTICLE */
-
-/* TABELLE */
-
-/* FORM */
-
-/* ELEMENTI NELL' ASIDE */
-
-/* FOOTER */
+header {
+    width: 94%;
+}
