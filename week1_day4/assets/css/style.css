@@ -3,21 +3,36 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     /*font-family: ;*/
-    font-size: 0.8em;
+    /*font-size: 0.8em;*/
     line-height: 1.2em;
-    background: ;
+}
+
+body {
+    background-image: url("../img/sfondo.png");
 }
 
 header {
-    width: 94%;
+    width: 90%;
     margin: 1.2em auto;
+    padding: 1.2em 0;
     background-image: linear-gradient(to bottom, rgba(0,160,198,1), rgba(3,109,134,1));
+}
+
+header div {
+    width: 100%;
+    text-align: center;
 }
 
 header p{
     color: white;
+    text-align: center;
 }
 
-header ul{
+nav{
     color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
 }
