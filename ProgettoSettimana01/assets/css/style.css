@@ -28,6 +28,7 @@ header img {
     background-position: center;
     background-size: cover;
     padding: 2em;
+    margin-bottom: 3em;
 }
 
 #section1 h1 {
@@ -36,6 +37,7 @@ header img {
     font-family: 'Montserrat', sans-serif;
     color: #25a2c3;
     line-height: 1.5;
+    font-size: 1.8em;
 }
 
 #section1 p {
@@ -60,17 +62,19 @@ header img {
     color: #25a2c3;
     line-height: 1.5;
     width: 80%;
-    margin: 1.5em auto 0.5em auto;
+    margin: 0 auto 0.8em auto;
+    font-size: 1em;
 }
 
 #section2 p {
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 2em auto;
 }
 
 #section2 img {
     width: 50%;
     border-radius: 50%;
+    margin-bottom: 1em;
 }
 
 #section3 {
@@ -146,7 +150,7 @@ footer hr {
 
 footer p {
     color: #c8e7f0;
-    font-size: 0.7em;
+    font-size: 0.9em;
 }
 
 footer a {
