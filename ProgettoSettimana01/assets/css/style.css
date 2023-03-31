@@ -51,6 +51,10 @@ header img {
     border-radius: 8px;
 }
 
+#section2 {
+    margin-bottom: 4em;
+}
+
 #section2 h2 {
     font-family: 'Montserrat', sans-serif;
     color: #25a2c3;
