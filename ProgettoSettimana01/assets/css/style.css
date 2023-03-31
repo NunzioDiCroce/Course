@@ -27,10 +27,26 @@ header img {
     background-image: url("../img/banner.jpg");
     background-position: center;
     background-size: cover;
-    padding: 3em;
+    padding: 2em;
 }
 
 #section1 h1 {
     margin-top: 0;
+    margin-bottom: 0.5em;
     font-family: 'Montserrat', sans-serif;
+    color: #25a2c3;
+    line-height: 1.5;
+}
+
+#section1 p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#section1 a {
+    padding: 0.8em 2em 0.8em 2em;
+    color: white;
+    background-color: #f04c2f;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px;
 }
