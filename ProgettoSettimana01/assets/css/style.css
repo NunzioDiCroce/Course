@@ -124,10 +124,15 @@ header img {
 
 footer {
     background-color: #25a2c3;
+    padding-top: 1em;
+    padding-bottom: 3em;
 }
 
 footer h2 {
     color: white;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    margin-bottom: 0.5em;
 }
 
 footer div {
@@ -141,6 +146,7 @@ footer hr {
 
 footer p {
     color: #c8e7f0;
+    font-size: 0.7em;
 }
 
 footer a {
