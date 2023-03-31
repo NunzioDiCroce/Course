@@ -152,3 +152,7 @@ footer p {
 footer a {
     color: #c8e7f0;
 }
+
+footer address {
+    display: inline;
+}
