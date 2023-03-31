@@ -20,7 +20,7 @@ header {
 }
 
 header img {
-    width: 30%;
+    width: 35%;
 }
 
 #section1 {
@@ -49,4 +49,22 @@ header img {
     background-color: #f04c2f;
     font-family: 'Montserrat', sans-serif;
     border-radius: 8px;
+}
+
+#section2 h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #25a2c3;
+    line-height: 1.5;
+    width: 80%;
+    margin: 1.5em auto 0.5em auto;
+}
+
+#section2 p {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#section2 img {
+    width: 50%;
+    border-radius: 50%;
 }
