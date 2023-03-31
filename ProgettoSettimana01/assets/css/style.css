@@ -68,3 +68,26 @@ header img {
     width: 50%;
     border-radius: 50%;
 }
+
+#section3 {
+    background-color: #e22d0e;
+    color: white;
+    padding: 1em;
+}
+
+#section3 h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#section3 blockquote {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+#section3 p {
+    font-size: 1.1em;
+}
+
+#section3 span {
+    font-size: 0.7em;
+}
