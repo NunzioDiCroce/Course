@@ -1,0 +1,101 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    /*font-family: ;*/
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+
+body {
+    color: #393d41;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65;
+}
+
+header {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 3em;
+    background-color: black;
+}
+
+header img {
+    width: 10%;
+}
+
+#section1 {
+    text-align: center;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    background-image: url(../img/banner.jpg);
+    background-position: top;
+    background-size: 100%;
+}
+
+#section1 h1 {
+    color: #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+#section1 p {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+}
+
+#section1 a {
+    background-color: #f04c2f;
+    color: white;
+    padding: 0.8em 2em 0.8em 2em;
+    border-radius: 0.5em;
+}
+
+#section2_left {
+    display: inline-block;
+    margin-left: 10em;
+    width: 40%;
+}
+
+#section2_left img {
+    border-radius: 100em;
+}
+
+#section2_right {
+    display: inline-block;
+    width: 40%;
+}
+
+#section2_right h3 {
+    width: 50%;
+    margin: 0;
+    color: #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+#section2_right p {
+    margin: 0;
+}
+
+#section3 {
+    text-align: center;
+    background-color: #e22d0e;
+    color: white;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+#section3 h2 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+#section3 p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
