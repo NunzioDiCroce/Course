@@ -59,6 +59,8 @@ header img {
     display: inline-block;
     margin-left: 10em;
     width: 40%;
+    margin-top: 7em;
+    margin-bottom: 7em;
 }
 
 #section2_left img {
@@ -76,10 +78,12 @@ header img {
     color: #25a2c3;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
+    margin-bottom: 0.5em;
 }
 
 #section2_right p {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 1.5em;
 }
 
 #section3 {
@@ -98,4 +102,59 @@ header img {
 #section3 p {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+#section4 div {
+    width: 25%;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #dee1e3;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-top: 5%;
+}
+
+#section4 img {
+    width: 100%;
+}
+
+#section4 h4 {
+    color: #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+}
+
+#section4 p {
+    margin-top: 0em;
+    margin-bottom: 2em;
+}
+
+footer {
+    background-color: #25a2c3;
+    color: #c8e7f0;
+}
+
+footer h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    color: white;
+}
+
+footer div {
+    margin: 0 auto;
+}
+
+footer hr {
+    width: 15%;
+    border-color: white;
+}
+
+footer p {
+    margin: 0 auto;
+}
+
+footer a {
+    color: #c8e7f0;
 }
