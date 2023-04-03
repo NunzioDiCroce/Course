@@ -24,4 +24,10 @@ width: 20%;
 
 .container p {
     margin-top: 0;
-    }
+}
+
+#altraPagina:hover {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
