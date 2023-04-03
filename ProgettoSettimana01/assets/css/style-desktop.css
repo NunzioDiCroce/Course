@@ -39,13 +39,16 @@ header img {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     margin-top: 0;
+    margin-bottom: 0.3em;
+    font-size: 2em;
 }
 
 #section1 p {
     width: 50%;
-    margin-left: auto;
+    margin-top: 0;
     margin-right: auto;
     margin-bottom: 3em;
+    margin-left: auto;
 }
 
 #section1 a {
@@ -53,6 +56,7 @@ header img {
     color: white;
     padding: 0.8em 2em 0.8em 2em;
     border-radius: 0.5em;
+    text-decoration: none;
 }
 
 #section2_left {
@@ -91,12 +95,20 @@ header img {
     background-color: #e22d0e;
     color: white;
     padding-top: 3em;
-    padding-bottom: 3em;
+    padding-bottom: 5em;
+    font-size: 1.2em;
 }
 
 #section3 h2 {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
+    margin-bottom: 0.3em;
+}
+
+#section3 blockquote {
+    font-size: 1.5em;
+    font-style: italic;
+    margin-top: 0;
 }
 
 #section3 p {
@@ -104,14 +116,38 @@ header img {
     margin-bottom: 0;
 }
 
+#section3 span {
+    font-size: 0.7em;
+}
+
 #section4 div {
     width: 25%;
     text-align: center;
     display: inline-block;
     border: 1px solid #dee1e3;
-    margin-left: 5%;
-    margin-top: 5%;
-    margin-top: 5%;
+    margin-top: 6em;
+    margin-bottom: 8em;
+}
+
+#section4_left {
+    margin-left: 10%;
+    margin-right: 2%;
+}
+
+#section4_center {
+    margin-right: 2%;
+}
+
+#section4_center img {
+    margin-bottom: 0.4em;
+}
+
+#section4_right {
+    margin-right: 10%;
+}
+
+#section4_right img {
+    margin-bottom: 1.5em;
 }
 
 #section4 img {
@@ -128,31 +164,47 @@ header img {
 #section4 p {
     margin-top: 0em;
     margin-bottom: 2em;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
     background-color: #25a2c3;
     color: #c8e7f0;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 3em;
 }
 
 footer h2 {
-    text-align: center;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     color: white;
+    font-size: 3em;
 }
 
-footer div {
-    margin: 0 auto;
+#phone {
+    margin-right: 7em;
+}
+
+#mail {
+    margin-right: 4.5em;
 }
 
 footer hr {
-    width: 15%;
+    width: 18%;
     border-color: white;
+    margin-bottom: 2em;
+}
+
+footer address {
+    margin-bottom: 2em;
+    font-style: normal;
 }
 
 footer p {
-    margin: 0 auto;
+    font-size: 0.8em;
 }
 
 footer a {
