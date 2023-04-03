@@ -26,8 +26,13 @@ width: 20%;
     margin-top: 0;
 }
 
+#altraPagina:visited {
+    color: white
+  }
+
 #altraPagina:hover {
     color: black;
     text-decoration: underline;
     cursor: pointer;
 }
+
