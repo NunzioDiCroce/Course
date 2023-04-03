@@ -22,13 +22,13 @@ body {
 width: 20%;
 }
 
-.container p {
-    margin-top: 0;
+#altraPagina {
+    text-decoration: none;
 }
 
 #altraPagina:visited {
-    color: white
-  }
+    color: white;
+}
 
 #altraPagina:hover {
     color: black;
@@ -36,3 +36,6 @@ width: 20%;
     cursor: pointer;
 }
 
+#altraPagina p {
+    margin-top: 0;
+}
