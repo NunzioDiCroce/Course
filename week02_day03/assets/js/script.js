@@ -93,9 +93,9 @@ total();
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-var totalShoppingCard2 = 50;
+var totalShoppingCard2 = 20;
 var discount = 0.8;
-var totalShoppingCard2_discount = discount * shippingAmount2;
+var totalShoppingCard2_discount = discount * totalShoppingCard2;
 var shippingAmount2;
 var totalAmount2;
 if ( totalShoppingCard2_discount > 50 ) {
@@ -220,7 +220,8 @@ const me2 = {
   skills2: ['javascript', 'html', 'css'],
 }
 me2.city2 = 'Toronto';
-console.log(me2.city2);
+delete me2.lastName2;
+console.log(me2.lastName2);
 
 
 /* ESERCIZIO 13
