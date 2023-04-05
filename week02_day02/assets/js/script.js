@@ -51,7 +51,7 @@ document.getElementById('quartaRisposta').innerHTML = 'Ho creato una variabile c
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 var cognome = 'Di Croce';
-var nome = cognome;
+nome = cognome;
 document.getElementById('quintaRisposta').innerHTML = 'Ho riassegnato un nuovo valore alla prima variabile nome assegnando il valore ' + nome + ' con datatype string.';
 
 
@@ -92,6 +92,6 @@ var lowercase = name2.toLowerCase();
 document.getElementById('settimaRispostaSecondaVerifica').innerHTML = lowercase;
 function secondaVerifica() {
   secondoEsito = (name1 == lowercase) ? 'uguaglianza TRUE' : 'uguaglianza FALSE';
-  document.getElementById('settimaRispostaSecondaVerifica').innerHTML = 'Definendo poi una seconda variabile senza cambiare il valore di name2 ma utilizzando il metodo toLowerCase, ' + name2 + ' è diventato ' + lowercase + '. In questo modo otteniamo una ' + secondoEsito + '.'
+  document.getElementById('settimaRispostaSecondaVerifica').innerHTML = 'Definendo poi una seconda variabile senza cambiare il valore di name2 ma utilizzando il metodo toLowerCase, ' + name2 + ' è diventato ' + lowercase + '. In questo modo otteniamo   una ' + secondoEsito + '.'
 }
 secondaVerifica();
