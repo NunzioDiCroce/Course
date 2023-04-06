@@ -4,11 +4,233 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Javascript</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
+
 <body>
     
+    <div id="container">
+
+        <h1>Esercitazione: <span>Lavoriamo con la logica condizionale, gli array e gli oggetti</span></h1>
+
+        <main>
+
+            <h4 id="exercise">Esercizio 1</h4>
+            <p id="exerciseDescription">Scrivi un algoritmo per trovare il più grande tra due numeri interi.</p>
+            <h4 id="solution">Scrivi qui la tua risposta</h4>
+            <hr>
+            <p id="solutionDescription1">
+                <ul>
+                    <li>Primo numero: <span id="primoNumero"></span></li>
+                    <li>Secondo numero: <span id="secondoNumero"></span></li>
+                    <li>Numero più grande: <span id="numeroPiuGrande"></span></li>
+                </ul>
+            </p>
+            <hr>
+            <br>
+
+            <h4 id="exercise">Esercizio 2</h4>
+            <p id="exerciseDescription">Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.</p>
+            <h4 id="solution">Scrivi qui la tua risposta</h4>
+            <hr>
+            <p id="solutionDescription2">
+                <ul>
+                    <li>Numero fornito: <span id="numero"></span></li>
+                    <li>Console: <span id="console"></span></li>
+                </ul>
+            </p>
+            <hr>
+            <br>
+
+            <h4 id="exercise">Esercizio 3</h4>
+            <p id="exerciseDescription">Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: cerca l'operatore modulo su un motore di ricerca).</p>
+            <h4 id="solution">Scrivi qui la tua risposta</h4>
+            <hr>
+            <p id="solutionDescription3">
+                <ul>
+                    <li>Numero fornito: <span id="fornito"></span></li>
+                    <li>Esito: <span id="divisibile"></span></li>
+                </ul>
+            </p>
+            <hr>
+            <br>
+
+            <h4 id="exercise">Esercizio 4</h4>
+            <p id="exerciseDescription">Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.</p>
+            <h4 id="solution">Scrivi qui la tua risposta</h4>
+            <hr>
+            <p id="solutionDescription4">
+                <ul>
+                    <li>Primo numero: <span id="primoIntero"></span></li>
+                    <li>Secondo numero: <span id="secondoIntero"></span></li>
+                    <li>Esito: <span id="otto"></span></li>
+                </ul>
+            </p>
+            <hr>
+            <br>
+
+            <h4 id="exercise">Esercizio 5</h4>
+            <p id="exerciseDescription">Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".<br>C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10).<br>Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.</p>
+            <h4 id="solution">Scrivi qui la tua risposta</h4>
+            <hr>
+            <p id="solutionDescription5">
+                <ul>
+                    <li>Total Shopping Cart: <span id="shopping"></span></li>
+                    <li>Shipping: <span id="shipping"></span></li>
+                    <li>Total Amount: <span  id="amount"></span></li>
+                </ul>
+            </p>
+            <hr>
+            <br>
+
+            <h4 id="exercise">Esercizio 6</h4>
+            <p id="exerciseDescription">  Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.<br>Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.</p>
+            <h4 id="solution">Scrivi qui la tua risposta</h4>
+            <hr>
+            <p id="solutionDescription6">
+                <ul>
+                    <li>Total Shopping Cart: <span id="shopping2"></span></li>
+                    <li>Total Shopping Cart with 20% discount: <span id="discunt"></span></li>
+                    <li>Shipping: <span id="shipping2"></span></li>
+                    <li>Total Amount: <span  id="amount2"></span></li>
+                </ul>
+            </p>
+            <hr>
+            <br>
+
+            <h4 id="exercise">Esercizio 7</h4>
+            <p id="exerciseDescription">  Crea tre variabili, e assegna un valore numerico a ciascuna di esse.<br>Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso. Alla fine mostra il risultato in console.</p>
+            <h4 id="solution">Scrivi qui la tua risposta</h4>
+            <hr>
+            <p id="solutionDescription7">
+                <ul>
+                    <li>Prima variabile: <span id="prima"></span></li>
+                    <li>Seconda variabile: <span id="seconda"></span></li>
+                    <li>Terza variabile: <span id="terza"></span></li>
+                    <li>Dal più alto al più basso: <span id="ordine"></span></li>
+                </ul>
+            </p>
+            <hr>
+            <br>
+
+            <h4 id="exercise">Esercizio 8</h4>
+            <p id="exerciseDescription">  Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").</p>
+            <h4 id="solution">Scrivi qui la tua risposta</h4>
+            <hr>
+            <p id="solutionDescription8">
+                <ul>
+                    <li>Valore: <span id="fornito2"></span></li>
+                    <li>Il valore fornito è di tipo: <span id="unNumero"></span></li>
+                </ul>
+            </p>
+            <hr>
+            <br>
+
+            <h4 id="exercise">Esercizio 9</h4>
+            <p id="exerciseDescription">Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca).</p>
+            <h4 id="solution">Scrivi qui la tua risposta</h4>
+            <hr>
+            <p id="solutionDescription9">
+                <ul>
+                    <li>Numero: <span id="pariDispari"></span></li>
+                    <li>Il mumero fornito è: <span id="pariDispari2"></span></li>
+                </ul>
+            </p>
+            <hr>
+            <br>
+
+            <h4 id="exercise">Esercizio 10</h4>
+            <p id="exerciseDescription">Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
+                <code>let val = 7<br>if (val < 10) {<br>console.log("Meno di 10");<br>} else if (val < 5) {<br>console.log("Meno di 5");
+                } else {<br>console.log("Uguale a 10 o maggiore");<br>}</code></p>
+            <h4 id="solution">Scrivi qui la tua risposta</h4>
+            <hr>
+            <p id="solutionDescription10">
+                <ul>
+                    <li>Val: <span id="val"></span></li>
+                    <li>Messaggio: <span id="val2"></span></li>
+                </ul>
+            </p>
+            <hr>
+            <br>
+
+            <h4 id="exercise">Esercizio 11</h4>
+            <p id="exerciseDescription">Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".<br><code>const me = {<br>name: 'John',<br>lastName: 'Doe',<br>skills: ['javascript', 'html', 'css'],<br>}</code></p>
+            <h4 id="solution">Scrivi qui la tua risposta</h4>
+            <hr>
+            <p id="solutionDescription11">
+                <ul>
+                    <li>Name: <span id="nome"></span></li>
+                    <li>Last Name: <span id="cognome"></span></li>
+                    <li>Skills: <span id="capacita"></span></li>
+                    <li>Città (nuova proprietà): <span id="nuovaProprieta"></span></li>
+                </ul>
+            </p>
+            <hr>
+            <br>
+
+            <h4 id="exercise">Esercizio 12</h4>
+            <p id="exerciseDescription">Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".</p>
+            <h4 id="solution">Scrivi qui la tua risposta</h4>
+            <hr>
+            <p id="solutionDescription12">
+                <ul>
+                    <li>Name: <span id="nome2"></span></li>
+                    <li>Last Name: <span id="cognome2"></span></li>
+                    <li>Skills: <span id="capacita2"></span></li>
+                    <li>Città (nuova proprietà): <span id="nuovaProprieta2"></span></li>
+                </ul>
+            </p>
+            <hr>
+            <br>
+
+            <h4 id="exercise">Esercizio 13</h4>
+            <p id="exerciseDescription">Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".</p>
+            <h4 id="solution">Scrivi qui la tua risposta</h4>
+            <hr>
+            <p id="solutionDescription13">
+                <ul>
+                    <li>Name: <span id="nome3"></span></li>
+                    <li>Last Name: <span id="cognome3"></span></li>
+                    <li>Skills: <span id="capacita3"></span></li>
+                    <li>Città (nuova proprietà): <span id="nuovaProprieta3"></span></li>
+                </ul>
+            </p>
+            <hr>
+            <br>
+
+            <h4 id="exercise">Esercizio 14</h4>
+            <p id="exerciseDescription">Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.</p>
+            <h4 id="solution">Scrivi qui la tua risposta</h4>
+            <hr>
+            <p id="solutionDescription14">
+                <ul>
+                    <li>Valori array: <span id="valori"></span></li>
+                </ul>
+            </p>
+            <hr>
+            <br>
+
+            <h4 id="exercise">Esercizio 15</h4>
+            <p id="exerciseDescription">Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.</p>
+            <h4 id="solution">Scrivi qui la tua risposta</h4>
+            <hr>
+            <p id="solutionDescription15">
+                <ul>
+                    <li>Valori array: <span id="valori2"></span></li>
+                </ul>
+            </p>
+            <hr>
+
+        </main>
+
+    </div>
+
     <script src="assets/js/script.js"></script>
 
 </body>
+
 </html>

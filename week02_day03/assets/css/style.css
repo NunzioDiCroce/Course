@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    margin: 2em;
+    border: 1px solid black;
+    padding: 2em;
+    border-radius: 1em;
+    background-color: #415fe1;
+}
+
+h1 {
+    width: 90%;
+    margin: 0em auto 1em auto;
+    text-align: center;
+    background-color: yellow;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+main {
+    width: 93%;
+    margin: 4em auto 3em auto;
+}
+
+#exercise {
+    margin-bottom: 0;
+    font-style: italic;
+    color: yellow;
+}
+
+#exerciseDescription {
+    margin-top: 0;
+    font-style: italic;
+    color: yellow;
+}
+
+#solution {
+    color: white;
+}
