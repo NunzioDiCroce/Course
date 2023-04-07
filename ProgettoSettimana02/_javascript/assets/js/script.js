@@ -126,10 +126,9 @@ while (n<numericArray.length) {
 }*/
 
 let n=0;
-while (n<numericArray.length || numericArray[n] == '32') {
+while (n<numericArray.length || numericArray[n] == 32) {
     console.log(numericArray[n]);
     n++;
-
 }
 
 
@@ -143,7 +142,7 @@ var charactersArrayDieci = [];
 for (var i=0; i<charactersArray; i++) {
     switch (charactersArray[i]) {
         case 'g':
-            charactersArrayDieci.push('1');
+            charactersArrayDieci.push('7');
             break;
     }
 }
