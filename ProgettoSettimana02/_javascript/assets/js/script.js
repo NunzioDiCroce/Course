@@ -69,8 +69,7 @@ console.log(cars);
 
 
 /* ESERCIZIO 6
-    Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.
-    Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto e stampa l'array in console.
+    Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi. Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto e stampa l'array in console.
 */
 let car =
 {
@@ -119,17 +118,33 @@ const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
 ];
 
-let n=0;
+/*let n=0;
 while (n<numericArray.length) {
     console.log(numericArray[n]);
     n++;
     if(n==14) break;
+}*/
+
+let n=0;
+while (n<numericArray.length || numericArray[n] == '32') {
+    console.log(numericArray[n]);
+    n++;
+
 }
 
 
 /* ESERCIZIO 10
-    Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
-    dell'alfabeto italiano.
+    Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
-/*const charactersArray = [g, n, u, z, d]*/
+const charactersArray = ['g', 'n', 'u', 'z', 'd'];
+var charactersArrayDieci = [];
+
+for (var i=0; i<charactersArray; i++) {
+    switch (charactersArray[i]) {
+        case 'g':
+            charactersArrayDieci.push('1');
+            break;
+    }
+}
+console.log(charactersArrayDieci);
