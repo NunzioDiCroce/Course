@@ -1,0 +1,25 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: ;*/
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+
+body {
+    font-size: 1.2em;
+    margin: 2em;
+}
+
+header {
+    margin-bottom: 4em;
+}
+
+section h4 {
+    margin-bottom: 0;
+}
+
+section p {
+    margin-top: 0;
+}

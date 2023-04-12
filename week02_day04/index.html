@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    
+    <header>
+        <h1>Javascript</h1>
+        <h2>Destrutturazione array ed oggetti</h2>
+    </header>
+
+    <main>
+        
+        <div id="container">
+
+            <section id="section1">
+                <h4>ESERCIZIO 1</h4>
+                <p>Crea una variabile chiamata "characters" e inserisci un array vuoto.</p>
+                <h4 class="solutionTitle">SOLUZIONE</h4>
+                <p class="solutionDescription">Ho creato un array vuoto di nome <code>characters </code>.<br><code>characters.lenght</code> è uguale a <span id="charactersLenght"></span>.</p>
+                <br>
+                <hr>
+            </section>
+            
+            
+            <section id="section2">
+                <h4>ESERCIZIO 2</h4>
+                <p>Usando un for loop, cicla l'array "starWarsCharacters" ed accedi alla proprietà "name".<br>Usa il valore contenuto inserendolo nell'array creato precedentemente.<br>Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]</p>
+                <h4 class="solutionTitle">SOLUZIONE</h4>
+                <p class="solutionDescription">L'array <code>characters </code>adesso ha una lunghezza uguale a <span id="charactersLenght2"></span> e presenta i seguenti valori:<br><span id="solutionDue"></span> .</p>
+                <br>
+                <hr>
+            </section>
+            
+            <section id="section3">
+                <h4>ESERCIZIO 3</h4>
+                <p>Seguendo i passaggi precedenti crea un array chiamato "femaleCharacters" e inserisci un oggetto con questa
+                    struttura:<br><code>{name: Leia Organa, hair_color: "brown", eye_color: "brown"}</code><br>Successivamente
+                    usando un for loop, cicla l'array "starWarsCharacters" e inserisci nell'array femaleCharacters gli oggetti con
+                    gender = 'female' limitatamente alle proprietà dell'oggetto già inserito.</p>
+                <h4 class="solutionTitle">SOLUZIONE</h4>
+                <p class="solutionDescription">Ho creato un array vuoto di nome <code>femaleCharacters </code>.<br>Ho inserito all'interno di questo array gli oggetti di<code> starWarsCharacters </code>aventi<code> gender = 'female' </code>.<br>Il nuovo array ha una <code> lenght </code>uguale a <span id="femaleCharacters"></span> .</p>
+                <br>
+                <hr>
+            </section>
+            
+            <section id="section4">
+                <h4>ESERCIZIO 4</h4>
+                <p>Crea un oggetto "eyeColor" che abbia come proprietà: blue, yellow, brown, red, blue-gray. Ognuna di queste proprietà contiene un array vuoto.</p>
+                <h4 class="solutionTitle">SOLUZIONE</h4>
+                <p class="solutionDescription">Ho creato un nuovo oggetto di nome <code>eyeColor </code>.<br>Ho inserito come proprità di questo oggetto 5 array vuoti.</p>
+                <br>
+                <hr>
+            </section>
+            
+            <section id="section5">
+                <h4>ESERCIZIO 5</h4>
+                <p>Inserisci l'oggetto dei personaggi in "starWarsCharacters" nell'array corrispondente al colore dei loro occhi
+                    nell'oggetto "eyeColor" precedentemente creato.<br>Utilizza uno switch statement per determinare in quale
+                    proprietà inserire il personaggio.</p>
+                <h4 class="solutionTitle">SOLUZIONE</h4>
+                <p class="solutionDescription">Ho inserito gli oggetti di <code>starWarsCharacters </code> nel nuovo oggetto<code> eyeColor </code>nella proprietà corrispondente (array) in base a<code> eye_color </code>:<br>Array blue ha lunghezza <span id="blueLenght"></span><br>Array yellow ha lunghezza <span id="yellowLenght"></span><br>Array brown ha lunghezza <span id="brownLenght"></span><br> Array red ha lunghezza <span id="redLenght"></span><br>Array blue_gray ha lunghezza <span id="blue_grayLenght"></span></p>
+                <br>
+                <hr>
+            </section>
+            
+            <section id="section6">
+                <h4>ESERCIZIO 6</h4>
+                <p>Usa un while loop per calcolare la massa totale dell'equipaggio.</p>
+                <h4 class="solutionTitle">SOLUZIONE</h4>
+                <p class="solutionDescription">La massa totale dell'equipaggio è <span id="totalMass"></span> .</p>
+                <br>
+                <hr>
+            </section>
+            
+            <section id="section7">
+                <h4>ESERCIZIO 7</h4>
+                <p>Crea uno switch statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'impotetica
+                    astronave contenente i personaggi dell'array "starWarsCharacters" (cerca su un motore di ricerca switch case e
+                    conditionals)<br>Se la massa è inferiore a 500 stampa in console: "Ship is under loaded",<br>Se la massa è
+                    uguale a 500 stampa in console: "Ship is half loaded",<br>Se la massa è superiore a 700 stampa in console:
+                    "Warning: Load is over 700",<br>Se la massa è superiore a 900 stampa in console: "Critical Load: Over
+                    900",<br>Se la massa è superiore a 1000 stampa in console: "DANGER! OVERLOAD ALERT: Jump ship now!"<br>Una volta
+                    fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
+                </p>
+                <h4 class="solutionTitle">SOLUZIONE</h4>
+                <p class="solutionDescription">La massa totale dell'equipaggio è <span id="totalMass7"></span> .<br>Il messaggio in <code> console log </code>è: <span id="message"></span> .</p>
+                <br>
+                <hr>
+            </section>
+            
+            <section id="section8">
+                <h4>ESERCIZIO 8</h4>
+                <p>Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot"
+                    (Tip: puoi creare un nuovo array, o tentare la riassegnazione del valore corrispondente).</p>
+                <h4 class="solutionTitle">SOLUZIONE</h4>
+                <p class="solutionDescription">Ho creato un nuovo array "starWarsCharactersNew" sostituendo il valore "robot" a "n/a". Vedere<code> console log </code>.</p>
+                <br>
+                <hr>
+            </section>
+            
+            <section id="section9">
+                <h4>ESERCIZIO 9</h4>
+                <p>Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "characters" le stringhe
+                    corrispondenti a personaggi con lo stesso nome".<br>Usa uno più for loop per raggiungere il risultato (tip:
+                    cerca un metodo degli array per rimuovere un elemento).<br>Una volta fatto crea un console.log per controllare
+                    la proprietà length di "characters" prima e dopo l'operazione.</p>
+                <h4 class="solutionTitle">SOLUZIONE</h4>
+                <p class="solutionDescription">La lunghezza dell'array "characters" è: <span id="charactersLength"></span><br>La lunghezza dell'array "femaleCharacters" è: <span id="femaleCharactersLength"></span><br>Eliminando i valori di "characters" che hanno gli stessi nomi di "femaleCharacters", otteniamo un array con lunghezza: <span id="charactersLengthNew"></span></p>
+                <br>
+                <hr>
+            </section>
+            
+            <section id="section10">
+                <h4>ESERCIZIO 10</h4>
+                <p>Crea una funzionalità che prenda un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le
+                    proprietà in modo discorsivo.</p>
+                <h4 class="solutionTitle">SOLUZIONE</h4>
+                <p class="solutionDescription">Lunghezza array "starWarsCharacters": <span id="starWarsCharactersLunghezza"></span><br>Numero casuale posizione: <span id="posizione"></span><br>Proprietà oggetto ->
+                    name: <span id="prop1"></span>
+                    , height: <span id="prop2"></span>
+                    , mass: <span id="prop3"></span>
+                    , hair_color: <span id="prop4"></span>
+                    , skin_color: <span id="prop5"></span>
+                    , eye_color: <span id="prop6"></span>
+                    , birth_year: <span id="prop7"></span>
+                    , gender: <span id="prop8"></span>
+                    
+                </p>
+                <br>
+                <hr>
+            </section>
+
+        </div>
+
+
+    </main>
+
+
+    <footer></footer>
+
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
