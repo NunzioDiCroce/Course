@@ -288,8 +288,8 @@ function isThisAnEmail (mail) {
   var regex_email_valida = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return mailVerifica = regex_email_valida.test(mail);
 }
-isThisAnEmail('miaMail@.');
-console.log('mail: miaMail@.');
+isThisAnEmail('mario@.');
+console.log('mail: mario@.');
 if (mailVerifica === true) {
   console.log('formato mail corretto')
 } else {
@@ -351,55 +351,8 @@ function rollTheDices (numero) {
     oggetto8.sum = oggetto8.sum + random
   }
 }
-rollTheDices(5);
+rollTheDices(4);
 console.log(oggetto8);
-
-
-/*var oggetto8 = {
-  sum,
-  values: []
-}
-
-function rollTheDices (numero) {
-  var diceNumber;
-  for (let i = 0; i < numero; i++) {
-    dice();
-    diceNumber = random;
-    oggetto8.values.push(diceNumber)
-  }
-  sum = oggetto8.values.reduce(funzione8);
-  function funzione8 (A, B) {
-    return A + B
-  }
-}
-rollTheDices(3);
-console.log(oggetto8);*/
-
-
-
-
-/*var values = [];
-var sum8;
-var diceNumber;
-
-for (let i = 0; i < 3; i++) {
-  dice();
-  diceNumber = random;
-  values.push(diceNumber)
-}
-console.log(values);
-
-sum8 = values.reduce(funzione8);
-function funzione8 (totale, numero) {
-  return totale + numero
-}
-console.log(sum8);*/
-
-
-/*dice = () => { random = Math.ceil(Math.random()*6) }
-dice();
-console.log(`dice number is : ${random}`);*/
-
 
 
 /* ESERCIZIO 9
@@ -642,7 +595,7 @@ function searchAndDivide (stringa18) {
     }
   }
 }
-searchAndDivide('Lord');
+searchAndDivide('Avengers');
 console.log(oggetto18);
 
 
