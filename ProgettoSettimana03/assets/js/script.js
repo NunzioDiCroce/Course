@@ -783,6 +783,15 @@ funzione26();
 */
 console.log('- - - - - - - - - [EXTRA] JS Avanzato : ESERCIZIO 27 - - - - - - - - -')
 
+function halfTree(asterisco) {
+  for (let i = 1; i <= asterisco; i++) {
+    let a = ' '.repeat(asterisco-i);
+    let b = '*'.repeat(i*2 -1)
+    console.log(b + a);
+  }
+}
+halfTree(3);
+
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -793,6 +802,15 @@ console.log('- - - - - - - - - [EXTRA] JS Avanzato : ESERCIZIO 27 - - - - - - - 
   *****
 */
 console.log('- - - - - - - - - [EXTRA] JS Avanzato : ESERCIZIO 28 - - - - - - - - -')
+
+function tree(asterisco) {
+  for (let i = 1; i <= asterisco; i++) {
+    let a = ' '.repeat(asterisco-i);
+    let b = '*'.repeat(i*2 -1)
+    console.log(a + b + a);
+  }
+}
+tree(5);
 
 
 /* ESERCIZIO 29
