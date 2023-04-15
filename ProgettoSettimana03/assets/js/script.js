@@ -770,32 +770,27 @@ function funzione26 () {
 funzione26();
 
 
+
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
   Crea una funzione chiamata "halfTree" che riceve un numero come parametro e costruisce un mezzo albero di "*" (asterischi) dell'altezza fornita.
-
   Esempio:
   halfTree(3)
-
   *
   **
   ***
-
 */
 console.log('- - - - - - - - - [EXTRA] JS Avanzato : ESERCIZIO 27 - - - - - - - - -')
 
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
-
   Esempio:
   tree(3)
-
     *
    ***
   *****
-
 */
 console.log('- - - - - - - - - [EXTRA] JS Avanzato : ESERCIZIO 28 - - - - - - - - -')
 
@@ -805,3 +800,25 @@ console.log('- - - - - - - - - [EXTRA] JS Avanzato : ESERCIZIO 28 - - - - - - - 
 */
 console.log('- - - - - - - - - [EXTRA] JS Avanzato : ESERCIZIO 29 - - - - - - - - -')
 
+var divisore = 0;
+var contatore = 1;
+
+function isItPrime (test) {
+  console.log(`numero scelto : ${test}`);
+  if (test <= 1) {
+    console.log(`scegliere un numero maggiore di 1`)
+  } else {
+    for (i = 0; i < test/2; i++) {
+      divisore ++;
+      if (test % divisore === 0) {
+        contatore ++;
+      }
+    }
+    if (contatore >2) {
+      console.log(`il numero ${test} non è un numero primo`)
+    } else {
+      console.log(`il numero ${test} è un numero primo`)
+    }
+  }
+  }
+isItPrime(89);
