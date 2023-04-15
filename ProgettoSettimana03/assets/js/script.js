@@ -329,7 +329,6 @@ whatDayIsIt();
   Deve invocare la precedente funzione dice() il numero di volte specificato nel parametro, e deve tornare un oggetto contenente
   una proprietà "sum": il suo valore deve rappresentare il totale di tutti i valori estratti con le invocazioni di dice().
   L'oggetto ritornato deve anche contenere una proprietà "values", contenente un array con tutti i valori estratti dalle invocazioni di dice().
-
   Example:
   rollTheDices(3) => ritorna {
       sum: 10
@@ -338,6 +337,63 @@ whatDayIsIt();
 */
 console.log('- - - - - - - - - Funzioni : ESERCIZIO 8 - - - - - - - - -')
 
+var oggetto8 = {
+  sum: 0,
+  values: []
+}
+
+function rollTheDices (numero) {
+  var diceNumber;
+  for (let i = 0; i < numero; i++) {
+    dice();
+    diceNumber = random;
+    oggetto8.values.push(diceNumber);
+    oggetto8.sum = oggetto8.sum + random
+  }
+}
+rollTheDices(5);
+console.log(oggetto8);
+
+
+/*var oggetto8 = {
+  sum,
+  values: []
+}
+
+function rollTheDices (numero) {
+  var diceNumber;
+  for (let i = 0; i < numero; i++) {
+    dice();
+    diceNumber = random;
+    oggetto8.values.push(diceNumber)
+  }
+  sum = oggetto8.values.reduce(funzione8);
+  function funzione8 (A, B) {
+    return A + B
+  }
+}
+rollTheDices(3);
+console.log(oggetto8);*/
+
+
+
+
+/*var values = [];
+var sum8;
+var diceNumber;
+
+for (let i = 0; i < 3; i++) {
+  dice();
+  diceNumber = random;
+  values.push(diceNumber)
+}
+console.log(values);
+
+sum8 = values.reduce(funzione8);
+function funzione8 (totale, numero) {
+  return totale + numero
+}
+console.log(sum8);*/
 
 
 /*dice = () => { random = Math.ceil(Math.random()*6) }
@@ -449,6 +505,19 @@ isTodayMyBirthday();
   deve ritornare l'oggetto fornito dopo aver eliminato in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
 console.log('- - - - - - - - - Arrays & Oggetti : ESERCIZIO 11 - - - - - - - - -')
+
+var oggetto11 = {
+  nome: 'Mario',
+  cognome: 'Rossi',
+  anni: '30',
+  nazione: 'Italia'
+}
+
+function deleteProp (parametro11) {
+  delete oggetto11[parametro11]
+}
+deleteProp('nome');
+console.log(oggetto11);
 
 
 /* ESERCIZIO 12
