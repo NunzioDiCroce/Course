@@ -194,3 +194,50 @@ label {
     border: 2px solid white;
     font-weight: bolder;
 }
+
+
+/* - - - - feedbackPage - - - - */
+
+#feedbackPageContainer {
+    text-align: center;
+}
+
+#feedbackPageTitle {
+    width: 50%;
+    margin:0 auto;
+}
+
+#feedbackPageTitle h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 40px;
+    line-height: 0.8em;
+    font-weight: 800;
+    line-height: 1em;
+    margin-bottom: 0.1em;
+}
+
+#feedback p {
+
+}
+
+#feedback div {
+
+}
+
+hr {
+    width: 60%;
+    border-color: #C2128D;
+}
+
+#moreInfo button {
+    padding: 0.9em 3em;
+    font-size: 1.1em;
+    font-weight: bolder;
+    background-color: #00FFFF;
+    transition: 0.7s;
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 0 0 5px 5px #01f9f981;
+    color: black;
+    border: 1px solid #00FFFF;
+}
