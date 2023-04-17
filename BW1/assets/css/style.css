@@ -216,17 +216,33 @@ label {
     margin-bottom: 0.1em;
 }
 
-#feedback p {
+#feedback {
+    width: 45%;
+    margin: 0 auto;
+}
 
+#feedback p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
 }
 
 #feedback div {
 
 }
 
+#feedback input {
+    width: 90%;
+    margin-bottom: 0.5em;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1em;
+}
+
 hr {
-    width: 60%;
     border-color: #C2128D;
+    margin-bottom: 3em;
+    margin-top: 0;
 }
 
 #moreInfo button {
