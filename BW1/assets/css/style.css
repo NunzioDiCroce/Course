@@ -61,7 +61,11 @@ main {
     margin-bottom: 5em;
 }
 
-#customCheckbox {
+
+
+
+
+/*#customCheckbox {
     -webkit-appearance: none;
     height: 20px;
     width: 20px;
@@ -70,7 +74,7 @@ main {
     margin-right: 10px;
     position: relative;
     top: 4px;
-}
+}*/
 
 label {
     margin-right: 10em;
