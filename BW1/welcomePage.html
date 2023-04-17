@@ -5,11 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Page</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+    </style>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+    </style>
+
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body>
+    <header id="header">
+            <img src="assets/img/epicode_logo.png" alt="logo">
+    </header>
+
+
+    <main>
+        
+        <div id="welcomePageContainer">
+
+            <section id="welcomePageTitle">
+                <h1>Welcome to your exam</h1>
+            </section>
+
+            <section id="welcomePageParagraph">
+                <p id="instructions">Instructions</p>
+                <p>We don't expect most engineers to know the answers to all of these questions, so don't worry if you're unsure of a few of them.</p>
+            </section>
+
+            <section id="welcomePageList">
+                <ul>
+                    <li>Each question is <b>timed</b> and can only be <b>answered once</b>.</li>
+                    <li>Changing browser tab or opening other windows will <b>invalidate the question</b>.</li>
+                    <li>This exam will take approx.<b>0-5 minutes</b>.</li>
+                </ul>
+            </section>
+
+            <section id="welcomePageCheckbox">
+                <input type="checkbox" id="checkbox" name="checkbox">
+                <label for="checkbox"><b>I promise to answer myself without help from answer</b></label>
+                    <button class="button" type="button">PROCEED</button>
+            </section>
+
+        </div>
     
+    </main>
+
+
+
+
 </body>
 
 </html>
