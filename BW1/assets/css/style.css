@@ -5,15 +5,13 @@ html, body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     /*line-height: 1.2em;*/
-
-    /*heading: font-family: 'Outfit', sans-serif; | 60px */
-
 }
 
 body {
     background-image: url(../img/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    color: white;
 }
 
 header {
@@ -33,4 +31,29 @@ main {
 
 
 /* welcomePage */
+
+#welcomePageTitle h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 60px;
+    width: 40%;
+    line-height: 0.8em;
+    font-weight: 800;
+}
+
+#welcomePageTitle h1 span {
+    font-weight: 200;
+}
+
+#welcomePageParagraph h2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    margin-bottom: 0.2em;
+    color: #C2128D;
+}
+
+#welcomePageParagraph p {
+    margin-top: 0;
+    width: 60%;
+    margin-bottom: 3em;
+}
 
