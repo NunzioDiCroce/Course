@@ -98,51 +98,54 @@ const questions = [
       correct_answer: "Java",
       incorrect_answers: ["Python", "C", "Jakarta"],
     },
-  ];
+];
 
   /* - - - - scrip questionPage - - - - */
 
-  /*window.onload = function () {};*/
+/*window.onload = questionFunction();*/
 
 
-var currentQuestion;
-var currentCorrect_answer;
-var currentIncorrect_answer = [];
-function selectQuestion (index) {
-    for (i = 0; i < questions.length; i++) {
-        currentQuestion = questions[index].question
-        currentCorrect_answer = questions[index].correct_answer
-        currentIncorrect_answer = questions[index].incorrect_answers
+    var questionNumber = 4;
 
+    var currentQuestion;
+    var currentCorrect_answer;
+    var currentIncorrect_answer = [];
+    function selectQuestion (index) {
+        for (i = 0; i < questions.length; i++) {
+            currentQuestion = questions[index].question
+            currentCorrect_answer = questions[index].correct_answer
+            currentIncorrect_answer = questions[index].incorrect_answers
+
+        }
     }
-}
-selectQuestion(8);
+    selectQuestion(questionNumber);
 
-function writeQuestion () {
-    var question = document.getElementById('questionPageTitle');
-    var h1New = document.createElement('h1');
-    h1New.innerText = currentQuestion;
-    h1New.className = 'questionPageTitle';
-    question.appendChild(h1New);
-}
-writeQuestion();
-
-function writeAnswers () {
-    currentIncorrect_answer.push(currentCorrect_answer);
-    var answers = currentIncorrect_answer;
-    console.log(answers);
-    shuffleArray(answers);
-    console.log(answers);
-    var answer = document.getElementById('questionPageAnswers');
-    for (i = 0; i < answers.length; i++) {
-        var button = document.createElement('button');
-        button.innerHTML = answers[i];
-        button.className = 'answerButton';
-        answer.appendChild(button);
+    function writeQuestion () {
+        var question = document.getElementById('questionPageTitle');
+        var h1New = document.createElement('h1');
+        h1New.innerText = currentQuestion;
+        h1New.className = 'questionPageTitle';
+        question.appendChild(h1New);
     }
-}
-writeAnswers();
+    writeQuestion();
 
-function shuffleArray(inputArray) {
-    inputArray.sort(()=>Math.random() - 0.5);
-}
+    var button = [];
+    function writeAnswers () {
+        currentIncorrect_answer.push(currentCorrect_answer);
+        var answers = currentIncorrect_answer;
+        console.log(answers);
+        shuffleArray(answers);
+        console.log(answers);
+        var answer = document.getElementById('questionPageAnswers');
+        for (i = 0; i < answers.length; i++) {
+            button = document.createElement('button');
+            button.innerHTML = answers[i];
+            button.className = 'answerButton';
+            answer.appendChild(button);
+        }
+    }
+    writeAnswers();
+
+    function shuffleArray(inputArray) {
+        inputArray.sort(()=>Math.random() - 0.5);
+    }
