@@ -116,29 +116,33 @@ function selectQuestion (index) {
 
     }
 }
-selectQuestion(1);
-
+selectQuestion(8);
 
 function writeQuestion () {
     var question = document.getElementById('questionPageTitle');
     var h1New = document.createElement('h1');
     h1New.innerText = currentQuestion;
+    h1New.className = 'questionPageTitle';
     question.appendChild(h1New);
 }
 writeQuestion();
 
-var answers = [];
 function writeAnswers () {
     currentIncorrect_answer.push(currentCorrect_answer);
-    answers = currentIncorrect_answer;
+    var answers = currentIncorrect_answer;
     console.log(answers);
     shuffleArray(answers);
-    var buttons = document.getElementsByClassName('answerButton');
-    console.log(buttons);
+    console.log(answers);
+    var answer = document.getElementById('questionPageAnswers');
+    for (i = 0; i < answers.length; i++) {
+        var button = document.createElement('button');
+        button.innerHTML = answers[i];
+        button.className = 'answerButton';
+        answer.appendChild(button);
+    }
 }
 writeAnswers();
 
 function shuffleArray(inputArray) {
     inputArray.sort(()=>Math.random() - 0.5);
 }
-console.log(answers);
