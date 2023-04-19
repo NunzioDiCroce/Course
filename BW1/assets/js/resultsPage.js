@@ -1,6 +1,3 @@
-//Dichiarazioni variabili:
-//Risposte che derivano dalla Question Page
-
 var matchValue = 0;
 var unmatchValue = 0;
 

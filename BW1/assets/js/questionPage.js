@@ -260,8 +260,11 @@ function score(event, rispostaCorretta) {
     const rispostaCliccata = event.target.innerText;
     if (rispostaCliccata === rispostaCorretta) {
         match++;
+        localStorage.setItem("match", match);
     } else {
         unmatch++;
+        localStorage.setItem("unmatch", unmatch);
+
     }
     console.log(match);
     console.log(unmatch);
@@ -282,11 +285,8 @@ function nextQuestion() {
         sezioneContatore.innerText = contatore;
         random();
     } else {
-        localStorage.setItem("match", match);
-        localStorage.setItem("unmatch", unmatch);
         window.location.href = 'resultsPage.html';
     }
-
 }
 
 
