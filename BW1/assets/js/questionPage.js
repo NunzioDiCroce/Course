@@ -125,7 +125,7 @@ const COLOR_CODES = {
 const TIME_LIMIT = 10;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
-let timerInterval = 1;
+let timerInterval = 0;
 let remainingPathColor = COLOR_CODES.info.color;
 
 document.getElementById("app").innerHTML = `
@@ -167,13 +167,9 @@ function startTimer() {
         );
         setCircleDasharray();
         setRemainingPathColor(timeLeft);
-
         if (timeLeft === 0) {
-            unmatch++; /**/
-
-
+            unmatch++;
             nextQuestion();
-            /**/
         }
     }, 1000);
 }
@@ -181,12 +177,10 @@ function startTimer() {
 function formatTime(time) {
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
-
     if (seconds < 10) {
         seconds = `0${seconds}`;
     }
-
-    return `SECONDS\n\n ${seconds}\n\n REMAINING`;
+    return `SECONDS\n ${seconds}\n REMAINING`;
 }
 
 function setRemainingPathColor(timeLeft) {
@@ -214,9 +208,7 @@ function calculateTimeFraction() {
 }
 
 function setCircleDasharray() {
-    const circleDasharray = `${(
-        calculateTimeFraction() * FULL_DASH_ARRAY
-    ).toFixed(0)} 283`;
+    const circleDasharray = `${(calculateTimeFraction() * FULL_DASH_ARRAY).toFixed(0)} 283`;
     document
         .getElementById("base-timer-path-remaining")
         .setAttribute("stroke-dasharray", circleDasharray);
