@@ -17,7 +17,6 @@ body {
     background-image: url(../img/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    /*background-position: left;*/
     color: white;
 }
 
@@ -96,7 +95,7 @@ input {
     font-weight: bolder;
 }
 
-.customActive{
+.customActive{ /*classe aggiunta con js per gestire il button dopo checkBox*/
         background-color : #00FFFF !important;
         box-shadow: 0 0 5px 5px #01f9f981;
         color: black;
@@ -112,9 +111,9 @@ input {
 
 /* - - - questionPage - - - */
 
-#questionPageHeader {
+#questionPageHeader { /*header modificato rispetto ad header generale per ospitare il timer*/
     width: 85%;
-    margin: 3% auto 10% auto;
+    margin: 3% auto 3% auto;
 }
 
 #questionPageContainer {
@@ -122,21 +121,17 @@ input {
 }
 
 #questionPageTitle {
-    width: 70%;/*modifica da 30%*/
+    width: 60%;
     margin:0 auto;
 }
 
 #questionPageTitle h1 {
     font-family: 'Outfit', sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 0.8em;
     font-weight: 800;
     line-height: 1em;
     margin-bottom: 1.5em;
-}
-
-#questionPageTitle h1 span {
-    font-weight: 200;
 }
 
 #questionPageAnswers {
@@ -156,6 +151,7 @@ input {
 
 .answerButton:hover {
     background-color: #C2128D;
+    cursor: pointer;
 }
 
 #questionPageCounter h1 {
@@ -166,7 +162,10 @@ input {
 #questionPageCounter span {
     color: #C2128D;
 }
-/*timer*/
+
+
+/* - - - questionPage timer - - - */
+
 .base-timer {
     position: relative;
     width: 150px;
@@ -226,8 +225,8 @@ input {
     width: 10px;
   }
 
-/* - - - - resultsPage - - - - */
 
+/* - - - resultsPage - - - */
 
 #resultsPageContainer {
     text-align: center;
@@ -276,7 +275,6 @@ input {
 #rateUs{
     padding-bottom: 5em;
 }
-
 
 
 /* - - - - feedbackPage - - - - */
