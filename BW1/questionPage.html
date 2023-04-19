@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -31,11 +31,18 @@
         <div id="questionPageContainer">
 
             <section id="questionPageTitle">
-                
+                <h1><span>How can I create a</span> checkbox in HTML?</h1>
             </section>
 
             <section id="questionPageAnswers">
-
+                <div>
+                    <button type="button" class="answerButton">PRIMA RISPOSTA</button>
+                    <button type="button" class="answerButton">SECONDA RISPOSTA</button>
+                </div>
+                <div>
+                    <button type="button" class="answerButton">TERZA RISPOSTA</button>
+                    <button type="button" class="answerButton">QUARTA RISPOSTA</button>
+                </div>
             </section>
 
             <section id="questionPageCounter">
@@ -46,8 +53,54 @@
     
     </main>
 
-    <script src="assets/js/questionPage.js"></script>
-
 </body>
 
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question Page</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+    </style>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+    </style>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <header id="questionPageHeader">
+      <img src="assets/img/epicode_logo.png" alt="logo" />
+      
+        <div id="app"></div>
+      
+    </header>
+
+    <main>
+      <div id="questionPageContainer">
+        <section id="questionPageTitle">
+          <h1><span>How can I create a</span> checkbox in HTML?</h1>
+        </section>
+
+        <section id="questionPageAnswers">
+    
+        </section>
+
+        <section id="questionPageCounter">
+          <h1>
+            QUESTION <span id="contatoreDomande"></span> <span>/ 10</span>
+          </h1>
+        </section>
+      </div>
+    </main>
+    <script src="assets/js/questionPage.js"></script>
+  </body>
 </html>

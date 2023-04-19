@@ -11,7 +11,7 @@ body {
     background-image: url(../img/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: left;
+    /*background-position: left;*/
     color: white;
 }
 
@@ -69,6 +69,23 @@ label {
     margin-right: 12em;
 }
 
+/*Proprietà Button Welcome Page*/
+
+#buttonWelcomePage{
+    padding: 0.9em 3em;
+    font-size: 1.1em;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    font-weight: bolder;
+}
+/*Classe per il button Welcome Page quando il check viene flaggato*/
+.customActive{
+        background-color : #00FFFF !important; 
+        color : black !important;
+        border : none !important;
+}
+
 .button {
     padding: 0.9em 3em;
     font-size: 1.1em;
@@ -87,7 +104,23 @@ label {
     color: black;
     border: 1px solid #00FFFF;
 }
-
+/*Aggiunta proprietà css per l'input*/
+input {
+    
+    
+     height: 20px;
+     width: 20px;
+     border: 3px solid white;
+     margin-right: 10px;
+     position: relative;
+     top: 4px;
+     /*-webkit-appearance:none;*/
+     
+    
+     
+ 
+ }
+ 
 
 /* - - - - questionPage - - - - */
 
@@ -102,7 +135,7 @@ label {
 }
 
 #questionPageTitle {
-    width: 80%;
+    width: 70%;/*modifica da 30%*/
     margin:0 auto;
 }
 
@@ -123,7 +156,7 @@ label {
     margin-bottom: 4em;
 }
 
-.answerButton { 
+.answerButton {
     width: 30%;
     padding: 2%;
     border-radius: 50px;
@@ -146,60 +179,76 @@ label {
 #questionPageCounter span {
     color: #C2128D;
 }
-
-
-
-/* - - - - resultsPage - - - - */
-
-
-#resultsPageContainer {
-    text-align: center;
-}
-
-#resultsPageTitle {
-    width: 50%;
-    margin:0 auto;
-}
-
-#resultsPageTitle h1 {
-    font-family: 'Outfit', sans-serif;
+/*timer*/
+.base-timer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 10px;
+    stroke: lightgrey;
+  }
+  
+  .base-timer__path-remaining {
+    stroke-width: 10px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+  }
+  
+  .base-timer__path-remaining.green {
+    color: aqua
+  }
+  
+  .base-timer__path-remaining.orange {
+    color: orange;
+  }
+  
+  .base-timer__path-remaining.red {
+    color: red;
+  }
+  
+  .base-timer__label {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 40px;
-    line-height: 0.8em;
-    font-weight: 800;
-    line-height: 1em;
-    margin-bottom: 0.1em;
+    margin-left: 30px;
+  }
+  .h1 {
+      font-family: "Lucida Console", Courier, monospace;
+      font-size: 3px;
+  }
+
+  #app{
+    margin-left: 80%;
+    width: 10px;
+  }
+
+/*Modifica del padding inferiore*/
+#rateUs{
+    padding-bottom: 5em;
 }
 
-#resultsPageTitle p {
-    margin-top: 0;
-    font-size: 1.2em;
-}
-
-#results {
-    margin-bottom: 2%;
-}
-
-.resultsItem {
-    width: 30%;
-    height: 300px;
-    background-color: black;
-    display: inline-block;
-     margin: 2% 1% 2% 1%
-}
-
-#rateUs button {
-    padding: 0.9em 3em;
-    font-size: 1.1em;
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-    font-weight: bolder;
-}
 
 
 /* - - - - feedbackPage - - - - */
 
-#feedbackPageContainer {
+/*#feedbackPageContainer {
     text-align: center;
 }
 
@@ -257,4 +306,133 @@ hr {
     box-shadow: 0 0 5px 5px #01f9f981;
     color: black;
     border: 1px solid #00FFFF;
+    
+}
+
+.rating {
+    display: flex;
+    padding: 0;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.rating li {
+    overflow: auto;
+    margin: auto;
+    list-style-type: none
+}
+
+.rating-item {
+    cursor: pointer;
+    font-size: 3em;
+    color: rgb(0, 255, 255);
+}
+
+*/
+
+
+/* - - - - feedbackPageMODIFICATO - - - - */
+
+#feedbackPageContainer {
+    text-align: center;
+}
+
+#feedbackPageTitle {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#feedbackPageTitle h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 40px;
+    line-height: 0.8em;
+    font-weight: 800;
+    line-height: 1em;
+    margin-bottom: 0.1em;
+}
+
+#feedback {
+    margin: 0 auto;
+}
+
+#feedback p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+#feedback div {
+    margin-bottom: 5em;
+}
+
+#feedback input {
+    width: 90%;
+    margin-bottom: 0.5em;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1em;
+}
+
+hr {
+    border-color: #C2128D;
+    margin-bottom: 3em;
+    margin-top: 0;
+}
+
+#moreInfo button {
+    padding: 0.9em 3em;
+    font-size: 1.1em;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    font-weight: bolder;
+}
+
+#moreInfo button:hover {
+    background-color: #00FFFF;
+    transition: 0.7s;
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 0 0 5px 5px #01f9f981;
+    color: black;
+    border: 1px solid #00FFFF;
+}
+
+.rating {
+    display: flex;
+    padding: 0;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.rating li {
+    overflow: auto;
+    margin: auto;
+    list-style-type: none
+}
+
+.rating-item {
+    cursor: pointer;
+    font-size: 3em;
+    color: rgb(0, 255, 255);
+}
+
+/* initial: make all stars full */
+.rating-item::before {
+    content: "\2605";
+}
+
+/* make until the clicked star (the rest) empty */
+.rating-item.active~.rating-item::before {
+    content: "\2606";
+}
+
+/* on hover make all full */
+.rating:hover .rating-item::before {
+    content: "\2605";
+}
+
+/* make until the hovered (the rest) empty */
+.rating-item:hover~.rating-item::before {
+    content: "\2606";
 }
