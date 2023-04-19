@@ -105,7 +105,7 @@ const questions = [
 /*window.onload = questionFunction();*/
 
 
-    var questionNumber = 4;
+    var questionNumber = 0;
 
     var currentQuestion;
     var currentCorrect_answer;
