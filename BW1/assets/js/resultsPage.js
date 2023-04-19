@@ -11,7 +11,8 @@ var answer = {
     unmatch:unmatchValue,
 };
 
-
+answer.match = match;
+answer.unmatch = unmatch;
 
 //Array classe 'resultsItem' con i tre div
 var results = document.getElementsByClassName('resultsItem');
@@ -32,7 +33,7 @@ parCorrectPer.style.margin = '0';
 parCorrectPer.style.fontWeight = 'bold';
 
 var parCorrectQue = document.createElement('p');
-parCorrectQue.innerText = answer.correct + '/' + totale + ' questions';
+parCorrectQue.innerText = answer.match + '/' + totale + ' questions';
 parCorrectQue.style.margin = '0';
 
 results[0].appendChild(parCorrectTitle);
@@ -55,7 +56,7 @@ parWrongPer.style.margin = '0';
 parWrongPer.style.fontWeight = 'bold';
 
 var parWrongQue = document.createElement('p');
-parWrongQue.innerText = answer.wrong + '/' + totale + ' questions';
+parWrongQue.innerText = answer.unmatch + '/' + totale + ' questions';
 parWrongQue.style.margin = '0';
 
 results[2].appendChild(parWrongTitle);

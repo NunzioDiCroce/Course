@@ -247,6 +247,52 @@ input {
     width: 10px;
   }
 
+/* - - - - resultsPage - - - - */
+
+
+#resultsPageContainer {
+    text-align: center;
+}
+
+#resultsPageTitle {
+    width: 50%;
+    margin:0 auto;
+}
+
+#resultsPageTitle h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 40px;
+    line-height: 0.8em;
+    font-weight: 800;
+    line-height: 1em;
+    margin-bottom: 0.1em;
+}
+
+#resultsPageTitle p {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+#results {
+    margin-bottom: 2%;
+}
+
+.resultsItem {
+    /*width: 30%;*/
+    /*height: 300px;*/
+    display: inline-block;
+    /* margin: 2% 1% 2% 1%*/
+}
+
+#rateUs button {
+    padding: 0.9em 3em;
+    font-size: 1.1em;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    font-weight: bolder;
+}
+
 /*Modifica del padding inferiore*/
 #rateUs{
     padding-bottom: 5em;
