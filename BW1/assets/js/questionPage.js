@@ -100,6 +100,10 @@ const questions = [
 
 /* - - - js questionPage - - - */
 
+/* - - - js questionPage timer - - - */
+
+/* - - - js questionPage timer : - - - */
+
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
@@ -118,10 +122,10 @@ const COLOR_CODES = {
     }
 };
 
-const TIME_LIMIT = 30;
+const TIME_LIMIT = 10;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
-let timerInterval = 10;
+let timerInterval = 1;
 let remainingPathColor = COLOR_CODES.info.color;
 
 document.getElementById("app").innerHTML = `
