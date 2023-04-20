@@ -1,4 +1,6 @@
-/*js per gestire il button dopo checkBox*/
+
+/* js per gestire il button dopo checkBox */
+
 var check = document.getElementById('customCheckbox');
 var btnPage1 = document.getElementById('buttonWelcomePage');
 check.checked = false; /*da verificare*/

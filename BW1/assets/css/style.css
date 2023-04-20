@@ -98,7 +98,6 @@ input {
 .customActive{ /*classe aggiunta con js per gestire il button dopo checkBox*/
         background-color : #00FFFF !important;
         box-shadow: 0 0 5px 5px #01f9f981;
-        color: black;
         border: 1px solid #00FFFF;
         color : black !important;
         border : none !important;
@@ -257,10 +256,7 @@ input {
 }
 
 .resultsItem {
-    /*width: 30%;*/
-    /*height: 300px;*/
     display: inline-block;
-    /* margin: 2% 1% 2% 1%*/
 }
 
 #rateUs button {
@@ -272,9 +268,13 @@ input {
     font-weight: bolder;
 }
 
-/*Modifica del padding inferiore*/
-#rateUs{
-    padding-bottom: 5em;
+#rateUs button:hover {
+        background-color : #00FFFF;
+        box-shadow: 0 0 5px 5px #01f9f981;
+        color: black;
+        border: 1px solid #00FFFF;
+        border : none;
+        cursor: pointer;
 }
 
 
@@ -307,12 +307,8 @@ input {
     margin-bottom: 2em;
 }
 
-#feedback div {
-    margin-bottom: 5em;
-}
-
 #feedback input {
-    width: 90%;
+    width: 58%;
     margin-bottom: 0.5em;
     background-color: transparent;
     border: none;
@@ -324,6 +320,7 @@ hr {
     border-color: #C2128D;
     margin-bottom: 3em;
     margin-top: 0;
+    width: 63%;
 }
 
 #moreInfo button {
@@ -336,14 +333,15 @@ hr {
 }
 
 #moreInfo button:hover {
-    background-color: #00FFFF;
-    transition: 0.7s;
-    outline-color: transparent;
-    outline-style: solid;
-    box-shadow: 0 0 5px 5px #01f9f981;
-    color: black;
-    border: 1px solid #00FFFF;
+        background-color : #00FFFF;
+        box-shadow: 0 0 5px 5px #01f9f981;
+        color: black;
+        border: 1px solid #00FFFF;
+        border : none;
+        cursor: pointer;
 }
+
+/* - - - feedbackPage rating - - - */
 
 .rating {
     display: flex;
@@ -364,22 +362,22 @@ hr {
     color: rgb(0, 255, 255);
 }
 
-/* initial: make all stars full */
+/* riempie tutte le stelle */
 .rating-item::before {
     content: "\2605";
 }
 
-/* make until the clicked star (the rest) empty */
+/* riempie tutte le stelle fino alla selezionata (compresa) */
 .rating-item.active~.rating-item::before {
     content: "\2606";
 }
 
-/* on hover make all full */
-.rating:hover .rating-item::before {
+/* riempie tutte le stelle con hover */
+.rating:hover .rating-item::before {/*da verificare*/
     content: "\2605";
 }
 
-/* make until the hovered (the rest) empty */
+/* riempie tutte le stelle fino alla selezionata (compresa) con hover */
 .rating-item:hover~.rating-item::before {
     content: "\2606";
 }
