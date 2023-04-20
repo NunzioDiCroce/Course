@@ -152,9 +152,9 @@ document.getElementById("app").innerHTML = `
 
 startTimer();
 
-function onTimesUp() {
+/*function onTimesUp() {
     clearInterval(timerInterval);
-}
+}*/
 
 function startTimer() {
     timerInterval = setInterval(() => {
@@ -177,9 +177,9 @@ function formatTime(time) {
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
     if (seconds < 10) {
-        seconds = `0${seconds}`;
+        seconds = `${seconds}`;
     }
-    return `SECONDS\n ${seconds}\n REMAINING`;
+    return `SECONDS<span class="secondsFont">${seconds}</span>REMAINING`;
 }
 
 function setRemainingPathColor(timeLeft) {
@@ -187,18 +187,25 @@ function setRemainingPathColor(timeLeft) {
     if (timeLeft <= alert.threshold) {
         document
             .getElementById("base-timer-path-remaining")
-            .classList.remove(warning.color);
+            .classList.remove(warning.color, info.color);
         document
             .getElementById("base-timer-path-remaining")
             .classList.add(alert.color);
     } else if (timeLeft <= warning.threshold) {
         document
             .getElementById("base-timer-path-remaining")
-            .classList.remove(info.color);
+            .classList.remove(info.color, alert.color);
         document
             .getElementById("base-timer-path-remaining")
             .classList.add(warning.color);
-    }
+    } else {
+        document
+          .getElementById("base-timer-path-remaining")
+          .classList.remove(alert.color, warning.color);
+        document
+          .getElementById("base-timer-path-remaining")
+          .classList.add(info.color);
+      }
 }
 
 function calculateTimeFraction() {
@@ -291,7 +298,11 @@ function nextQuestion() {
     if (indexDomandaCorrente < 9) {
         indexDomandaCorrente++;
 
-        onTimesUp();
+        document.getElementById("base-timer-path-remaining").classList.remove(COLOR_CODES.alert.color);
+
+        clearInterval(timerInterval);
+
+        /*onTimesUp();*/
 
         timePassed = 0;
         timeLeft = TIME_LIMIT + 1; /*da verificare */
