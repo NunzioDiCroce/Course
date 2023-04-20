@@ -223,11 +223,11 @@ input:checked::before {
 }
   
 .base-timer__path-remaining.orange {
-    color: orange;
+    color: #00FFFF;
 }
   
 .base-timer__path-remaining.red {
-    color: red;
+    color: #00FFFF;
 }
   
 .base-timer__label {
