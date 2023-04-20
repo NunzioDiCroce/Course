@@ -120,7 +120,7 @@ const COLOR_CODES = {
     }
 };
 
-const TIME_LIMIT = 10;
+const TIME_LIMIT = 50;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = 0;
@@ -167,6 +167,7 @@ function startTimer() {
         setRemainingPathColor(timeLeft);
         if (timeLeft === 0) {
             unmatch++;
+            console.log(match, unmatch);
             nextQuestion();
         }
     }, 1000);
@@ -216,6 +217,7 @@ function setCircleDasharray() {
 
 /* creazione array domande random */
 
+var localStorage = 0;
 var match = 0;
 var unmatch = 0;
 var indexDomandaCorrente = 0;
@@ -301,6 +303,8 @@ function nextQuestion() {
         
         random();
     } else {
+        localStorage.setItem("match", match);
+        localStorage.setItem("unmatch", unmatch);
         window.location.href = 'resultsPage.html';
     }
 }
