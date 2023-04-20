@@ -267,11 +267,11 @@ input:checked::before {
 
 #resultsPageTitle p {
     margin-top: 0;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 #results {
-    margin-bottom: 2%;
+    margin-bottom: 2em;
 }
 
 .resultsItem {
@@ -296,6 +296,16 @@ input:checked::before {
         cursor: pointer;
 }
 
+#left, #center, #rigth {
+    display: inline-block;
+    font-family: 'Outfit', sans-serif;
+}
+
+#center {
+    width: 28%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
 
 /* - - - feedbackPage - - - */
 
