@@ -18,8 +18,8 @@ console.log(answer);
 //Array classe 'resultsItem' con i tre div
 var results = document.getElementsByClassName('resultsItem');
 //Variabili per i risultati
-var correttePercentuale = ((answer.match) / (answer.match + answer.unmatch) * 100).toFixed(1);
-var sbagliatePercentuale = ((answer.unmatch) / (answer.match + answer.unmatch) * 100).toFixed(1);
+var correttePercentuale = parseInt(((answer.match) / (answer.match + answer.unmatch) * 100).toFixed(1));
+var sbagliatePercentuale = parseInt(((answer.unmatch) / (answer.match + answer.unmatch) * 100).toFixed(1));
 var totale = answer.match + answer.unmatch;
 //Variabili per il div delle risposte esatte
 var parCorrectTitle = document.createElement('p');
@@ -107,7 +107,8 @@ const centerTextDoughnut = {
 
     }
 }
-if (sbagliatePercentuale < 60) {
+
+if (sbagliatePercentuale < 50) {
 
     var myCanvas = document.getElementById('myCanvas').getContext('2d');
     var config = new Chart(myCanvas, {
@@ -127,22 +128,11 @@ if (sbagliatePercentuale < 60) {
                     cutout: '70%',
                     hoverOffset: 1,
                     borderColor: 'transparent',
-
-
-
                 }]
-
         },
         options: {
             borderAlign: 'inner',
             plugins: {
-
-
-
-
-
-
-
             }
 
         },
@@ -321,6 +311,8 @@ else {
         
     });
 }
+console.log(sbagliatePercentuale);
+console.log(typeof(sbagliatePercentuale));
 
 
 

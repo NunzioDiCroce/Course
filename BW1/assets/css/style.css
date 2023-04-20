@@ -2,6 +2,11 @@
 
 /* - - - css reset - - - */
 
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap');
+
+
 html, body {
     margin: 0;
     padding: 0;
@@ -258,7 +263,7 @@ input:checked::before {
 
 #resultsPageTitle h1 {
     font-family: 'Outfit', sans-serif;
-    font-size: 40px;
+    font-size: 50px;
     line-height: 0.8em;
     font-weight: 800;
     line-height: 1em;
@@ -268,10 +273,6 @@ input:checked::before {
 #resultsPageTitle p {
     margin-top: 0;
     font-size: 1.5em;
-}
-
-#results {
-    margin-bottom: 2em;
 }
 
 .resultsItem {
@@ -296,7 +297,7 @@ input:checked::before {
         cursor: pointer;
 }
 
-#left, #center, #rigth {
+#left, #center, #right {
     display: inline-block;
     font-family: 'Outfit', sans-serif;
 }
