@@ -74,17 +74,44 @@ label {
 }
 
 input {
+    cursor: pointer;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid white;
+    width: 17px;
+    height: 17px;
+}
+
+input:hover {
+    background-color: #cccccc;
+}
+
+input::before {
+    content: "\2713";
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    visibility: hidden;
+    color: white;
+}
+
+input:checked::before {
+    visibility: visible;
+}
+
+
+/*input {
     margin-right: 10px;
     position: relative;
     top: 4px;
-}
+}*/
 
-#customCheckbox {
-    content: ""; /* da verificare */
+/*#customCheckbox {
+    content: "";
     width: 20px;
     height: 20px;
-    border: 3px solid white;  /* da verificare */
-}
+    border: 3px solid white;
+}*/
 
 #buttonWelcomePage{
     padding: 0.9em 3em;
@@ -192,15 +219,15 @@ input {
 }
   
 .base-timer__path-remaining.green {
-    color: aqua
+    color: #00FFFF;
 }
   
 .base-timer__path-remaining.orange {
-    color: aqua;
+    color: orange;
 }
   
 .base-timer__path-remaining.red {
-    color: aqua;
+    color: red;
 }
   
 .base-timer__label {
@@ -314,6 +341,7 @@ input {
     border: none;
     color: white;
     font-size: 1em;
+    outline: none;
 }
 
 hr {
