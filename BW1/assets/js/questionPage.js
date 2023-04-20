@@ -102,8 +102,6 @@ const questions = [
 
 /* - - - js questionPage timer - - - */
 
-/* - - - js questionPage timer : - - - */
-
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
@@ -214,6 +212,9 @@ function setCircleDasharray() {
         .setAttribute("stroke-dasharray", circleDasharray);
 }
 
+/* - - - js questionPage question & answers - - - */
+
+/* creazione array domande random */
 
 var match = 0;
 var unmatch = 0;
@@ -231,6 +232,12 @@ while (domandeRandom.length < 10) {
     }
 }
 console.log(domandeRandom);
+
+
+/* creazione array risposte random in base a question corrente*/
+/* definizione variabile risposta corretta */
+/* scrittura nel DOM di domanda ed array risposte random (button) */
+
 window.addEventListener("load", random);
 
 function random() {
@@ -251,13 +258,16 @@ function random() {
         const testoButton = document.createTextNode(risposteRandom[i]);
         button.appendChild(testoButton);
         button.onclick = function (e) {
-
             nextQuestion();
             score(e, rispostaCorretta);
         };
         sezioneButton.appendChild(button);
     }
 }
+
+
+/* funzione score (invocata nel for della funzione random) per gestione contatore risposte corrette/sbagliate (match/unmatch)) */
+
 function score(event, rispostaCorretta) {
     const rispostaCliccata = event.target.innerText;
     if (rispostaCliccata === rispostaCorretta) {
@@ -266,25 +276,29 @@ function score(event, rispostaCorretta) {
     } else {
         unmatch++;
         localStorage.setItem("unmatch", unmatch);
-
     }
     console.log(match);
     console.log(unmatch);
     console.log(rispostaCliccata)
 }
 
-function nextQuestion() {
 
+/* funzione nextQuestion (invocata nel for della funzione random) per gestione passaggi a domanda successiva e resultsPage */
+
+function nextQuestion() {
     if (indexDomandaCorrente < 9) {
         indexDomandaCorrente++;
+
         onTimesUp();
 
-        timePassed = 0; //
-        timeLeft = TIME_LIMIT + 1;//
+        timePassed = 0;
+        timeLeft = TIME_LIMIT + 1; /*da verificare */
 
         startTimer()
+
         contatore++;
         sezioneContatore.innerText = contatore;
+        
         random();
     } else {
         window.location.href = 'resultsPage.html';
