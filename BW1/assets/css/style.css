@@ -224,7 +224,6 @@ input:checked::before {
 .base-timer__label {
     position: absolute;
     width: 150px;
-    /*height: 150px;*/
     top: 0;
     display: grid;
     align-items: center;
@@ -232,11 +231,6 @@ input:checked::before {
     font-size: 13px;
     padding-top: 40px;
     text-align: center;
-}
-
-.h1 {
-    font-family: "Lucida Console", Courier, monospace;
-    font-size: 3px;
 }
 
 #app{
