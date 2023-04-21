@@ -6,9 +6,8 @@ var unmatch = parseInt(localStorage.getItem('unmatch'));
 console.log(match);
 console.log(unmatch);
 var answer = {
-
     match: 0,
-    unmatch:0 ,
+    unmatch: 0,
 };
 
 answer.match = match;
@@ -17,16 +16,17 @@ console.log(answer);
 
 //Array classe 'resultsItem' con i tre div
 var results = document.getElementsByClassName('resultsItem');
+
 //Variabili per i risultati
 var correttePercentuale = parseInt(((answer.match) / (answer.match + answer.unmatch) * 100).toFixed(1));
 var sbagliatePercentuale = parseInt(((answer.unmatch) / (answer.match + answer.unmatch) * 100).toFixed(1));
 var totale = answer.match + answer.unmatch;
+
 //Variabili per il div delle risposte esatte
 var parCorrectTitle = document.createElement('p');
 parCorrectTitle.innerText = 'Correct';
 parCorrectTitle.style.fontSize = '3em';
 parCorrectTitle.style.margin = '0';
-
 var parCorrectPer = document.createElement('p');
 parCorrectPer.innerText = correttePercentuale + '%';
 parCorrectPer.style.fontSize = '3em';
@@ -34,26 +34,23 @@ parCorrectPer.style.margin = '0';
 parCorrectPer.style.fontWeight = 'bold';
 parCorrectTitle.style.lineHeight = '1em';
 /*parCorrectPer.style.paddingBottom = '50%';*/
-
 var parCorrectQue = document.createElement('p');
 parCorrectQue.innerText = answer.match + '/' + totale + ' questions';
 parCorrectQue.style.margin = '0';
 
-/*Variabili appoggio*/
+//Appoggio
 var correctEmpty = document.createElement('p');
 correctEmpty.innerText = "\n";
-
 var wrongEmpty = document.createElement('p');
 wrongEmpty.innerText = "\n";
-
-
 parCorrectQue.style.paddingBottom = '100px';
+
+//inserimento variabili in div left di section results
 results[0].appendChild(parCorrectTitle);
 results[0].appendChild(parCorrectPer);
 results[0].appendChild(parCorrectQue);
 results[0].appendChild(correctEmpty);
 results[0].style.textAlign = 'left';
-
 results[0].style.textAlign = 'left';
 
 //Variabili per il div delle risposte sbagliate
@@ -62,30 +59,25 @@ parWrongTitle.innerText = 'Wrong';
 parWrongTitle.style.fontSize = '3em';
 parWrongTitle.style.margin = '0';
 parWrongTitle.style.lineHeight = '1em';
-
-
-
 var parWrongPer = document.createElement('p');
 parWrongPer.innerText = sbagliatePercentuale + '%';
 parWrongPer.style.fontSize = '3em';
 parWrongPer.style.margin = '0';
 parWrongPer.style.fontWeight = 'bold';
 /*parWrongPer.style.paddingBottom = '50%';*/
-
 var parWrongQue = document.createElement('p');
 parWrongQue.innerText = answer.unmatch + '/' + totale + ' questions';
 parWrongQue.style.margin = '0';
+
+//Appoggio
 parWrongQue.style.paddingBottom = '100px';
 
+//inserimento variabili in div right di section results
 results[2].appendChild(parWrongTitle);
 results[2].appendChild(parWrongPer);
 results[2].appendChild(parWrongQue);
 results[2].appendChild(wrongEmpty);
 results[2].style.textAlign = 'right';
-
-
-
-
 
 //CIAMBELLA CHARTJS
 //plugin block del centerText
@@ -96,20 +88,15 @@ const centerTextDoughnut = {
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.font = 'white bold 12px sans-serif';
-
         const text = 'Ciao';
-
         const textWidth = ctx.meausureText(text).width;
-
         const x = chart.getDatasetMeta(0).data[0].x;
         const y = chart.getDatasetMeta(0).data[0].y;
         ctx.fillText(text, x, y);
-
     }
 }
 
 if (sbagliatePercentuale < 50) {
-
     var myCanvas = document.getElementById('myCanvas').getContext('2d');
     var config = new Chart(myCanvas, {
         type: 'doughnut',
@@ -119,7 +106,6 @@ if (sbagliatePercentuale < 50) {
         shadowOffsetY: 10,
 
         data: {
-
             datasets: [
                 {
                     label: 'Result',
@@ -134,18 +120,15 @@ if (sbagliatePercentuale < 50) {
             borderAlign: 'inner',
             plugins: {
             }
-
         },
         plugins: [{
             title: {
                 display: true,
                 text: 'Congratulations!',
                 color: 'white',
-
                 font: {
                     size: 15,
                 }
-
             },
             id: 'text',
 
@@ -205,13 +188,8 @@ if (sbagliatePercentuale < 50) {
                 ctx.fillText(text5, textX5, textY5);
                 ctx.save();
             },
-
-        }],
-
-
-        
+        }], 
     });
-
 }
 
 
@@ -225,7 +203,6 @@ else {
         shadowOffsetY: 10,
 
         data: {
-
             datasets: [
                 {
                     label: 'Result',
@@ -234,35 +211,21 @@ else {
                     cutout: '70%',
                     hoverOffset: 1,
                     borderColor: 'transparent',
-
-
-
                 }]
-
         },
         options: {
             borderAlign: 'inner',
             plugins: {
-
-
-
-
-
-
-
             }
-
         },
         plugins: [{
             title: {
                 display: true,
                 text: 'Sorry!',
                 color: 'white',
-
                 font: {
                     size: 15,
                 }
-
             },
             id: 'text',
 
@@ -304,18 +267,11 @@ else {
 
                 ctx.save();
             },
-
         }],
-
-
-        
     });
 }
 console.log(sbagliatePercentuale);
 console.log(typeof(sbagliatePercentuale));
-
-
-
 
 
 const data = {

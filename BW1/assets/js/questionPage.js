@@ -102,10 +102,11 @@ const questions = [
 
 /* - - - js questionPage timer - - - */
 
+/*definizione angolo cambio colori*/
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
-
+/*definizione codici colori*/
 const COLOR_CODES = {
     info: {
         color: "green"
@@ -120,12 +121,13 @@ const COLOR_CODES = {
     }
 };
 
+/*definizione variabili per gestione timer countdown*/
 const TIME_LIMIT = 30;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = 0;
 let remainingPathColor = COLOR_CODES.info.color;
-
+/*inserimento in DOM del timer utilizzando svg w3.org*/
 document.getElementById("app").innerHTML = `
 <div class="base-timer">
   <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -144,17 +146,11 @@ document.getElementById("app").innerHTML = `
       ></path>
     </g>
   </svg>
-  <span id="base-timer-label" class="base-timer__label">${formatTime(
-    timeLeft
-)}</span>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(timeLeft)}</span>
 </div>
 `;
 
 startTimer();
-
-/*function onTimesUp() {
-    clearInterval(timerInterval);
-}*/
 
 function startTimer() {
     timerInterval = setInterval(() => {
@@ -174,7 +170,7 @@ function startTimer() {
 }
 
 function formatTime(time) {
-    const minutes = Math.floor(time / 60);
+    //const minutes = Math.floor(time / 60);
     let seconds = time % 60;
     if (seconds < 10) {
         seconds = `${seconds}`;

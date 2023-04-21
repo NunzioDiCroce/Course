@@ -122,10 +122,7 @@ input:checked::before {
         border: 1px solid #00FFFF;
         color : black !important;
         border : none !important;
-}
-
-.button:hover {
-    cursor: pointer;
+        cursor: pointer;
 }
 
 
