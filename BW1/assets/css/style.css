@@ -152,7 +152,7 @@ input:checked::before {
 }
 
 #questionPageAnswers {
-    margin-bottom: 4em;
+    margin-bottom: 3em;
 }
 
 .answerButton {
@@ -164,6 +164,7 @@ input:checked::before {
     box-shadow: 0px -2px 2px 0px white;
     margin: 1% 2% 1% 2%;
     font-weight: bolder;
+    font-size: 15px;
 }
 
 .answerButton:hover {
@@ -278,6 +279,11 @@ input:checked::before {
     width: 28%;
     margin-left: 50px;
     margin-right: 50px;
+}
+
+#right {
+    color: white;
+    opacity: 0.8;
 }
 
 #rateUs button {
