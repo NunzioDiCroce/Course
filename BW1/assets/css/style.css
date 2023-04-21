@@ -1,11 +1,13 @@
-/* css organizzato in parti dedicate: css reset, general, welcome, questions, results, feedback */
+/* css organizzato in parti dedicate: fonts, css reset, general, welcome, questions, results, feedback */
 
-/* - - - css reset - - - */
+/* - - - fonts import - - - */
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;800&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap');
 
+
+/* - - - css reset - - - */
 
 html, body {
     margin: 0;
@@ -15,6 +17,7 @@ html, body {
     font-size: 16px;
     /*line-height: 1.2em;*/
 }
+
 
 /* - - - general - - - */
 
@@ -275,8 +278,15 @@ input:checked::before {
     font-size: 1.5em;
 }
 
-.resultsItem {
+#left, #center, #right {
     display: inline-block;
+    font-family: 'Outfit', sans-serif;
+}
+
+#center {
+    width: 28%;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 #rateUs button {
@@ -297,16 +307,6 @@ input:checked::before {
         cursor: pointer;
 }
 
-#left, #center, #right {
-    display: inline-block;
-    font-family: 'Outfit', sans-serif;
-}
-
-#center {
-    width: 28%;
-    margin-left: 50px;
-    margin-right: 50px;
-}
 
 /* - - - feedbackPage - - - */
 
