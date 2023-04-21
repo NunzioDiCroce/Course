@@ -374,7 +374,8 @@ hr {
 
 .rating li {
     overflow: auto;
-    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
     list-style-type: none
 }
 
