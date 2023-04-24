@@ -11,6 +11,12 @@ body {
 * {box-sizing: border-box;}
 hr {display: none;} /* rimuove l'elemento */
 
+@media print {
+    body {
+        font-size: 2.5rem;
+    }
+}
+
 /* HEADER */
 header {
     background: rgb(0,160,198);
@@ -28,6 +34,7 @@ header div img {
 }
 header nav ul {
     margin: 0;
+    display: inline-flex; /*aggiunto per rispettare l'immagine mobile*/
 }
 header nav li {
     list-style: none;
@@ -35,6 +42,7 @@ header nav li {
 header nav li a {
     color: white;
     text-decoration: none;
+    margin-left: 15px; /*aggiunto per rispettare l'immagine mobile*/
 }
 header nav li a:hover {
     color: red;
@@ -42,6 +50,40 @@ header nav li a:hover {
 header nav li a::before {
     content: "\22c6\0020";
 }
+
+/* HEADER media query */
+@media screen and (min-width: 992px) {
+    header {
+        text-align: start;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    header div {
+        display: inline-flex;
+    }
+    header div img {
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+    header div p {
+        margin-bottom: 0;
+        padding-top: 25px;
+        margin-right: 230px;
+    }
+    @media screen and (min-width: 992px) {
+        nav {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}
+
+@media print {
+    header {
+        display: none;
+    }
+}
+
 
 /* MAIN */
 main {
@@ -64,6 +106,18 @@ section h2 {
     margin-bottom: 1em;
 }
 
+@media screen and (min-width: 768px) and (max-widt: 991px) {
+    article h2 {
+        font-size: 100px;
+    }
+}
+
+@media print {
+    main {
+        box-shadow: none;
+    }
+}
+
 /* ELEMENTI NEL MAIN - ARTICLE */
 h1 {
     font-size: 2.6rem;
@@ -77,6 +131,21 @@ p, address, ul, ol, dl, blockquote {
 h1 + p {
     color: #a0a0a0;
 }
+
+#html5logo { /*aggiunto per inserire logo html5*/
+    width: 100%;
+    height: 100%;
+    border: 5px solid blue;
+}
+
+article div { /*aggiunto per inserire logo html5*/
+    border: 5px solid violet;
+    padding: 0px;
+    width: 95px;
+    height: 95px;
+    margin-bottom: 10px;
+}
+
 ul, ol {
     margin-left: 2em;
 }
@@ -99,6 +168,38 @@ iframe {
     margin-bottom: 2em;
     border-radius: 20px;
 }
+
+section h2 { /*aggiunto per essere coerente con screenshot di specifica*/
+    background-color: rgb(140, 140, 140);
+}
+
+@media screen and (min-width:768px) {
+    h2 {
+        font-size: 2rem;
+        font-weight: 900;
+    }
+}
+
+@media screen and (min-width:992px) {
+    iframe {
+        width: 49%;
+        margin: 0 auto;
+        display: inline-block;
+    }
+    section {
+        border-radius: 20px;
+        width: 49%;
+        margin: 0 auto;
+        display: inline-block;
+    }
+}
+
+@media print {
+    iframe, section {
+        display: none;
+    }
+}
+
 
 /* TABELLE */
 table {
@@ -143,6 +244,15 @@ button {
     font-weight: bold;
 }
 
+
+@media screen and (min-width:768px) {
+    table {
+        margin: 0 auto;
+        margin-bottom: 80px;
+    }
+}
+
+
 /* ELEMENTI NELL' ASIDE */
 aside h2 {
     text-align: center;
@@ -164,6 +274,19 @@ aside div p:last-child {
     text-align: right;
 }
 
+@media screen and (min-width: 992px) {
+    aside div {
+        width: 33%;
+        margin: 0 auto;
+        display: inline-block;
+    }
+}
+
+@media print {
+    aside {
+        display: none;
+    }
+}
 
 /* FOOTER */
 footer {
@@ -177,4 +300,10 @@ footer {
 }
 footer a {
     color: fuchsia;
+}
+
+@media print {
+    footer {
+        display: none;
+    }
 }

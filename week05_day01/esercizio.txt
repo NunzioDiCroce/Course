@@ -1,0 +1,7 @@
+index.html
+il file scaricato ha un approccio mobile first (width = 576-768px)
+
+lavorare per rendere responsive il template ai seguenti breakpoints:
+768 - 992px : medium
+992 - in su : desktop
+
