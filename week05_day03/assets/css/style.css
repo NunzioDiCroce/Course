@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+html, body {
+    /*margin: 0;*/
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7em;
+    /*line-height: 0.8em;*/
+}
+
+#nav {
+    background-color: #FEF7E2;
+    border-radius: 50px;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    padding: 4%;
+}
+
+#navShop {
+    background-color: #FFDF7F;
+    color: #742305;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 50px;
+    margin: 6%;
+    padding: 4%;
+    font-size: 3em;
+}
+
+.navItem {
+    background-color: #FFDF7F;
+    color: #742305;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    padding: 4%;
+    width: 30%;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #742305;
+    width: 70%;
+    text-align: center;
+    font-size: 3em;
+}
+
+.card {
+    background-color: #FEF7E2;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card img {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-bottom: 10px;
+}
+
+.cardText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    color: #742305;
+    width: 80%;
+}
+
+.cardTextBold {
+    font-weight: bold;
+}
+
+.button {
+    background-color: #FFDF7F;
+    color: #742305;
+    border-radius: 50px;
+    padding: 8px;
+    width: 60%;
+    text-align: center;
+    font-size: 1.8em;
+    border: none;
+    margin-bottom: 10px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #742305;
+    width: 70%;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+section {
+    background-color: #FEF7E2;
+    color: #742305;
+    border-radius: 50px;
+    padding: 8px 30px;
+    text-align: left;
+    font-size: 2em;
+    border: none;
+    margin-bottom: 10px;
+}
