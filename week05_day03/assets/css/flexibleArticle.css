@@ -1,0 +1,29 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+    /*font-family:*/
+    /*font-size: 0.8em;*/
+    /*line-height: 1.2em;*/
+}
+
+#flexibleArticle {
+    padding: 25px 20px 25px 20px;
+    background-color: #FBF7E3;
+    color: #612406;
+    border-radius: 40px;
+}
+
+#flexibleArticle img {
+    width: 100%;
+}
+
+@media screen and (min-width: 1280px) {
+    #flexibleArticle {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    #flexibleArticle img {
+        margin-right: 20px;
+    }
+}
