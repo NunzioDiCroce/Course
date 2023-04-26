@@ -180,7 +180,6 @@ section {
     }
     
     h2 {
-        color: #742305;
         width: 100%;
         text-align: left;
         font-size: 4em;
@@ -194,17 +193,108 @@ section {
 
 /* media queries medium (1024) */
 @media screen and (min-width: 1024px) {
+    #container {
+        display: flex;
+    }
 
+    #nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0;
+        margin-right: 5%;
+        position: fixed;
+        width: 20%;
+        height: -webkit-fill-available;
+    }
+    
+    #navShop {
+        justify-content: space-around;
+        margin: 10%;
+        width: 80%;
+        height: 4%;
+        order: 1;
+    }
+    
+    .navItem {
+        margin: 10%;
+        width: 80%;
+        padding: 2% 2%;
+        height: 4%;
+    }
+
+    #ourHoney {
+        order: 2;
+    }
+
+    #traceHoney {
+        order: 3;
+    }
+
+    #facilities {
+        order: 4;
+    }
+
+    #contacts {
+        order: 5;
+    }
+    
+    #containerTwo {
+        display: flex;
+        flex-direction: column;
+        margin-left: 24%;
+    }
+    
+    main {
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: left;
+        font-size: 7em;
+    }
+    
+    .card {
+        width: 30%;
+        margin: 1%;
+    }
+    
+    h2 {
+        font-size: 6em;
+    }
 }
 
 
 /* media queries medium-large (1200) */
 @media screen and (min-width: 1200px) {
-
+    .card {
+        width: 23%;
+    }
 }
 
 
 /* media queries extralarge (1920) */
 @media screen and (min-width: 1920px) {
+    #nav {
+        width: 15%;
+    }
 
+    #containerTwo {
+        margin-left: 17%;
+    }
+
+    .card {
+        width: 18%;
+    }
+
+    section {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    section img {
+        margin-right: 3%;
+    }
 }
