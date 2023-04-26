@@ -1,0 +1,27 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+    /*font-family: ;*/
+    /*font-size: 0.8em;*/
+    /*line-height: 1.2em;*/
+}
+
+#productCard {
+    width: 300px;
+    height: 350px;
+    border-radius: 100px;
+    border: 2px solid black;
+}
+
+#productCard img {
+    width: 100%;
+}
+
+#productCard_text {
+    background-color: #FBF7E3;
+}
+
+#productCard_text p {
+    margin: 0;
+}
