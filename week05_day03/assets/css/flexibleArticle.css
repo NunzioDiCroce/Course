@@ -18,6 +18,7 @@ html, body {
     width: 100%;
 }
 
+/* media query per gestire il responsive da mobile a desktop (almeno 1280px) */
 @media screen and (min-width: 1280px) {
     #flexibleArticle {
         display: flex;
