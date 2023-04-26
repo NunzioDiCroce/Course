@@ -18,7 +18,7 @@ ul {
     height: 100px;
     align-items: center;
     padding: 0;
-    width: 80%
+    width: 70%
 }
 
 #first, #second, #fourth, #fifth {
@@ -34,9 +34,17 @@ ul {
 #third {
     background-color: #F3DF85;
     border-radius: 100px;
-    width: 20%;
+    width: 25%;
     text-align: center;
     height: 60%;
     color: #612406;
     font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#third img {
+    width: 30%;
+    margin: 0px 30px 0px 10px;
 }
