@@ -8,3 +8,53 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+#testoAlternato {
+    border: 2px solid black;
+    margin-top: 40px;
+    margin-left: 20px;
+    width: 80%;
+    padding: 20px;
+}
+
+#prima {
+    color: red;
+    font-weight: bold;
+    margin-left: 5px;
+    position: absolute;
+    z-index: 3;
+    background-color: white;
+    width: 120px;
+    height: 18px;
+    animation: fadeinout 4s linear 16s infinite;
+    
+}
+
+#seconda {
+    color: green;
+    font-weight: bold;
+    margin-left: 5px;
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    width: 120px;
+    height: 18px;
+    animation: fadeinout 4s linear 4s infinite;
+}
+
+#terza {
+    color: blue;
+    font-weight: bold;
+    margin-left: 5px;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    width: 120px;
+    height: 18px;
+    animation: fadeinout 4s linear 8s infinite;
+}
+
+@keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+
