@@ -24,13 +24,29 @@
     transform: rotate(-5deg);
 }
 
+#post1:hover {
+    box-shadow: 0px 0px 20px black;
+    transform: scale(1.5);
+}
+
 #post2 {
     background-color: greenyellow;
     transform: rotate(5deg);
 }
 
+#post2:hover {
+    box-shadow: 0px 0px 20px black;
+    transform: scale(1.5);
+}
+
 #post3 {
     background-color: pink;
+    transform: rotate(-7deg);
+}
+
+#post3:hover {
+    box-shadow: 0px 0px 20px black;
+    transform: scale(1.5);
 }
 
 #post4 {
@@ -38,13 +54,29 @@
     transform: rotate(5deg);
 }
 
+#post4:hover {
+    box-shadow: 0px 0px 20px black;
+    transform: scale(1.5);
+}
+
 #post5 {
     background-color: yellow;
     transform: rotate(-5deg);
 }
 
+#post5:hover {
+    box-shadow: 0px 0px 20px black;
+    transform: scale(1.5);
+}
+
 #post6 {
     background-color: pink;
+    transform: rotate(-7deg);
+}
+
+#post6:hover {
+    box-shadow: 0px 0px 20px black;
+    transform: scale(1.5);
 }
 
 #post7 {
@@ -52,12 +84,65 @@
     transform: rotate(-5deg);
 }
 
+#post7:hover {
+    box-shadow: 0px 0px 20px black;
+    transform: scale(1.5);
+}
+
 #post8 {
     background-color: greenyellow;
     transform: rotate(5deg);
+}
+
+#post8:hover {
+    box-shadow: 0px 0px 20px black;
+    transform: scale(1.5);
 }
 
 h3 {
     font-weight: bold;
     margin-bottom: 1em;
 }
+
+@keyframes giallo {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
+
+#post1, #post5, #post7 {
+    animation: giallo 1s ease 0s 1;
+}
+
+@keyframes verde {
+    0% {
+        transform: translatey(-100%);
+    }
+    100% {
+        transform: translatey(0);
+    }
+  }
+
+  #post2, #post4, #post8 {
+    animation: verde 1s ease 0s 1;
+}
+
+@keyframes rosa {
+    0% {
+        transform: translatex(100%);
+    }
+    100% {
+        transform: translatex(0);
+    }
+  }
+
+  #post3, #post6 {
+    animation: rosa 1s ease 0s 1;
+}
+
+
+
+
