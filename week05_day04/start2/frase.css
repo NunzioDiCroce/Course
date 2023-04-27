@@ -23,19 +23,31 @@
 
 .parole div:first-of-type {
     animation-delay: 0s;
-    color: aqua;
+    color: red;
+    font-weight: bold;
+    position: absolute;
+    left: 220px;
+    top: 94.5px;
 }
 
 .parole div:nth-of-type(2) {
     transform: translateY(-100%);
     animation-delay: 2s;
-    color:brown;
+    color: green;
+    font-weight: bold;
+    position: absolute;
+    left: 220px;
+    top: 110px;
 }
 
 .parole div:last-of-type {
     transform: translateY(-200%);
     animation-delay: 4s;
-    color: yellowgreen;
+    color: blue;
+    font-weight: bold;
+    position: absolute;
+    left: 220px;
+    top: 125.5px;
 }
 
 @keyframes fadein {
