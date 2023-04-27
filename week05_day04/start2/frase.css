@@ -12,56 +12,41 @@
     border: 2px solid black;
     margin-top: 40px;
     margin-left: 20px;
-    width: 80%;
+    width: 40%;
     padding: 20px;
 }
 
-#prima {
-    color: red;
-    font-weight: bold;
-    margin-left: 5px;
-    position: absolute;
-    z-index: 3;
-    background-color: white;
-    width: 120px;
-    height: 18px;
-    animation: fadeinout 6s linear infinite;
-    
+.parole div {
+    opacity: 0;
+    animation: fadein 6s infinite;
 }
 
-#seconda {
-    color: green;
-    font-weight: bold;
-    margin-left: 5px;
-    position: absolute;
-    z-index: 2;
-    background-color: white;
-    width: 120px;
-    height: 18px;
-    animation: fadeinout 6s linear 2s infinite;
+.parole div:first-of-type {
+    animation-delay: 0s;
+    color: aqua;
 }
 
-#terza {
-    color: blue;
-    font-weight: bold;
-    margin-left: 5px;
-    position: absolute;
-    z-index: 1;
-    background-color: white;
-    width: 120px;
-    height: 18px;
-    animation: fadeinout 6s linear 4s infinite;
+.parole div:nth-of-type(2) {
+    transform: translateY(-100%);
+    animation-delay: 2s;
+    color:brown;
 }
 
-@keyframes fadeinout {
+.parole div:last-of-type {
+    transform: translateY(-200%);
+    animation-delay: 4s;
+    color: yellowgreen;
+}
+
+@keyframes fadein {
     0% {
         opacity: 0;
     }
-    50% {
+    30% {
         opacity: 1;
     }
-    100% {
+    50% {
         opacity: 0;
     }
-  }
+}
 
