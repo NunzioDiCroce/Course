@@ -25,7 +25,7 @@
     background-color: white;
     width: 120px;
     height: 18px;
-    animation: fadeinout 4s linear infinite;
+    animation: fadeinout 6s linear infinite;
     
 }
 
@@ -38,7 +38,7 @@
     background-color: white;
     width: 120px;
     height: 18px;
-    animation: fadeinout 4s linear infinite;
+    animation: fadeinout 6s linear 2s infinite;
 }
 
 #terza {
@@ -50,15 +50,18 @@
     background-color: white;
     width: 120px;
     height: 18px;
-    animation: fadeinout 4s linear infinite;
+    animation: fadeinout 6s linear 4s infinite;
 }
 
 @keyframes fadeinout {
-    0%,100% {
+    0% {
         opacity: 0;
     }
     50% {
         opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
   }
 
