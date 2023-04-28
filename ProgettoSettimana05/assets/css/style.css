@@ -151,7 +151,7 @@ p {
     margin-left: 10%;
     flex-wrap: wrap;
     gap: 2%;
-    width: 55%;
+    width: 45%;
 }
 
 .bottomLeftItem {
@@ -227,7 +227,7 @@ p {
 /* - - - - - - - - - - bottom right section - - - - - - - - - - */
 #bottomRight {
     border: 2px solid black;
-    width: 30%;
+    width: 25%;
     padding: 10px;
 }
 
