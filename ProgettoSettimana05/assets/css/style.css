@@ -79,6 +79,7 @@ p {
 /* - - - - - - - - - - middle section - - - - - - - - - - */
 #middle {
     border-bottom: 1px solid #8080803d;
+    margin-bottom: 30px;
 }
 
 #middleTitle {
@@ -138,6 +139,79 @@ p {
 
 
 /* - - - - - - - - - - bottom section - - - - - - - - - - */
+#bottomLeft {
+    display: flex;
+    margin-left: 10%;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
 .bottomLeftItem {
     border: 2px solid black;
+    display: flex;
+    align-items: center;
+    /*width: 50%;*/
+    padding: 10px;
+}
+
+.bottomLeftItemText {
+    margin-right: 10px;
+}
+
+.bottomLeftItem img {
+    width: 150px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-top: 2.5px;
+}
+
+.author img {
+    width: 25px;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
+.authorName {
+    font-weight: bold;
+}
+
+.authorText1 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.authorText2 {
+    color: gray;
+    /*width: 350px;*/
+    margin-bottom: 10px;
+}
+
+.authorText3 {
+    color: gray;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.authorText3b {
+    display: flex;
+    align-items: center;
+}
+
+.authorText3 span {
+    background-color: #8080803d;
+    border-radius: 20px;
+    padding: 8px;
+    text-align: center;
+
+}
+
+.authorText3 img {
+    width: 25px;
 }
