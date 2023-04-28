@@ -20,7 +20,6 @@ header {
     align-items: center;
     background-color: #ffc017;
     border-bottom: 1px solid #191919;
-    
 }
 
 #headerLeft {
@@ -142,6 +141,8 @@ p {
 .text3 {
     color: gray;
     font-size: 0.8rem;
+    display: flex;
+    align-items: center;
 }
 
 
