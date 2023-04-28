@@ -47,13 +47,21 @@ header {
     display: flex;
     background-color: #ffc017;
     border-bottom: 1px solid #191919;
-    padding-top: 4%;
-    padding-bottom: 4%;
+    /*padding-top: 4%;*/
+    /*padding-bottom: 4%;*/
     margin-bottom: 30px;
+    justify-content: space-between;
 }
 
 #topLeft {
     margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#topRight {
+    height: 300px;
 }
 
 h1 {
