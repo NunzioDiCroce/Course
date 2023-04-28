@@ -20,6 +20,8 @@ header {
     align-items: center;
     background-color: #ffc017;
     border-bottom: 1px solid #191919;
+    position: fixed;
+    top: 0;
 }
 
 #headerLeft {
