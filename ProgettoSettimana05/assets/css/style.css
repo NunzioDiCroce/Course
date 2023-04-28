@@ -1,0 +1,32 @@
+html, body {
+    color: #191919;
+}
+
+header {
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffc017;
+    border-bottom: 1px solid #191919;
+}
+
+#headerLeft {
+    margin-left: 10%;
+}
+
+#headerRight {
+    display: flex;
+    margin-right: 10%;
+    width: 35%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#getStarted {
+    background-color: black;
+    color: white;
+    padding: 0.6em;
+    border-radius: 20px;
+}
