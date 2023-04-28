@@ -73,8 +73,49 @@ p {
     display: flex;
     align-items: center;
     margin-left: 10%;
+    margin-bottom: 20px;
 }
 
 #middleTitle img {
     margin-right: 5px;
+}
+
+#middleItems {
+    display: flex;
+    margin-left: 10%;
+}
+
+.middleItem {
+    display: flex;
+    border: 1px solid black;
+    width: 300px;
+    padding: 10px;
+}
+
+.itemNumber {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.itemImage {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-top: 2.5px;
+}
+
+.itemImage img {
+    width: 25px;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
+.text1 {
+    font-weight: bold;
+}
+
+.text2 {
+    font-weight: bold;
+    margin-bottom: 10px;
 }
