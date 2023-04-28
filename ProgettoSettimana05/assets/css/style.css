@@ -20,6 +20,7 @@ header {
     align-items: center;
     background-color: #ffc017;
     border-bottom: 1px solid #191919;
+    
 }
 
 #headerLeft {
@@ -102,7 +103,7 @@ p {
 
 .middleItem {
     display: flex;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     width: 310px;
     padding: 10px;
     margin-bottom: 35px;
@@ -161,7 +162,7 @@ p {
 }
 
 .bottomLeftItem {
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     display: flex;
     align-items: center;
     width: 90%;
@@ -233,9 +234,10 @@ p {
 
 /* - - - - - - - - - - bottom right section - - - - - - - - - - */
 #bottomRight {
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     width: 25%;
     padding: 10px;
+    height: 250px;
 }
 
 #bottomRightTitle {
