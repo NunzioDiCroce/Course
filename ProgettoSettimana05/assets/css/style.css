@@ -139,18 +139,26 @@ p {
 
 
 /* - - - - - - - - - - bottom section - - - - - - - - - - */
+#bottom {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* - - - - - - - - - - bottom left section - - - - - - - - - - */
 #bottomLeft {
     display: flex;
     margin-left: 10%;
     flex-wrap: wrap;
     gap: 2%;
+    width: 55%;
 }
 
 .bottomLeftItem {
     border: 2px solid black;
     display: flex;
     align-items: center;
-    /*width: 50%;*/
+    width: 90%;
     padding: 10px;
 }
 
@@ -209,9 +217,53 @@ p {
     border-radius: 20px;
     padding: 8px;
     text-align: center;
-
 }
 
 .authorText3 img {
     width: 25px;
+}
+
+
+/* - - - - - - - - - - bottom right section - - - - - - - - - - */
+#bottomRight {
+    border: 2px solid black;
+    width: 30%;
+    padding: 10px;
+}
+
+#bottomRightTitle {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#bottomRight1 {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    
+}
+
+.bottomRight1Item {
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: gray;
+    border: 1px solid #8080803d;
+}
+
+#bottomRight2 {
+    border-top: 1px solid #8080803d;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    
+}
+
+.bottomRight2Item {
+    padding: 8px;
+    text-align: center;
+    margin-top: 5px;
+    color: gray;
 }
