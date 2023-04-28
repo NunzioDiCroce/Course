@@ -1,13 +1,17 @@
 
+/* - - - - - - - - - - font import - - - - - - - - - - */
 @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 
+/* - - - - - - - - - - general - - - - - - - - - - */
 html, body {
     color: #191919;
     font-family: 'Roboto', sans-serif;
 }
 
+
+/* - - - - - - - - - - header - - - - - - - - - - */
 header {
     display: flex;
     padding-top: 2%;
@@ -37,6 +41,8 @@ header {
     border-radius: 20px;
 }
 
+
+/* - - - - - - - - - - top section - - - - - - - - - - */
 #top {
     display: flex;
     background-color: #ffc017;
@@ -69,6 +75,8 @@ p {
     text-align: center;
 }
 
+
+/* - - - - - - - - - - middle section - - - - - - - - - - */
 #middle {
     border-bottom: 1px solid #8080803d;
 }
@@ -126,4 +134,10 @@ p {
 
 .text3 {
     color: gray;
+}
+
+
+/* - - - - - - - - - - bottom section - - - - - - - - - - */
+.bottomLeftItem {
+    border: 2px solid black;
 }
