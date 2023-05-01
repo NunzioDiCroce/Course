@@ -337,3 +337,9 @@ p {
     border-radius: 20px;*/
     transition: background-color 1s;
 }
+
+
+/* - - - - - - - - - - SVG animation - - - - - - - - - - */
+.mHidden {
+    opacity: 0;
+}

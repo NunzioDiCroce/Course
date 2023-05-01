@@ -1,3 +1,4 @@
+
 /* - - - - - - - - - - navbar color change - - - - - - - - - - */
 var headerChange = 'headerChange';
 var headerBack = 'headerBack';
@@ -21,6 +22,12 @@ window.onscroll = function () {
 
 console.log(window.scrollY);
 
-var button = document.getElementById('getStarted');
-console.log (button.classList);
+
+/* - - - - - - - - - - SVG animation - - - - - - - - - - */
+var animation = function () {
+    var m = document.querySelectorAll('g[stroke-linecap="butt"]');
+    var mRandom = Math.round(Math.random() * (m.length - 1));
+    m[mRandom].classList.toggle('mHidden')
+}
+setInterval(animation, 50);
 
