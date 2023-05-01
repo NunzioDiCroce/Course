@@ -291,5 +291,24 @@ p {
 }
 
 
-/* - - - - - - - - - - navbar change colore - - - - - - - - - - */
+/* - - - - - - - - - - navbar color change - - - - - - - - - - */
+.headerChange {
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid #191919;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 9999;
+}
 
+.getStartedChange {
+    background-color: #1a8917;
+    color: white;
+    padding: 0.6em;
+    border-radius: 20px;
+}
