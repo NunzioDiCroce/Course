@@ -343,3 +343,33 @@ p {
 .mHidden {
     opacity: 0;
 }
+
+
+/* - - - - - - - - - - media queries 1200px (desktop) >> 768px (tablet) >> 480px (mobile) - - - - - - - - - - */
+
+@media screen and (max-width: 480px) {
+
+    #headerRight :nth-child(1), #headerRight :nth-child(2), #headerRight :nth-child(3), svg {
+        display: none;
+    }
+
+    #bottom {
+        flex-direction: column;
+    }
+
+    #bottomRight {
+        order: 1;
+        width: 95%;
+    }
+
+    #bottomLeft {
+        order: 2;
+        width: 95%;
+        margin-left: 5%;
+    }
+
+    .bottomLeftItemText {
+        font-size: 0.6rem;
+    }
+
+}
