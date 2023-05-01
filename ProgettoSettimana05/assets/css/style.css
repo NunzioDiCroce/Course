@@ -20,6 +20,10 @@ header {
     align-items: center;
     background-color: #ffc017;
     border-bottom: 1px solid #191919;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 9999;
 }
 
 #headerLeft {
@@ -47,7 +51,7 @@ header {
     display: flex;
     background-color: #ffc017;
     border-bottom: 1px solid #191919;
-    /*padding-top: 4%;*/
+    padding-top: 6%;
     /*padding-bottom: 4%;*/
     margin-bottom: 30px;
     justify-content: space-between;
