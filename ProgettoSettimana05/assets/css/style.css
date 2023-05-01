@@ -38,7 +38,7 @@ header {
     align-items: center;
 }
 
-#getStarted {
+.getStarted {
     background-color: black;
     color: white;
     padding: 0.6em;
@@ -293,22 +293,47 @@ p {
 
 /* - - - - - - - - - - navbar color change - - - - - - - - - - */
 .headerChange {
-    display: flex;
+    /*display: flex;
     padding-top: 2%;
     padding-bottom: 2%;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;*/
     background-color: white;
-    border-bottom: 1px solid #191919;
+    /*border-bottom: 1px solid #191919;
     position: fixed;
     top: 0px;
     width: 100%;
-    z-index: 9999;
+    z-index: 9999;*/
+    transition: background-color 1s;
+}
+
+.headerBack {
+    /*display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    justify-content: space-between;
+    align-items: center;*/
+    background-color: #ffc017;
+    /*border-bottom: 1px solid #191919;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 9999;*/
+    transition: background-color 1s;
 }
 
 .getStartedChange {
     background-color: #1a8917;
-    color: white;
+   /*color: white;
     padding: 0.6em;
-    border-radius: 20px;
+    border-radius: 20px;*/
+    transition: background-color 1s;
+}
+
+.getStartedBack {
+    background-color: black;
+   /*color: white;
+    padding: 0.6em;
+    border-radius: 20px;*/
+    transition: background-color 1s;
 }
