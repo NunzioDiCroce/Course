@@ -3,3 +3,11 @@
 html, body {
     font-family: 'Inter', sans-serif;
 }
+
+#grayText {
+    color: rgb(170, 170, 170);
+}
+
+#orangeText {
+    color: orange;
+}
