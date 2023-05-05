@@ -27,5 +27,5 @@ body {
 
 .heroButtonColor {
     background-color: #7CC99A;
-    border: 0px;
+    border: 1px solid #7CC99A;
 }
