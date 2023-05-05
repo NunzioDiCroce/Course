@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+html, body {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+}
+
+$myGray: rgb(170, 170, 170);
+$myViolet: #7153FA;
+$myGreen: #7CC99A;
+
+
+#grayText {
+    color: $myGray;
+}
+
+#orangeText {
+    color:  orange;
+}
+
+#violetText {
+    color:darkviolet;
+}
+
+.heroColor {
+    background-color: $myViolet;
+}
+
+.heroButtonColor {
+    background-color: $myGreen;
+    border: 1px solid $myGreen;
+}
+
+.burgerColor {
+    border-color: $myViolet;
+}
