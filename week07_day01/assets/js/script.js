@@ -27,7 +27,27 @@ firstUser.benchmark();
 
 // - - - - - - - - - - - - - - - Esercizio 2 - - - - - - - - - - - - - - -
 
+class Pet {
+    constructor (_petName, _ownerName, _species, _breed) {
+        this.petName = _petName;
+        this.ownerName = _ownerName;
+        this.species = _species;
+        this.breed = _breed
+    }
+    sameOwner () {
+        if (firstPet.ownerName === secondPet.ownerName) {
+            console.log(`${firstPet.petName} ha lo stesso padrone di ${secondPet.petName} ovvero ${firstPet.ownerName}`)
+        } else {
+            console.log(`${firstPet.petName} e ${secondPet.petName} non hanno lo stesso padrone`)
+        }
+    }
+}
 
+var firstPet = new Pet ('Pippo', 'Mario', 'Cane', 'Labrador');
+var secondPet = new Pet ('Pluto', 'Giovanni', 'Cane', 'Bassotto');
+console.log(firstPet);
+console.log(secondPet);
+firstPet.sameOwner();
 
 
 
