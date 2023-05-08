@@ -1,4 +1,5 @@
 
+// - - - - - - - - - - - - - - - Esercizio 1 - - - - - - - - - - - - - - -
 class User {
     constructor (_firstName, _lastName, _age, _location) {
         this.firstName = _firstName;
@@ -22,6 +23,9 @@ var secondUser = new User ('Paolo', 'Bianchi', 120, 'Milano');
 console.log(firstUser);
 console.log(secondUser);
 firstUser.benchmark();
+
+
+// - - - - - - - - - - - - - - - Esercizio 2 - - - - - - - - - - - - - - -
 
 
 
