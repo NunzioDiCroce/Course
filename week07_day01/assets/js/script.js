@@ -18,8 +18,8 @@ class User {
     }
 }
 
-var firstUser = new User ('Mario', 'Rossi', 105, 'Roma');
-var secondUser = new User ('Paolo', 'Bianchi', 120, 'Milano');
+var firstUser = new User ('Mario', 'Rossi', 24, 'Roma');
+var secondUser = new User ('Paolo', 'Bianchi', 32, 'Milano');
 console.log(firstUser);
 console.log(secondUser);
 firstUser.benchmark();
@@ -44,14 +44,16 @@ class Pet {
 }
 
 var firstPet = new Pet ('Pippo', 'Mario', 'Cane', 'Labrador');
-var secondPet = new Pet ('Pluto', 'Giovanni', 'Cane', 'Bassotto');
+var secondPet = new Pet ('Pluto', 'Mario', 'Cane', 'Bassotto');
 console.log(firstPet);
 console.log(secondPet);
 firstPet.sameOwner();
 
 
+// - - - - - - - - - - - - - - - Esercizio 2: JS FORM - - - - - - - - - - - - - - -
 
 
+document.addEventListener('click', insertPet);
+function insertPet () {
 
-
-
+}
