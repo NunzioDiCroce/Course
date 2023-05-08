@@ -19,10 +19,11 @@ class User {
 
 var firstUser = new User ('Mario', 'Rossi', 105, 'Roma');
 var secondUser = new User ('Paolo', 'Bianchi', 120, 'Milano');
-firstUser.benchmark();
-
 console.log(firstUser);
 console.log(secondUser);
+firstUser.benchmark();
+
+
 
 
 
