@@ -52,8 +52,3 @@ firstPet.sameOwner();
 
 // - - - - - - - - - - - - - - - Esercizio 2: JS FORM - - - - - - - - - - - - - - -
 
-
-document.addEventListener('click', insertPet);
-function insertPet () {
-
-}
