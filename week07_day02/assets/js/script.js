@@ -9,6 +9,9 @@ let userName = document.getElementById('nameBox');
 let userSurname = document.getElementById('surnameBox');
 let userCity = document.getElementById('cityBox');
 
+//definizione variabili DOM: lista utenti
+let list = document.getElementById('usersList');
+
 //definizione array users
 let users = [];
 
@@ -22,10 +25,23 @@ addUser.addEventListener('click', function(event) {
     }
     console.log(newUser);
     users.push(newUser);
-    localStorage.setItem('newUser', JSON.stringify(users));
+    let stringifiedUsers = JSON.stringify(users);
+    localStorage.setItem('users', stringifiedUsers);
+    let listItem = document.createElement('li');
+    list.appendChild(listItem);
+    let retrievedUsers = JSON.parse(stringifiedUsers);
+    console.log(retrievedUsers);
+    listItem.innerHTML = `${newUser.name} ${newUser.surname} | ${newUser.city}`;
+    //listItem.innerHTML = `${newUser.name} ${newUser.surname} | ${newUser.city}`;
+    userName.value = '';
+    userSurname.value = '';
+    userCity.value = '';
 });
 
 //funzione "Rimuovi utente"
-removeUser.addEventListener('click', function(event) {
-
+removeUser.addEventListener('click', function() {
+    let lastUser = users.pop();
+    console.log(lastUser);
+    console.log(users);
+    localStorage.setItem('newUser', JSON.stringify(users));
 });
