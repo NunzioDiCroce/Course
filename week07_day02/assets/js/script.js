@@ -7,3 +7,13 @@ let removeUser = document.getElementById('removeBtn');
 let userName = document.getElementById('nameBox');
 let userSurname = document.getElementById('surnameBox');
 let userCity = document.getElementById('cityBox');
+
+//funzione "Aggiungi utente"
+addUser.addEventListener('click', function(event) {
+
+});
+
+//funzione "Rimuovi utente"
+removeUser.addEventListener('click', function(event) {
+    
+});
