@@ -1,4 +1,20 @@
 
+// - - - - - - - - - - TIMER - - - - - - - - - - 
+let timer = document.getElementById('timer')
+setInterval(()=> {
+    let seconds = 0
+    if(sessionStorage.getItem("timer")) {
+        seconds = Number(sessionStorage.getItem("timer"))
+    } else {
+        seconds = Number(timer.innerHTML)
+    }
+    seconds++
+    sessionStorage.setItem("timer", seconds)
+    timer.innerHTML = seconds
+}, 1000)
+
+
+// - - - - - - - - - - FORM REGISTRAZIONE UTENTI - - - - - - - - - - 
 //definizione variabili DOM
 //definizione variabili DOM: buttons
 let addUser = document.getElementById('addBtn');
@@ -28,11 +44,8 @@ addUser.addEventListener('click', function(event) {
     let stringifiedUsers = JSON.stringify(users);
     localStorage.setItem('users', stringifiedUsers);
     let listItem = document.createElement('li');
-    list.appendChild(listItem);
-    let retrievedUsers = JSON.parse(stringifiedUsers);
-    console.log(retrievedUsers);
+    list.appendChild(listItem);    
     listItem.innerHTML = `${newUser.name} ${newUser.surname} | ${newUser.city}`;
-    //listItem.innerHTML = `${newUser.name} ${newUser.surname} | ${newUser.city}`;
     userName.value = '';
     userSurname.value = '';
     userCity.value = '';
