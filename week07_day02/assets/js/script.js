@@ -1,60 +1,64 @@
 
-// - - - - - - - - - - TIMER - - - - - - - - - - 
-let timer = document.getElementById('timer')
-setInterval(()=> {
-    let seconds = 0
-    if(sessionStorage.getItem("timer")) {
-        seconds = Number(sessionStorage.getItem("timer"))
-    } else {
-        seconds = Number(timer.innerHTML)
-    }
-    seconds++
-    sessionStorage.setItem("timer", seconds)
-    timer.innerHTML = seconds
-}, 1000)
-
-
-// - - - - - - - - - - FORM REGISTRAZIONE UTENTI - - - - - - - - - - 
+// - - - - - - - - - - - - - - - - - - - - Esercizio TIMER - - - - - - - - - - - - - - - - - - - -
 //definizione variabili DOM
-//definizione variabili DOM: buttons
-let addUser = document.getElementById('addBtn');
-let removeUser = document.getElementById('removeBtn');
+let timing = document.getElementById('timer');
 
-//definizione variabili DOM: form fields
+//metodo setInterval
+let interval = setInterval(timeFunction, 1000);
+
+//definizione funzione
+function timeFunction() {
+    let seconds = 0;
+    if(sessionStorage.getItem('timer')) {
+        seconds = Number(sessionStorage.getItem('timer'))
+    } else {
+        seconds = Number(timing.innerHTML)
+    }
+    seconds++;
+    sessionStorage.setItem('timer', seconds);
+    timing.innerHTML = seconds;
+}
+
+
+
+// - - - - - - - - - - - - - - - - - - - - Esercizio FORM UTENTI - - - - - - - - - - - - - - - - - - - -
+//definizione variabili DOM
+//definizione variabili DOM - form utente
 let userName = document.getElementById('nameBox');
 let userSurname = document.getElementById('surnameBox');
 let userCity = document.getElementById('cityBox');
-
-//definizione variabili DOM: lista utenti
+//definizione variabili DOM - aggiungi/rimuovi utente
+let addUser = document.getElementById('addBtn');
+let removeUser = document.getElementById('removeBtn');
+//definizione variabili DOM - lista utenti
 let list = document.getElementById('usersList');
 
 //definizione array users
-let users = [];
+const users = [];
 
-//funzione "Aggiungi utente"
-addUser.addEventListener('click', function(event) {
+//definizione funzioni
+//definizione funzione aggiungi utente
+addUser.addEventListener('click', function(event){
     event.preventDefault();
-    let newUser = {
+    let user = {
         name: userName.value,
         surname: userSurname.value,
         city: userCity.value
     }
-    console.log(newUser);
-    users.push(newUser);
-    let stringifiedUsers = JSON.stringify(users);
-    localStorage.setItem('users', stringifiedUsers);
-    let listItem = document.createElement('li');
-    list.appendChild(listItem);    
-    listItem.innerHTML = `${newUser.name} ${newUser.surname} | ${newUser.city}`;
+    console.log(user);
+    users.push(user);
+    console.log(users);
     userName.value = '';
     userSurname.value = '';
     userCity.value = '';
+    list.appendChild(document.createElement('li')).innerText =`${user.name} ${user.surname} | ${user.city}`;
+    localStorage.setItem('users', JSON.stringify(users))
 });
 
-//funzione "Rimuovi utente"
+//definizione funzione rimuovi utente
 removeUser.addEventListener('click', function() {
-    let lastUser = users.pop();
-    console.log(lastUser);
+    users.pop();
     console.log(users);
-    localStorage.setItem('newUser', JSON.stringify(users));
+    list.lastChild.remove();
+    localStorage.setItem('users', JSON.stringify(users))
 });
