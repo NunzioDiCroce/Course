@@ -1,5 +1,31 @@
 
-// - - - - - - - - - - - - - - - FETCH
+// - - - - - - - - - - - - - - - definizione variabile in base ad prodotto selezionato (id)
+const selectedId = new URLSearchParams(window.location.search).get("id");
+console.log('id prodotto selezionato:',selectedId);
+
+window.onload = async () => {
+    if (selectedId) {
+        // - - - - - - - - - - - - - - - provenienza da tasto "Modifica" - manipolazione del DOM
+        document.getElementById('backofficeModify').innerText = 'Modifica prodotto';
+        document.getElementById('insert-btn').innerText = 'Modifica';
+        document.getElementById('delete-btn').classList.remove("d-none");
+
+        // - - - - - - - - - - - - - - - provenienza da tasto "Modifica" - prepopolamento campi form
+        try {
+            
+
+        }
+        catch (error) {
+            alert(error)
+        }
+
+
+    } else {
+
+    }
+}
+
+
 
 
 // - - - - - - - - - - - - - - - creazione nuovo prodotto da form e fetch POST
