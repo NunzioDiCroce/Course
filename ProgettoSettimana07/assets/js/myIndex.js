@@ -9,7 +9,7 @@ window.onload = async () => {
             })
             if (promise.ok) {
                 const postedProducts = await promise.json();
-                console.log(postedProducts);
+                console.log('elenco prodotti inseriti',postedProducts);
 
                 // - - - - - - - - - - - - - - - manipolazione DOM per inserimento product cards
                 const productsContainer = document.getElementById('productsContainer');

@@ -13,11 +13,14 @@ window.onload = async () => {
             })
             if (promise.ok) {
                 const selectedProduct = await promise.json();
-                console.log(selectedProduct);
+                console.log('prodotto selezionato:',selectedProduct);
 
                 // - - - - - - - - - - - - - - - manipolazione DOM per inserimento product cards
+                // - - - - - - - - - - - - - - - & destrutturazione prodotto selezionato (selectedProduct)
                 const detailsContainer = document.getElementById('detailsContainer');
-                
+
+                const { _id, name, description, brand, imageUrl, price, userId, createdAt, updatedAt, __v } = selectedProduct
+
                 detailsContainer.innerHTML += `
                     <div class="col-4 mb-4">
                         <div class="card">
