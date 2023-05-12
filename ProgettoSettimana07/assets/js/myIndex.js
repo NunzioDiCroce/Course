@@ -28,7 +28,7 @@ window.onload = async () => {
                             </ul>
                             <div class="card-body">
                                 <a href="./myDetails.html?id=${product._id}" class="btn btn-info w-100 mb-2">Scopri di più</a>
-                                <a href="#" class="btn btn-secondary w-100">Modifica</a>
+                                <a href="./myBackoffice.html?id=${product._id}" class="btn btn-secondary w-100" onclick="modify()">Modifica</a>
                             </div>
                         </div>
                     </div>
@@ -43,3 +43,7 @@ window.onload = async () => {
         alert(error)
     }
 }
+
+
+// - - - - - - - - - - - - - - - funzione modifica prodotto (modify) con assign su backoffice
+
