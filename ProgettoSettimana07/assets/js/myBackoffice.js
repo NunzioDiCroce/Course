@@ -15,6 +15,7 @@
 
 }*/
 
+// - - - - - - - - - - - - - - - creazione nuovo prodotto da form e fetch POST
 const submitFunction = async (event) => {
     event.preventDefault();
 
@@ -42,7 +43,6 @@ const submitFunction = async (event) => {
             } else {
                 throw new Error("Richiesta non a buon fine")
             }
-
     } catch (error) {
         alert(error)
     } 
