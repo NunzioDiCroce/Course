@@ -9,7 +9,32 @@ window.onload = async () => {
             })
             if (promise.ok) {
                 const postedProducts = await promise.json();
-                console.log(postedProducts)
+                console.log(postedProducts);
+
+                // - - - - - - - - - - - - - - - manipolazione DOM per inserimento product cards
+                const productsContainer = document.getElementById('productsContainer');
+                postedProducts.forEach((product) => {
+                    productsContainer.innerHTML += `
+                    <div class="col-4 mb-4">
+                        <div class="card">
+                            <img src="${product.imageUrl}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">${product.name}</h5>
+                                <p class="card-text">${product.description}</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Marca: ${product.brand}</li>
+                                <li class="list-group-item">Prezzo: ${product.price}</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-info w-100 mb-2">Scopri di più</a>
+                                <a href="#" class="btn btn-secondary w-100">Modifica</a>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                })
+                
             } else {
                 throw new Error("Richiesta non a buon fine")
             }
