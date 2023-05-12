@@ -72,14 +72,6 @@ function remove (event) {
 
 
 
-/*remove.addEventListener('click', function() {
-    users.pop();
-    console.log(users);
-    list.lastChild.remove();
-    localStorage.setItem('users', JSON.stringify(users))
-});*/
-
-
 
 
 
