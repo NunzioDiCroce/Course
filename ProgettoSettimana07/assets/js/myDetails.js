@@ -31,7 +31,7 @@ window.onload = async () => {
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Marca: ${brand}</li>
-                                <li class="list-group-item">Prezzo: ${price}</li>
+                                <li class="list-group-item">Prezzo: ${price} €</li>
                             </ul>
                             <div class="card-body">
                                 <a href="./myBackoffice.html?id=${_id}" class="btn btn-secondary w-100" onclick="modify()">Modifica</a>

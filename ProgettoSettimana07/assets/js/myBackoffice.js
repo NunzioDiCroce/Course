@@ -44,10 +44,11 @@ window.onload = async () => {
 }
 
 
-// - - - - - - - - - - - - - - - creazione nuovo prodotto da form e fetch POST
+// - - - - - - - - - - - - - - - creazione/modifica prodotto da backoffice
 const submitFunction = async (event) => {
     event.preventDefault();
 
+    // - - - - - - - - - - - - - - - creazione prodotto
     const newProduct = {
         name: document.getElementById('name').value,
         description: document.getElementById('description').value,
@@ -57,6 +58,7 @@ const submitFunction = async (event) => {
     }
     console.log('nuovo prodotto', newProduct)
 
+    // - - - - - - - - - - - - - - - "if" per fetch PUT/POST
     if (selectedId) {
         try {
             const promise = await fetch('https://striveschool-api.herokuapp.com/api/product/'+selectedId, {
@@ -98,3 +100,6 @@ const submitFunction = async (event) => {
         } 
     }
 }
+
+
+// - - - - - - - - - - - - - - - elimina prodotto da backoffice

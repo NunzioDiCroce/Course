@@ -24,7 +24,7 @@ window.onload = async () => {
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">Marca: ${product.brand}</li>
-                                <li class="list-group-item">Prezzo: ${product.price}</li>
+                                <li class="list-group-item">Prezzo: ${product.price} €</li>
                             </ul>
                             <div class="card-body">
                                 <a href="./myDetails.html?id=${product._id}" class="btn btn-info w-100 mb-2">Scopri di più</a>
