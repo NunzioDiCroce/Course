@@ -146,3 +146,17 @@ const deleteFunction = async () => {
     }
 
 }
+
+
+// - - - - - - - - - - - - - - - form reset
+const resetFunction = () => {
+    // - - - - - - - - - - - - - - - confirm funzione "elimina"
+    const confirmMessage = confirm('Cancellare i dati del prodotto?');
+    if (confirmMessage) {
+        document.getElementById('name').value='';
+        document.getElementById('description').value='';
+        document.getElementById('brand').value='';
+        document.getElementById('imageUrl').value='';
+        document.getElementById('price').value=''
+    }
+}
