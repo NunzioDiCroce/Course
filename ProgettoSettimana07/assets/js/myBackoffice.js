@@ -71,7 +71,13 @@ const submitFunction = async (event) => {
                 })
                 if (promise.ok) {
                     const newProductPosted = await promise.json();
-                    console.log(newProductPosted)
+                    console.log(newProductPosted);
+                    // - - - - - - - - - - - - - - - destrutturazione prodotto selezionato (selectedProduct)
+                    const { _id, name, description, brand, imageUrl, price, userId, createdAt, updatedAt, __v } = newProductPosted;
+                    // - - - - - - - - - - - - - - - alert
+                    alert('Il prodotto '+newProductPosted.name+' è stato modificato.');
+                    // - - - - - - - - - - - - - - - reindirizzamento ad homepage
+                    window.location.assign('./myIndex.html') 
                 } else {
                     throw new Error("Richiesta non a buon fine")
                 }
@@ -91,7 +97,13 @@ const submitFunction = async (event) => {
                 })
                 if (promise.ok) {
                     const newProductPosted = await promise.json();
-                    console.log(newProductPosted)
+                    console.log(newProductPosted);
+                    // - - - - - - - - - - - - - - - destrutturazione prodotto selezionato (selectedProduct)
+                    const { _id, name, description, brand, imageUrl, price, userId, createdAt, updatedAt, __v } = newProductPosted;
+                    // - - - - - - - - - - - - - - - alert
+                    alert('Il prodotto '+newProductPosted.name+' è stato creato.');
+                    // - - - - - - - - - - - - - - - reindirizzamento ad homepage
+                    window.location.assign('./myIndex.html')                    
                 } else {
                     throw new Error("Richiesta non a buon fine")
                 }
@@ -103,3 +115,34 @@ const submitFunction = async (event) => {
 
 
 // - - - - - - - - - - - - - - - elimina prodotto da backoffice
+const deleteFunction = async () => {
+    // - - - - - - - - - - - - - - - confirm funzione "elimina"
+    const confirmMessage = confirm('Eliminare il prodotto selezionato?')
+
+    if (confirmMessage) {
+        try {
+            const promise = await fetch('https://striveschool-api.herokuapp.com/api/product/'+selectedId, {
+                method: 'DELETE',
+                headers: {
+                    Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlMTA2ZTg4Zjc0MDAwMTQyODc1NDMiLCJpYXQiOjE2ODM4ODYxOTAsImV4cCI6MTY4NTA5NTc5MH0.SONJVTCh6D-4h1tQmGvDBURkzhteVbnm5cQqR7lb0kw',
+                    'Content-Type': 'application/json'
+                    }
+                })
+                if (promise.ok) {
+                    const deletedProduct = await promise.json();
+                    console.log(deletedProduct);
+                    // - - - - - - - - - - - - - - - destrutturazione prodotto selezionato (selectedProduct)
+                    const { _id, name, description, brand, imageUrl, price, userId, createdAt, updatedAt, __v } = deletedProduct;
+                    // - - - - - - - - - - - - - - - alert
+                    alert('Il prodotto '+deletedProduct.name+' è stato eliminato.');
+                    // - - - - - - - - - - - - - - - reindirizzamento ad homepage
+                    window.location.assign('./myIndex.html')
+                } else {
+                    throw new Error("Richiesta non a buon fine")
+                }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+}
