@@ -10,18 +10,36 @@ window.onload = async () => {
         document.getElementById('insert-btn').innerText = 'Modifica';
         document.getElementById('delete-btn').classList.remove("d-none");
 
-        // - - - - - - - - - - - - - - - provenienza da tasto "Modifica" - prepopolamento campi form
-        try {
-            
+        // - - - - - - - - - - - - - - - provenienza da tasto "Modifica" - parametrizzazione Url & method
+        const fetchUrl = 'https://striveschool-api.herokuapp.com/api/product/'+selectedId;
+        const fetchMethod = 'GET';
 
+        // - - - - - - - - - - - - - - - fetch parametrizzata
+        try {
+            const promise = await fetch(fetchUrl, {
+                method: fetchMethod,
+                //body:,
+                headers: {
+                    Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlMTA2ZTg4Zjc0MDAwMTQyODc1NDMiLCJpYXQiOjE2ODM4ODYxOTAsImV4cCI6MTY4NTA5NTc5MH0.SONJVTCh6D-4h1tQmGvDBURkzhteVbnm5cQqR7lb0kw'
+                    }
+            })
+            if (promise.ok) {
+                const selectedProduct = await promise.json();
+                console.log('prodotto selezionato:',selectedProduct);
+                // - - - - - - - - - - - - - - - prepopolamento campi form
+                const { _id, name, description, brand, imageUrl, price, userId, createdAt, updatedAt, __v } = selectedProduct;
+                document.getElementById('name').value = name;
+                document.getElementById('description').value = description;
+                document.getElementById('brand').value = brand;
+                document.getElementById('imageUrl').value = imageUrl;
+                document.getElementById('price').value = price;
+            } else {
+                throw new Error('Richiesta non a buon fine')
+            }
         }
         catch (error) {
             alert(error)
         }
-
-
-    } else {
-
     }
 }
 
