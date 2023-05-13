@@ -1,6 +1,11 @@
 
 // - - - - - - - - - - - - - - - fetch GET al window.onload
 window.onload = async () => {
+
+    // - - - - - - - - - - - - - - - variabile spinner Bootstrap (indicatore di caricamento)
+    var spinnerLoading = true;
+    console.log(spinnerLoading);
+
     try {
         const promise = await fetch('https://striveschool-api.herokuapp.com/api/product/', {
             headers: {
@@ -42,8 +47,18 @@ window.onload = async () => {
     catch (error) {
         alert(error)
     }
+
+    spinnerLoading = false;
+    console.log(spinnerLoading)
 }
 
 
-// - - - - - - - - - - - - - - - funzione modifica prodotto (modify) con assign su backoffice
+// - - - - - - - - - - - - - - - funzione spinner Bootstrap
 
+const spinnerLoading = loadingState => {
+    if (loadingState) {
+        document.getElementById('spinner').classList.remove('d-none')
+    } else {
+        document.getElementById('spinner').classList.add('d-none')
+    }
+}
