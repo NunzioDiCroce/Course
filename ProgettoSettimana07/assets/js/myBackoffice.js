@@ -43,6 +43,11 @@ window.onload = async () => {
     }
 }
 
+// - - - - - - - - - - - - - - - validazione campi form
+const validateFunction = () => {
+    document.getElementById('myForm').classList.add("validated")
+}
+
 
 // - - - - - - - - - - - - - - - creazione/modifica prodotto da backoffice
 const submitFunction = async (event) => {
@@ -101,7 +106,7 @@ const submitFunction = async (event) => {
                     // - - - - - - - - - - - - - - - destrutturazione prodotto selezionato (selectedProduct)
                     const { _id, name, description, brand, imageUrl, price, userId, createdAt, updatedAt, __v } = newProductPosted;
                     // - - - - - - - - - - - - - - - alert
-                    alert('Il prodotto '+newProductPosted.name+' è stato creato.');
+                    alert('Il prodotto '+newProductPosted.name+' è stato inserito.');
                     // - - - - - - - - - - - - - - - reindirizzamento ad homepage
                     window.location.assign('./myIndex.html')                    
                 } else {
