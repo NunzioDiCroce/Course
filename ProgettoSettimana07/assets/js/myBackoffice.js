@@ -44,8 +44,6 @@ window.onload = async () => {
 }
 
 
-
-
 // - - - - - - - - - - - - - - - creazione nuovo prodotto da form e fetch POST
 const submitFunction = async (event) => {
     event.preventDefault();
@@ -57,24 +55,46 @@ const submitFunction = async (event) => {
         imageUrl: document.getElementById('imageUrl').value,
         price: document.getElementById('price').value
     }
-    console.log('nuovo prodotto inserito', newProduct)
+    console.log('nuovo prodotto', newProduct)
 
-    try {
-        const promise = await fetch('https://striveschool-api.herokuapp.com/api/product/', {
-            method: "POST",
-            body: JSON.stringify(newProduct),
-            headers: {
-                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlMTA2ZTg4Zjc0MDAwMTQyODc1NDMiLCJpYXQiOjE2ODM4ODYxOTAsImV4cCI6MTY4NTA5NTc5MH0.SONJVTCh6D-4h1tQmGvDBURkzhteVbnm5cQqR7lb0kw",
-                "Content-Type": "application/json"
+    if (selectedId) {
+        try {
+            const promise = await fetch('https://striveschool-api.herokuapp.com/api/product/'+selectedId, {
+                method: 'PUT',
+                body: JSON.stringify(newProduct),
+                headers: {
+                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlMTA2ZTg4Zjc0MDAwMTQyODc1NDMiLCJpYXQiOjE2ODM4ODYxOTAsImV4cCI6MTY4NTA5NTc5MH0.SONJVTCh6D-4h1tQmGvDBURkzhteVbnm5cQqR7lb0kw",
+                    "Content-Type": "application/json"
+                    }
+                })
+                if (promise.ok) {
+                    const newProductPosted = await promise.json();
+                    console.log(newProductPosted)
+                } else {
+                    throw new Error("Richiesta non a buon fine")
                 }
-            })
-            if (promise.ok) {
-                const newProductPosted = await promise.json();
-                console.log(newProductPosted)
-            } else {
-                throw new Error("Richiesta non a buon fine")
-            }
-    } catch (error) {
-        alert(error)
-    } 
+        } catch (error) {
+            alert(error)
+        } 
+
+    } else {
+        try {
+            const promise = await fetch('https://striveschool-api.herokuapp.com/api/product/', {
+                method: 'POST',
+                body: JSON.stringify(newProduct),
+                headers: {
+                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVlMTA2ZTg4Zjc0MDAwMTQyODc1NDMiLCJpYXQiOjE2ODM4ODYxOTAsImV4cCI6MTY4NTA5NTc5MH0.SONJVTCh6D-4h1tQmGvDBURkzhteVbnm5cQqR7lb0kw",
+                    "Content-Type": "application/json"
+                    }
+                })
+                if (promise.ok) {
+                    const newProductPosted = await promise.json();
+                    console.log(newProductPosted)
+                } else {
+                    throw new Error("Richiesta non a buon fine")
+                }
+        } catch (error) {
+            alert(error)
+        } 
+    }
 }
