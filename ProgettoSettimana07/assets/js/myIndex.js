@@ -3,8 +3,11 @@
 window.onload = async () => {
 
     // - - - - - - - - - - - - - - - variabile spinner Bootstrap (indicatore di caricamento)
-    var spinnerLoading = true;
-    console.log(spinnerLoading);
+    var loading = true;
+    //console.log(loading);
+    //var spinner = document.getElementById('spinner');
+    //console.log(spinner);
+    document.getElementById('spinner').classList.remove('d-none')
 
     try {
         const promise = await fetch('https://striveschool-api.herokuapp.com/api/product/', {
@@ -48,17 +51,7 @@ window.onload = async () => {
         alert(error)
     }
 
-    spinnerLoading = false;
-    console.log(spinnerLoading)
-}
-
-
-// - - - - - - - - - - - - - - - funzione spinner Bootstrap
-
-const spinnerLoading = loadingState => {
-    if (loadingState) {
-        document.getElementById('spinner').classList.remove('d-none')
-    } else {
-        document.getElementById('spinner').classList.add('d-none')
-    }
+    loading = false;
+    //console.log(loading)
+    document.getElementById('spinner').classList.add('d-none')
 }

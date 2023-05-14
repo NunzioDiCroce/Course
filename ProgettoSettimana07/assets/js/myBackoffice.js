@@ -155,7 +155,7 @@ const deleteFunction = async () => {
 
 // - - - - - - - - - - - - - - - form reset
 const resetFunction = () => {
-    // - - - - - - - - - - - - - - - confirm funzione "elimina"
+    // - - - - - - - - - - - - - - - confirm funzione "reset"
     const confirmMessage = confirm('Cancellare i dati del prodotto?');
     if (confirmMessage) {
         document.getElementById('name').value='';
