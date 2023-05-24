@@ -52,7 +52,7 @@ console.log('Irpef: ' + lavoratore.tasseIrpef + '%' + ' ovvero ' + lavoratore.ge
 console.log('Reddito annuo netto: ' + lavoratore.getRedditoAnnuoNetto() + ' €');
 // - - - - - - - - - - - - - - - SOLUZIONE CON CLASSE ABSTRACT
 console.log('- - - - - - - - - - SOLUZIONE CON CLASSE ABSTRACT');
-// definizione classe astratta Dipendente
+// definizione classe astratta Contribuente
 var Contribuente = /** @class */ (function () {
     function Contribuente(_codice, _reddito, _inps, _irpef) {
         this.codice = _codice;
@@ -90,3 +90,59 @@ console.log('Imponibile annuo: ' + dipendente.getImponibile() + ' €');
 console.log('Inps: ' + dipendente.inps + '%' + ' ovvero ' + dipendente.getInps() + ' €');
 console.log('Irpef: ' + dipendente.irpef + '%' + ' ovvero ' + dipendente.getIrpef() + ' €');
 console.log('Reddito annuo netto: ' + dipendente.getUtile() + ' €');
+// - - - - - - - - - - - - - - - SOLUZIONE CON CLASSE ESTESA
+console.log('- - - - - - - - - - SOLUZIONE CON CLASSE ESTESA');
+// definizione classe Cittadino
+var Cittadino = /** @class */ (function () {
+    function Cittadino(_reddito, _inps, _irpef) {
+        this.reddito = _reddito;
+        this.inps = _inps;
+        this.irpef = _irpef;
+    }
+    Cittadino.prototype.getImponibile = function (codice) {
+        return (codice / 100) * this.reddito;
+    };
+    Cittadino.prototype.getInps = function (codice) {
+        return (this.inps / 100) * this.getImponibile(codice);
+    };
+    Cittadino.prototype.getIrpef = function (codice) {
+        return (this.irpef / 100) * this.getImponibile(codice);
+    };
+    Cittadino.prototype.getUtile = function (codice) {
+        return this.reddito - this.getInps(codice) - this.getIrpef(codice);
+    };
+    return Cittadino;
+}());
+// definizione classe CittadinoTipoA come estensione di Cittadino
+var CittadinoTipoA = /** @class */ (function (_super) {
+    __extends(CittadinoTipoA, _super);
+    function CittadinoTipoA(_codice, _reddito, _inps, _irpef) {
+        var _this = _super.call(this, _reddito, _inps, _irpef) || this;
+        _this.codice = _codice;
+        return _this;
+    }
+    CittadinoTipoA.prototype.getImponibile = function (codice) {
+        return (codice / 100) * this.reddito;
+    };
+    CittadinoTipoA.prototype.getInps = function (codice) {
+        return (this.inps / 100) * this.getImponibile(codice);
+    };
+    CittadinoTipoA.prototype.getIrpef = function (codice) {
+        return (this.irpef / 100) * this.getImponibile(codice);
+    };
+    CittadinoTipoA.prototype.getUtile = function (codice) {
+        return this.reddito - this.getInps(codice) - this.getIrpef(codice);
+    };
+    return CittadinoTipoA;
+}(Cittadino));
+// definizione variabili di input per simulazione classe estesa
+var codiceA = 90;
+// istanza classe CittadinoTipoA + console.log
+var cittadinoTipoA = new CittadinoTipoA(codiceA, 10000, 5, 5);
+console.log('Simulazione Cittadino Tipo A');
+console.log('Codice redditività: ' + cittadinoTipoA.codice + '%');
+console.log('Reddito annuo lordo: ' + cittadinoTipoA.reddito + ' €');
+console.log('Imponibile annuo: ' + cittadinoTipoA.getImponibile(codiceA) + ' €');
+console.log('Inps: ' + cittadinoTipoA.inps + '%' + ' ovvero ' + cittadinoTipoA.getInps(codiceA) + ' €');
+console.log('Irpef: ' + cittadinoTipoA.irpef + '%' + ' ovvero ' + cittadinoTipoA.getIrpef(codiceA) + ' €');
+console.log('Reddito annuo netto: ' + cittadinoTipoA.getUtile(codiceA) + ' €');
