@@ -146,3 +146,63 @@ console.log('Imponibile annuo: ' + cittadinoTipoA.getImponibile(codiceA) + ' €
 console.log('Inps: ' + cittadinoTipoA.inps + '%' + ' ovvero ' + cittadinoTipoA.getInps(codiceA) + ' €');
 console.log('Irpef: ' + cittadinoTipoA.irpef + '%' + ' ovvero ' + cittadinoTipoA.getIrpef(codiceA) + ' €');
 console.log('Reddito annuo netto: ' + cittadinoTipoA.getUtile(codiceA) + ' €');
+// - - - - - - - - - - - - - - - SOLUZIONE CON TRE OGGETTI
+console.log('- - - - - - - - - - SOLUZIONE CON TRE OGGETTI');
+// definizione classe Utente
+var Utente = /** @class */ (function () {
+    function Utente(_reddito, _inps, _irpef) {
+        this.reddito = _reddito;
+        this.inps = _inps;
+        this.irpef = _irpef;
+    }
+    return Utente;
+}());
+// definizione classe UtenteUno come estensione di Utente
+var UtenteUno = /** @class */ (function (_super) {
+    __extends(UtenteUno, _super);
+    function UtenteUno(_codice, _reddito, _inps, _irpef) {
+        var _this = _super.call(this, _reddito, _inps, _irpef) || this;
+        _this.codice = _codice;
+        return _this;
+    }
+    UtenteUno.prototype.getImponibile = function () {
+        return (this.codice / 100) * this.reddito;
+    };
+    UtenteUno.prototype.getInps = function () {
+        return (this.inps / 100) * this.getImponibile();
+    };
+    UtenteUno.prototype.getIrpef = function () {
+        return (this.irpef / 100) * this.getImponibile();
+    };
+    UtenteUno.prototype.getUtile = function () {
+        return this.reddito - this.getInps() - this.getIrpef();
+    };
+    return UtenteUno;
+}(Utente));
+// istanza (primo oggetto) utenteUno + console.log
+var utenteUno = new UtenteUno(10, 10000, 5, 5);
+console.log('UTENTE UNO');
+console.log('Codice redditività: ' + utenteUno.codice + '%');
+console.log('Reddito annuo lordo: ' + utenteUno.reddito + ' €');
+console.log('Imponibile annuo: ' + utenteUno.getImponibile() + ' €');
+console.log('Inps: ' + utenteUno.inps + '%' + ' ovvero ' + utenteUno.getInps() + ' €');
+console.log('Irpef: ' + utenteUno.irpef + '%' + ' ovvero ' + utenteUno.getIrpef() + ' €');
+console.log('Reddito annuo netto: ' + utenteUno.getUtile() + ' €');
+// istanza (secondo oggetto) utenteUno + console.log
+var utenteDue = new UtenteUno(20, 20000, 10, 10);
+console.log('UTENTE DUE');
+console.log('Codice redditività: ' + utenteDue.codice + '%');
+console.log('Reddito annuo lordo: ' + utenteDue.reddito + ' €');
+console.log('Imponibile annuo: ' + utenteDue.getImponibile() + ' €');
+console.log('Inps: ' + utenteDue.inps + '%' + ' ovvero ' + utenteDue.getInps() + ' €');
+console.log('Irpef: ' + utenteDue.irpef + '%' + ' ovvero ' + utenteDue.getIrpef() + ' €');
+console.log('Reddito annuo netto: ' + utenteDue.getUtile() + ' €');
+// istanza (terzo oggetto) utenteUno + console.log
+var utenteTre = new UtenteUno(30, 30000, 15, 15);
+console.log('UTENTE TRE');
+console.log('Codice redditività: ' + utenteTre.codice + '%');
+console.log('Reddito annuo lordo: ' + utenteTre.reddito + ' €');
+console.log('Imponibile annuo: ' + utenteTre.getImponibile() + ' €');
+console.log('Inps: ' + utenteTre.inps + '%' + ' ovvero ' + utenteTre.getInps() + ' €');
+console.log('Irpef: ' + utenteTre.irpef + '%' + ' ovvero ' + utenteTre.getIrpef() + ' €');
+console.log('Reddito annuo netto: ' + utenteTre.getUtile() + ' €');
