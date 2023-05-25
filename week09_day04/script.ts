@@ -32,6 +32,8 @@ class Capo {
     }
 }
 
+// - - - - - - - - - - - - - - - SOLUZIONE ISTANZE A MANO
+console.log('- - - - - - - - - - SOLUZIONE ISTANZE A MANO');
 // istanze (oggetti) di classe "Capo"
 // istanza 1
 let capoA = new Capo (1, 2121, 'primavera', 'cardigan', 1231, 5, 'nero', 18.50, 22.57, 'negozio', 45)
@@ -59,11 +61,27 @@ console.log(capoE);
 console.log('Saldo capo = ' + capoE.getSaldoCapo() + '€');
 console.log('Acquisto capo = ' + capoE.getAcquistoCapo() + '€');
 
-/*window.onload = async () => {
+
+// - - - - - - - - - - - - - - - SOLUZIONE CON FETCH
+console.log('- - - - - - - - - - SOLUZIONE CON FETCH');
+window.onload = async () => {
     try {
-        let promise = await fetch('Abbigliamento.json')
+        let promise = await fetch('Abbigliamento.json');
+        if (promise.ok) {
+            let capi = await promise.json();
+            console.log(capi);
+            for(let i = 0; i < capi.length; i++) {
+                let capo = new Capo(capi[i].id, capi[i].codprod, capi[i].collezione, capi[i].capo, capi[i].modello, capi[i].quantita,capi[i].colore, capi[i].prezzoIvaEsclusa, capi[i].prezzoIvaInclusa, capi[i].disponibile, capi[i].saldo);
+                console.log(capo);
+                console.log('Saldo capo = ' + capo.getSaldoCapo() + '€');
+                console.log('Acquisto capo = ' + capo.getAcquistoCapo() + '€');
+                console.log(typeof capo.getSaldoCapo());
+            }
+        } else {
+            throw new Error('Richiesta non a buon fine')
+        }
     }
     catch(error) {
         alert(error)
     }
-}*/
+}
