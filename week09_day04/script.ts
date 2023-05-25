@@ -32,8 +32,8 @@ class Capo {
     }
 }
 
-// - - - - - - - - - - - - - - - SOLUZIONE ISTANZE A MANO
-console.log('- - - - - - - - - - SOLUZIONE ISTANZE A MANO');
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SOLUZIONE CON ISTANZE A MANO
+console.log('- - - - - - - - - - - - - - - - - - - - - - - - - SOLUZIONE CON ISTANZE A MANO');
 // istanze (oggetti) di classe "Capo"
 // istanza 1
 let capoA = new Capo (1, 2121, 'primavera', 'cardigan', 1231, 5, 'nero', 18.50, 22.57, 'negozio', 45)
@@ -62,8 +62,8 @@ console.log('Saldo capo = ' + capoE.getSaldoCapo() + '€');
 console.log('Acquisto capo = ' + capoE.getAcquistoCapo() + '€');
 
 
-// - - - - - - - - - - - - - - - SOLUZIONE CON FETCH
-console.log('- - - - - - - - - - SOLUZIONE CON FETCH');
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SOLUZIONE CON FETCH
+console.log('- - - - - - - - - - - - - - - - - - - - - - - - - SOLUZIONE CON FETCH');
 window.onload = async () => {
     try {
         let promise = await fetch('Abbigliamento.json');

@@ -58,8 +58,8 @@ var Capo = /** @class */ (function () {
     };
     return Capo;
 }());
-// - - - - - - - - - - - - - - - SOLUZIONE ISTANZE A MANO
-console.log('- - - - - - - - - - SOLUZIONE ISTANZE A MANO');
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SOLUZIONE CON ISTANZE A MANO
+console.log('- - - - - - - - - - - - - - - - - - - - - - - - - SOLUZIONE CON ISTANZE A MANO');
 // istanze (oggetti) di classe "Capo"
 // istanza 1
 var capoA = new Capo(1, 2121, 'primavera', 'cardigan', 1231, 5, 'nero', 18.50, 22.57, 'negozio', 45);
@@ -86,8 +86,8 @@ var capoE = new Capo(5, 6111, 'primavera', 'maglia', 1021, 5, 'blu', 11, 13.42, 
 console.log(capoE);
 console.log('Saldo capo = ' + capoE.getSaldoCapo() + '€');
 console.log('Acquisto capo = ' + capoE.getAcquistoCapo() + '€');
-// - - - - - - - - - - - - - - - SOLUZIONE CON FETCH
-console.log('- - - - - - - - - - SOLUZIONE CON FETCH');
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SOLUZIONE CON FETCH
+console.log('- - - - - - - - - - - - - - - - - - - - - - - - - SOLUZIONE CON FETCH');
 window.onload = function () { return __awaiter(_this, void 0, void 0, function () {
     var promise, capi, i, capo, error_1;
     return __generator(this, function (_a) {
