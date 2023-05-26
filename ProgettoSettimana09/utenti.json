@@ -1,0 +1,22 @@
+[
+    {
+        "credito": 10,
+        "numeroChiamate": 2,
+        "tariffa": 0.2,
+        "utente": "Primo utente"
+    },
+
+    {
+        "credito": 20,
+        "numeroChiamate": 4,
+        "tariffa": 0.3,
+        "utente": "Secondo utente"
+    },
+
+    {
+        "credito": 30,
+        "numeroChiamate": 8,
+        "tariffa": 0.4,
+        "utente": "Terzo utente"
+    }
+]
