@@ -64,6 +64,10 @@ console.log('Acquisto capo = ' + capoE.getAcquistoCapo() + '€');
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SOLUZIONE CON FETCH
 console.log('- - - - - - - - - - - - - - - - - - - - - - - - - SOLUZIONE CON FETCH');
+
+let saldoCapo:number;
+let acquistoCapo:number;
+
 window.onload = async () => {
     try {
         let promise = await fetch('Abbigliamento.json');
@@ -73,8 +77,10 @@ window.onload = async () => {
             for(let i = 0; i < capi.length; i++) {
                 let capo = new Capo(capi[i].id, capi[i].codprod, capi[i].collezione, capi[i].capo, capi[i].modello, capi[i].quantita,capi[i].colore, capi[i].prezzoIvaEsclusa, capi[i].prezzoIvaInclusa, capi[i].disponibile, capi[i].saldo);
                 console.log(capo);
-                console.log('Saldo capo = ' + capo.getSaldoCapo() + '€');
-                console.log('Acquisto capo = ' + capo.getAcquistoCapo() + '€');
+                let saldoCapo:any = capo.getSaldoCapo();
+                let acquistoCapo:any = capo.getAcquistoCapo();
+                console.log('Saldo capo = ' + saldoCapo + '€');
+                console.log('Acquisto capo = ' + acquistoCapo + '€');
                 console.log(typeof capo.getSaldoCapo());
             }
         } else {

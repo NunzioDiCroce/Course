@@ -88,8 +88,10 @@ console.log('Saldo capo = ' + capoE.getSaldoCapo() + '€');
 console.log('Acquisto capo = ' + capoE.getAcquistoCapo() + '€');
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SOLUZIONE CON FETCH
 console.log('- - - - - - - - - - - - - - - - - - - - - - - - - SOLUZIONE CON FETCH');
+var saldoCapo;
+var acquistoCapo;
 window.onload = function () { return __awaiter(_this, void 0, void 0, function () {
-    var promise, capi, i, capo, error_1;
+    var promise, capi, i, capo, saldoCapo_1, acquistoCapo_1, error_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
@@ -105,8 +107,10 @@ window.onload = function () { return __awaiter(_this, void 0, void 0, function (
                 for (i = 0; i < capi.length; i++) {
                     capo = new Capo(capi[i].id, capi[i].codprod, capi[i].collezione, capi[i].capo, capi[i].modello, capi[i].quantita, capi[i].colore, capi[i].prezzoIvaEsclusa, capi[i].prezzoIvaInclusa, capi[i].disponibile, capi[i].saldo);
                     console.log(capo);
-                    console.log('Saldo capo = ' + capo.getSaldoCapo() + '€');
-                    console.log('Acquisto capo = ' + capo.getAcquistoCapo() + '€');
+                    saldoCapo_1 = capo.getSaldoCapo();
+                    acquistoCapo_1 = capo.getAcquistoCapo();
+                    console.log('Saldo capo = ' + saldoCapo_1 + '€');
+                    console.log('Acquisto capo = ' + acquistoCapo_1 + '€');
                     console.log(typeof capo.getSaldoCapo());
                 }
                 return [3 /*break*/, 4];
