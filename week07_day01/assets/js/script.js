@@ -27,7 +27,12 @@ firstUser.benchmark();
 
 // - - - - - - - - - - - - - - - Esercizio 2 - - - - - - - - - - - - - - -
 
+// definizione classe
 class Pet {
+    petName;
+    ownerName;
+    species;
+    breed;
     constructor (_petName, _ownerName, _species, _breed) {
         this.petName = _petName;
         this.ownerName = _ownerName;
@@ -43,6 +48,8 @@ class Pet {
     }
 }
 
+// soluzione esercizio 2 con verifica uguaglianza valore proprietà ownerName
+
 var firstPet = new Pet ('Pippo', 'Mario', 'Cane', 'Labrador');
 var secondPet = new Pet ('Pluto', 'Mario', 'Cane', 'Bassotto');
 console.log(firstPet);
@@ -50,5 +57,46 @@ console.log(secondPet);
 firstPet.sameOwner();
 
 
-// - - - - - - - - - - - - - - - Esercizio 2: JS FORM - - - - - - - - - - - - - - -
+// soluzione esercizio 2 con istanze di classe tramite form
+
+// definizione variabili per manipolazione DOM
+var petName = document.querySelector('#petName');
+console.log(petName);
+var ownerName = document.querySelector('#ownerName');
+console.log(ownerName);
+var species = document.querySelector('#species');
+console.log(species);
+var breed = document.querySelector('#breed');
+console.log(breed);
+var inserisci = document.querySelector('#inserisci');
+console.log(inserisci);
+var elenco = document.querySelector('#elenco');
+console.log(elenco);
+
+// definizione array
+var animali = [];
+
+// definizione funzione per:
+// 1. creare oggetto animale
+// 2. inserire l'oggetto in array
+// 3. scrivere l'oggetto in elenco DOM
+inserisci.addEventListener ('click', (event) => {
+    event.preventDefault();
+    if (petName.value != '' && ownerName.value != '' && species.value != '' && breed.value != '' ) {
+        // istanza classe
+        let newPet = new Pet (petName.value, ownerName.value, species.value, breed.value);
+        // inserimento istanza in array
+        animali.push(newPet);
+        console.log(animali);
+        // scrittura nel DOM
+        elenco.innerHTML += `<li>ANIMALE: ${newPet.petName}; PADRONE: ${newPet.ownerName}; SPECIE: ${newPet.species}; RAZZA: ${newPet.breed}</li>`
+        petName.value = '';
+        ownerName.value = '';
+        species.value = '';
+        breed.value = '';
+    } else {
+        elenco.innerHTML = `Compilare tutti i campi !`
+    }
+})
+
 
