@@ -1,0 +1,19 @@
+// definzione variabile default font family
+$defaultFont: Arial, Helvetica, sans-serif;
+
+// definzione variabili font size
+$xlFont: 96px;
+$largeFont: 48px;
+$mediumFont: 24px;
+$normalFont: 16px;
+$smallFont: 12px;
+
+// mixin titolo principale
+@mixin title-big {
+  font-size: $xlFont;
+  font-weight: 900;
+  letter-spacing: -6px;
+  line-height: 0.95;
+  margin-bottom: 1rem;
+  color: darken($heroColor, 25);
+}
