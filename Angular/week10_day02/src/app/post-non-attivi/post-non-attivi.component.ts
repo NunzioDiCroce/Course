@@ -14,10 +14,10 @@ import { RecuperaPostService } from '../services/recupera-post.service';
 export class PostNonAttiviComponent implements OnInit {
 
   // definizione array come da INTERFACE importata
-  post: Post[] = [];
+  posts: Post[] = [];
 
   constructor(private recuperaPostService: RecuperaPostService) {
-    this.recuperaPostService.recuperaPost().then((data) => {this.post = data})
+    this.recuperaPostService.recuperaPost().then((data) => {this.posts = data})
   }
 
   ngOnInit(): void {

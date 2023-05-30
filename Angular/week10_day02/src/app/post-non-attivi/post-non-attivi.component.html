@@ -2,14 +2,16 @@
 <!-- card -->
 <div class="container">
 <div class="row">
-  <div class="col-12">
-    <div class="card">
+  <div class="col-12" *ngFor="let item of posts">
+    <div class="card mb-3" *ngIf="item.active === false">
       <div class="card-header">
-        Featured
+        Post
       </div>
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">{{ item.title }}</h5>
+        <p class="card-text">{{ item.body }}</p>
+        <p class="card-text"><b>id:</b> {{ item.id }}</p>
+        <p class="card-text"><b>active:</b> {{ item.active }}</p>
       </div>
     </div>
   </div>

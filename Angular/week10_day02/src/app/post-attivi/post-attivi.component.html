@@ -1,1 +1,19 @@
-<p>post-attivi works!</p>
+
+<!-- card -->
+<div class="container">
+  <div class="row">
+    <div class="col-12" *ngFor="let item of posts">
+      <div class="card mb-3" *ngIf="item.active === true">
+        <div class="card-header">
+          Post
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ item.title }}</h5>
+          <p class="card-text">{{ item.body }}</p>
+          <p class="card-text"><b>id:</b> {{ item.id }}</p>
+          <p class="card-text"><b>active:</b> {{ item.active }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
