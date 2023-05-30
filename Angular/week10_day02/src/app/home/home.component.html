@@ -1,1 +1,12 @@
-<p>home works!</p>
+
+<!-- inserisco i due button con la funzionalità di routing -->
+<div class="container">
+  <div class="row d-flex">
+
+    <!-- modifico <a> per implementare il routing -->
+    <div class="col-2"><a class="btn btn-primary" [routerLink]="['/postAttivi']" routerLinkActive="active" role="button">Post attivi</a></div>
+
+    <!-- modifico <a> per implementare il routing -->
+    <div class="col-2"><a class="btn btn-primary" [routerLink]="['/postNonAttivi']" routerLinkActive="active" role="button">Post non attivi</a></div>
+  </div>
+</div>
