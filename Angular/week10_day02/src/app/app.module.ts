@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PostAttiviComponent } from './post-attivi/post-attivi.component';
 import { PostNonAttiviComponent } from './post-non-attivi/post-non-attivi.component';
+import { CardComponent } from './card/card.component';
 
 // dichiaro array routes per implementare il ROUTING
 const routes: Route[] = [
@@ -31,7 +32,8 @@ const routes: Route[] = [
     AppComponent,
     HomeComponent,
     PostAttiviComponent,
-    PostNonAttiviComponent
+    PostNonAttiviComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

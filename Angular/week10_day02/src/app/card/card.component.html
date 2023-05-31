@@ -1,0 +1,37 @@
+
+<!-- parte di card renderizzata dal PARENT
+<div class="container">
+  <div class="row">
+    <div class="col-12" *ngFor="let item of posts">
+
+      dichiarazione div CHILD in PARENT con ngIf ed oggetto inviato in @Input al CHILD
+      <app-card *ngIf="item.active === false" [postFromParent] = item> -->
+
+<!-- parte di card dopo ngFor & ngIf NON renderizzata dal PARENT ma RENDERIZZATA dal CHILD -->
+        <div class="card mb-3" [ngClass]="{
+           'bg-warning': postFromParent.type === 'news',
+           'bg-secondary': postFromParent.type === 'politic',
+           'bg-info': postFromParent.type === 'education'
+        }">
+        <div class="card-header">
+          Post
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ postFromParent.title }}</h5>
+          <p class="card-text">{{ postFromParent.body }}</p>
+          <p class="card-text"><b>id:</b> {{ postFromParent.id }}</p>
+          <p class="card-text"><b>active:</b> {{ postFromParent.active }}</p>
+          <p class="card-text"><b>type:</b> {{ postFromParent.type }}</p>
+
+
+          <!-- PARENT CONTENT INJECTION into child -->
+          <ng-content></ng-content>
+
+<!-- parte di card renderizzata dal PARENT
+          <button type="button" class="btn btn-primary" (click)="item.active = true">Attiva</button>
+      </app-card> -->
+        </div>
+      </div>
+    <!-- </div>
+  </div>
+</div> -->

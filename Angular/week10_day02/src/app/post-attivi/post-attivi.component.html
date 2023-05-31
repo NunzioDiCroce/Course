@@ -1,9 +1,14 @@
 
-<!-- card -->
+<!-- parte di card renderizzata dal PARENT -->
 <div class="container">
   <div class="row">
     <div class="col-12" *ngFor="let item of posts">
-      <div class="card mb-3" *ngIf="item.active === true">
+
+      <!-- dichiarazione div CHILD in PARENT con ngIf ed oggetto inviato in @Input al CHILD -->
+      <app-card *ngIf="item.active === true" [postFromParent] = item>
+
+<!-- parte di card dopo ngFor & ngIf NON renderizzata dal PARENT ma RENDERIZZATA dal CHILD -->
+        <!-- <div class="card mb-3">
         <div class="card-header">
           Post
         </div>
@@ -12,8 +17,14 @@
           <p class="card-text">{{ item.body }}</p>
           <p class="card-text"><b>id:</b> {{ item.id }}</p>
           <p class="card-text"><b>active:</b> {{ item.active }}</p>
-        </div>
-      </div>
+          <p class="card-text"><b>type:</b> {{ item.type }}</p> -->
+
+
+<!-- parte di card renderizzata dal PARENT -->
+          <button type="button" class="btn btn-primary" (click)="disattiva(item.id)">Disattiva</button>
+      </app-card>
+        <!-- </div>
+      </div> -->
     </div>
   </div>
-  </div>
+</div>
