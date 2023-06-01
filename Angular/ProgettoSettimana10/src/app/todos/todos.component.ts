@@ -30,7 +30,7 @@ export class TodosComponent implements OnInit {
 
   // definizione metodo che invoca il metodo del SERVICE passando come paramentro il valore da DATABINDING
   inserisci(_title:string) {
-    this.TodosSrv.todoPush(this.title);
+    this.TodosSrv.todoPush(this.title)
   }
 
   // definizione metodo che invoca il metodo del SERVICE per aggiornare l'object nell'array. Il metodo prevede 2 parametri: il primo è l'id dell'object, il secondo è l'indice dell'array necessarie per il map che effettuerà il metodo del SERVICE. Il metodo del component aggiorna lo stato da true a false ed effettua lo splice per sostituire l'oggetto modificato.
@@ -44,4 +44,5 @@ export class TodosComponent implements OnInit {
   completato(_id:number) {
     this.TodosSrv.todoUpdate(_id)
   }
+
 }
