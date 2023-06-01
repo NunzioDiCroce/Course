@@ -9,11 +9,11 @@
     </div>
   </div>
   <div class="row">
-    <div *ngFor="let item of todosArray">
+    <div *ngFor="let item of todosArray, let arrayIndex = index">
     <div class="col-6" *ngIf="item.completed === false">
       <div class="row">
         <div class="col-6"><h5>{{item.id}} {{item.title}} {{item.completed}}</h5></div>
-        <div class="col-3"><button type="button" class="btn btn-success me-2 mb-2">Completato</button></div>
+        <div class="col-3"><button type="button" class="btn btn-success me-2 mb-2" (click)="completato(item.id, arrayIndex)">Completato</button></div>
       </div>
       <p></p>
     </div>

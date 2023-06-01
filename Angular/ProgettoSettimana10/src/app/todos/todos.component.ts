@@ -32,4 +32,10 @@ export class TodosComponent implements OnInit {
     this.TodosSrv.todoPush(this.title);
   }
 
+  // definizione metodo che invoca il metodo del SERVICE per aggiornare l'object nell'array. Il metodo prevede 2 parametri: il primo è l'id dell'object, il secondo è l'indice dell'array necessarie per il map che effettuerà il metodo del SERVICE. Il metodo del component aggiorna lo stato da true a false ed effettua lo splice per sostituire l'oggetto modificato.
+  completato(_id:number, _arrayIndex:number) {
+    this.TodosSrv.todoUpdate({completed:false}, _id);
+    this.todosArray.splice(_arrayIndex, 1)
+  }
+
 }
