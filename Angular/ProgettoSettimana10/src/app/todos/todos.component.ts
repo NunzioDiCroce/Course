@@ -14,7 +14,7 @@ import { TodosService } from '../services/todos.service';
 export class TodosComponent implements OnInit {
 
     // definizione array vuoto
-    todosArray: Todo[] = [];
+    todosArray!: Todo[];
 
     // defininzione variabile per DATABINDING
     title!: string;
@@ -24,7 +24,8 @@ export class TodosComponent implements OnInit {
 
   ngOnInit(): void {
     // visto che il metodo "inserisci" invoca il metodo todoPush del SERVICE che a sua volta effettua il PUSH dell'oggetto nell'array del SERVICE, è necessario dire ARRAY COMPONENT = ARRAY SERVICE
-    this.todosArray = this.TodosSrv.todosArray
+    //this.todosArray = this.TodosSrv.todosArray
+    this.todosArray = this.TodosSrv.recuperaTodos()
   }
 
   // definizione metodo che invoca il metodo del SERVICE passando come paramentro il valore da DATABINDING
@@ -33,9 +34,14 @@ export class TodosComponent implements OnInit {
   }
 
   // definizione metodo che invoca il metodo del SERVICE per aggiornare l'object nell'array. Il metodo prevede 2 parametri: il primo è l'id dell'object, il secondo è l'indice dell'array necessarie per il map che effettuerà il metodo del SERVICE. Il metodo del component aggiorna lo stato da true a false ed effettua lo splice per sostituire l'oggetto modificato.
-  completato(_id:number, _arrayIndex:number) {
+  /*completato(_id:number, _arrayIndex:number) {
     this.TodosSrv.todoUpdate({completed:false}, _id);
-    this.todosArray.splice(_arrayIndex, 1)
-  }
+    this.todosArray.splice(_arrayIndex, 1);
+    console.log(this.todosArray)
+  }*/
 
+  // definizione metodo che invoca metodo SERVICE per aggiornare array object property
+  completato(_id:number) {
+    this.TodosSrv.todoUpdate(_id)
+  }
 }
