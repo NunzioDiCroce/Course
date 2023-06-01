@@ -9,6 +9,7 @@
     </div>
   </div>
   <div class="row">
+    <div *ngIf="todosArray.length != 0 else pippo">
     <div *ngFor="let item of todosArray">
       <div class="col-6" *ngIf="item.completed === false">
         <div class="row">
@@ -17,5 +18,7 @@
         </div>
       </div>
     </div>
+    </div>
+    <ng-template #pippo>Oops, non ci sono task</ng-template>
   </div>
 </div>
