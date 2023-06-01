@@ -17,16 +17,19 @@ export class TodosComponent implements OnInit {
     todosArray: Todo[] = [];
 
     // defininzione variabile per DATABINDING
-    title: string | undefined;
+    title!: string;
 
   // dichiaro nel constructor del COMPONENT un parametro tipo SERVICE
   constructor(private TodosSrv: TodosService) { }
 
   ngOnInit(): void {
+    // visto che il metodo "inserisci" invoca il metodo todoPush del SERVICE che a sua volta effettua il PUSH dell'oggetto nell'array del SERVICE, è necessario dire ARRAY COMPONENT = ARRAY SERVICE
+    this.todosArray = this.TodosSrv.todosArray
   }
 
-  inserisci() {
-    this.TodosSrv.todoPush()
+  // definizione metodo che invoca il metodo del SERVICE passando come paramentro il valore da DATABINDING
+  inserisci(_title:string) {
+    this.TodosSrv.todoPush(this.title);
   }
 
 }

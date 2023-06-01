@@ -13,14 +13,16 @@ export class TodosService {
 
   constructor() { }
 
-  recuperaTodos = () => {
-    return this.todosArray
-  }
-
-  todoPush = () => {
-    let newTodo = {id: this.todosArray.length+1, title: 'test', completed: false}
+  // definizione metodo per PUSH nuovo oggetto in array dei todos
+  todoPush = (_title:string) => {
+    let newTodo = {id: this.todosArray.length+1, title: _title, completed: false}
     this.todosArray.push(newTodo);
     console.log(this.todosArray)
+  }
+
+
+  recuperaTodos = () => {
+    return this.todosArray
   }
 
 }
