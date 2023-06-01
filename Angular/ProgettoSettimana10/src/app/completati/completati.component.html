@@ -1,1 +1,13 @@
-<p>completati works!</p>
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let item of todosArray">
+    <div class="col-6" *ngIf="item.completed === true">
+      <div class="row">
+        <div class="col-6"><h5>{{item.id}} {{item.title}} {{item.completed}}</h5></div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+</div>
+
