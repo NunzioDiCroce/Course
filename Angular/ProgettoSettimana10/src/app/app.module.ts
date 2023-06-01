@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+// import FormsModule per getire i FORM
+import { FormsModule } from '@angular/forms';
+
 // importo Route, RouterModule per ROUTING
 import { Route, RouterModule } from '@angular/router';
 
@@ -30,7 +33,9 @@ const routes: Route[] = [
   imports: [
     BrowserModule,
     // metodo forRoot su RouterModule con parametro routes per ROUTING
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    // inserisco FormsModule per gestire i FORM
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
