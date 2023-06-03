@@ -50,7 +50,6 @@ export class TodosComponent implements OnInit {
   completato(_id:number) {
     this.loadingCompletato = true;
     setTimeout( () => { this.TodosSrv.todoUpdate(_id), this.loadingCompletato = false }, 2000)
-    //this.TodosSrv.todoUpdate(_id)
   }
 
 }
