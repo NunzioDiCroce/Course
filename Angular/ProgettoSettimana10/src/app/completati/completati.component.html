@@ -1,13 +1,37 @@
 
 <div class="container">
-  <div class="row">
-    <div *ngFor="let item of todosArray">
-    <div class="col-6" *ngIf="item.completed === true">
-      <div class="row">
-        <div class="col-6"><h5>{{item.id}} {{item.title}} {{item.completed}}</h5></div>
-      </div>
-      <p></p>
+
+  <div class="row mb-3">
+    <div class="col-6">
+
     </div>
+    <div class="col-2">
+
+    </div>
+
+
+    <div class="col-3" *ngIf="loadingRecuperaTodos === true">Verifica task in corso...</div>
   </div>
+
+  <div class="row">
+    <div *ngIf="todosArray.length != 0 else noTask">
+
+      <div class="mb-3">Ci sono task censiti, verificare le sezioni "todos" e "completati"</div>
+
+      <div *ngFor="let item of todosArray">
+        <div class="col-6" *ngIf="item.completed === true">
+          <div class="row">
+            <div class="col-6"><h5>{{item.id}} {{item.title}} </h5></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <ng-template class="col-6" #noTask>Non ci sono task censiti</ng-template>
+
+
+  </div>
+
 </div>
 

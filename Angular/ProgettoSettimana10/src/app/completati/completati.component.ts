@@ -13,16 +13,19 @@ import { TodosService } from '../services/todos.service';
 })
 export class CompletatiComponent implements OnInit {
 
-    // definizione array vuoto
-    todosArray!: Todo[];
+  // definizione array vuoto
+  todosArray!: Todo[];
+
+  // definizione variabili per setTimeout
+  loadingRecuperaTodos: boolean = false;
 
   // dichiaro nel constructor del COMPONENT un parametro tipo SERVICE
   constructor(private TodosSrv: TodosService) { }
 
   ngOnInit(): void {
-    // visto che il metodo "inserisci" invoca il metodo todoPush del SERVICE che a sua volta effettua il PUSH dell'oggetto nell'array del SERVICE, è necessario dire ARRAY COMPONENT = ARRAY SERVICE
-    //this.todosArray = this.TodosSrv.todosArray
-    this.todosArray = this.TodosSrv.recuperaTodos()
+    // gestione setTimeout OnInit
+    this.loadingRecuperaTodos = true;
+    setTimeout( () => { this.todosArray = this.TodosSrv.recuperaTodos(), this.loadingRecuperaTodos = false }, 2000)
   }
 
 }
