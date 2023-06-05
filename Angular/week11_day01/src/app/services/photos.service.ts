@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
 
 // Observable, Subscription, throwError import
-import { Observable, Subscription, throwError } from 'rxjs';
+import { Observable, Subscription, throwError, Subject } from 'rxjs';
 
 
 @Injectable({
@@ -20,6 +20,9 @@ export class PhotosService {
 
   // definizione variabile per contare le foto preferite
   favouritesPhotos:number = 0;
+
+  // definizione Subject
+  favouritesSubject = new Subject<number>();
 
   constructor( private http:HttpClient ) { } // inserimento in constructor del paramentro HttpClient
 
@@ -40,9 +43,9 @@ export class PhotosService {
 
   // definizione metodo per incrementare il numero di foto preferite
   addToFavourites() {
-    this.favouritesPhotos ++
+    this.favouritesPhotos ++;
+    this.favouritesSubject.next(this.favouritesPhotos)
   }
-
 
   // definizione metodo gestione errori e relativo messaggio
   errorMessage (status:number) {
