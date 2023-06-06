@@ -1,0 +1,52 @@
+<div class="container">
+
+
+
+
+  <!-- TEMPLATE DRIVEN FORM  -->
+  <div class="row mb-5">
+    <div class="col">
+      <h2>TEMPLATE DRIVEN FORM</h2><hr>
+
+      <!-- FORM -->
+      <form (ngSubmit)="createHero()">
+
+        <label for="name">NAME</label>
+        <input type="text" id="name" name="name" class="form-control" required [(ngModel)]="superHeroForm.name" #name="ngModel">
+        <p *ngIf="name.invalid && name.touched">Campo obbligatorio!</p>
+
+        <label for="alterego">ALTEREGO</label>
+        <input type="text" id="alterego" name="alterego" class="form-control" required [(ngModel)]="superHeroForm.alterego" #alterego="ngModel">
+        <p *ngIf="alterego.invalid && alterego.touched">Campo obbligatorio!</p>
+
+        <label for="power">POWER</label>
+        <select id="power" name="power" class="form-select" required [(ngModel)]="superHeroForm.power" #power="ngModel">
+          <option value=""></option>
+          <option value="superPotereA">Superpotere A</option>
+          <option value="superPotereB">Superpotere B</option>
+          <option value="superPotereC">Superpotere C</option>
+          <option value="superPotereD">Superpotere D</option>
+          <option value="superPotereE">Superpotere E</option>
+        </select>
+        <p *ngIf="power.invalid && power.touched">Campo obbligatorio. Scegliere un superpotere!</p>
+
+        <label for="enemy">ENEMY</label>
+        <input type="text" id="enemy" name="enemy" class="form-control" required [(ngModel)]="superHeroForm.enemy" #enemy="ngModel">
+        <p *ngIf="enemy.invalid && enemy.touched">Campo obbligatorio con lunghezza massima di 10 caratteri!</p>
+
+        <label for="planet">PLANET</label>
+        <input type="text" id="planet" name="planet" class="form-control" required [(ngModel)]="superHeroForm.planet" #planet="ngModel">
+        <p *ngIf="planet.invalid && planet.touched">Campo obbligatorio con lunghezza minima di 5 caratteri!</p>
+
+        <label for="weakness">WEAKNESS</label>
+        <input type="text" id="weakness" name="weakness" class="form-control" [(ngModel)]="superHeroForm.weakness">
+        <p></p>
+
+        <button type="submit" class="btn btn-success" [disabled]="form.invalid">CREATE SUPERHERO</button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
