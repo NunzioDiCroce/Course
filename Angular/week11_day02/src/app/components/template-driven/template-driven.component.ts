@@ -22,8 +22,6 @@ export class TemplateDrivenComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // - - - - - - - - - - - - - - - - - - - - TEMPLATE DRIVEN FORM - - - - - - - - - - - - - - - - - - - -
-
   // definizione NgForm
   form!: NgForm;
 

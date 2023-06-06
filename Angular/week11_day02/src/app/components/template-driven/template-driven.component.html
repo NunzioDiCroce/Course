@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container mb-5">
   <div class="row">
     <div class="col">
-      <h2>TEMPLATE DRIVEN FORM</h2>
+      <h4>TEMPLATE DRIVEN FORM</h4><hr>
     </div>
   </div>
   <div class="row">
@@ -34,12 +34,12 @@
               <div class="mb-3">
                   <label for="enemy" class="form-label">NEMICO</label>
                   <input type="text" class="form-control" id="enemy" name="enemy" placeholder="Inserisci nemico"
-                      aria-describedby="enemy" required [(ngModel)]="superHeroForm.enemy" #enemy="ngModel">
+                      aria-describedby="enemy" required maxlength="10" [(ngModel)]="superHeroForm.enemy" #enemy="ngModel">
                   <div class="form-text text-danger" *ngIf="enemy.invalid && enemy.touched">Campo obbligatorio con lunghezza massima di 10 caratteri</div>
               </div>
               <div class="mb-3">
                   <label for="planet" class="form-label">PIANETA</label>
-                  <input type="text" class="form-control" id="planet" name="planet" aria-describedby="planet" placeholder="Inserisci pianeta" required [(ngModel)]="superHeroForm.planet" #planet="ngModel">
+                  <input type="text" class="form-control" id="planet" name="planet" aria-describedby="planet" placeholder="Inserisci pianeta" required minlength="5" [(ngModel)]="superHeroForm.planet" #planet="ngModel">
                   <div class="form-text text-danger" *ngIf="planet.invalid && planet.touched">Campo obbligatorio con lunghezza minima di 5 caratteri</div>
               </div>
               <div class="mb-3">
