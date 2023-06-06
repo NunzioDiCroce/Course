@@ -5,10 +5,6 @@ import { ViewChild } from '@angular/core';
 // TEMPLATE DRIVEN FORM NgForm import
 import { NgForm } from '@angular/forms';
 
-// REACTIVE FORM imports
-// MUST HAVE: FormBuilder, FormControl, FormGroup, Validators
-// NICE HAVE: FormArray
-import { FormBuilder, FormControl, FormGroup, Validators, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-template-driven',
@@ -54,6 +50,7 @@ export class TemplateDrivenComponent implements OnInit {
     this.superHero.planet = this.superHeroForm.planet;
     this.superHero.weakness = this.superHeroForm.weakness;
     console.log(this.superHero)
+    this.form.reset()
   }
 
 }

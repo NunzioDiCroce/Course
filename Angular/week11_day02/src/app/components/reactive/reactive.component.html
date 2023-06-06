@@ -1,1 +1,57 @@
-<p>reactive works!</p>
+<div class="container mb-5">
+  <div class="row">
+    <div class="col">
+      <h4>REACTIVE FORM</h4><hr>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col">
+          <form [formGroup]="form">
+              <div class="mb-3 form-group">
+                  <label for="name" class="form-label">NOME</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Inserisci nome supereroe"
+                      aria-describedby="name" formControlName="name">
+
+              </div>
+              <div class="mb-3 form-group">
+                  <label for="alterego" class="form-label">ALTEREGO</label>
+                  <input type="text" class="form-control" id="alterego" name="alterego" placeholder="Inserisci alterego"
+                      aria-describedby="alterego" formControlName="alterego">
+
+              </div>
+              <div class="mb-3 form-group">
+                  <label for="power" class="form-label">SUPERPOTERE</label>
+                  <select id="power" name="power" class="form-select" formControlName="power">
+                    <option value=""></option>
+                    <option value="superPotereA">Superpotere A</option>
+                    <option value="superPotereB">Superpotere B</option>
+                    <option value="superPotereC">Superpotere C</option>
+                    <option value="superPotereD">Superpotere D</option>
+                    <option value="superPotereE">Superpotere E</option>
+                  </select>
+
+              </div>
+              <div class="mb-3 form-group">
+                  <label for="enemy" class="form-label">NEMICO</label>
+                  <input type="text" class="form-control" id="enemy" name="enemy" placeholder="Inserisci nemico"
+                      aria-describedby="enemy" maxlength="10" formControlName="enemy">
+
+              </div>
+              <div class="mb-3 form-group">
+                  <label for="planet" class="form-label">PIANETA</label>
+                  <input type="text" class="form-control" id="planet" name="planet" aria-describedby="planet" placeholder="Inserisci pianeta" minlength="5" formControlName="enemy">
+
+              </div>
+              <div class="mb-3 form-group">
+                <label for="weakness" class="form-label">PUNTO DEBOLE</label>
+                <input type="text" class="form-control" id="weakness" name="weakness" aria-describedby="weakness" placeholder="Inserisci punto debole" formControlName="enemy">
+
+              </div>
+              <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-success me-auto" [disabled]="form.invalid">CREA SUPEREROE</button>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
+
