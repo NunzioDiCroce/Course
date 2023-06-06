@@ -16,15 +16,15 @@
       <form (ngSubmit)="createHero()">
 
         <label for="name">NAME</label>
-        <input type="text" id="name" name="name" class="form-control" required [ngModel]="superHeroForm.name">
+        <input type="text" id="name" name="name" class="form-control" required [(ngModel)]="superHeroForm.name">
         <p>Campo obbligatorio</p>
 
         <label for="alterego">ALTEREGO</label>
-        <input type="text" id="alterego" name="alterego" class="form-control" required [ngModel]="superHeroForm.alterego">
+        <input type="text" id="alterego" name="alterego" class="form-control" required [(ngModel)]="superHeroForm.alterego">
         <p>Campo obbligatorio</p>
 
         <label for="power">POWER</label>
-        <select id="power" name="power" class="form-select" required [ngModel]="superHeroForm.power">
+        <select id="power" name="power" class="form-select" required [(ngModel)]="superHeroForm.power">
           <option value=""></option>
           <option value="superPotereA">Superpotere A</option>
           <option value="superPotereB">Superpotere B</option>
@@ -35,15 +35,15 @@
         <p>Campo obbligatorio. Scegliere un superpotere.</p>
 
         <label for="enemy">ENEMY</label>
-        <input type="text" id="enemy" name="enemy" class="form-control" required [ngModel]="superHeroForm.enemy">
+        <input type="text" id="enemy" name="enemy" class="form-control" required [(ngModel)]="superHeroForm.enemy">
         <p>Campo obbligatorio con lunghezza massima di 10 caratteri</p>
 
         <label for="planet">PLANET</label>
-        <input type="text" id="planet" name="planet" class="form-control" required [ngModel]="superHeroForm.planet">
+        <input type="text" id="planet" name="planet" class="form-control" required [(ngModel)]="superHeroForm.planet">
         <p>Campo obbligatorio con lunghezza minima di 5 caratteri</p>
 
         <label for="weakness">WEAKNESS</label>
-        <input type="text" id="weakness" name="weakness" class="form-control" [ngModel]="superHeroForm.weakness">
+        <input type="text" id="weakness" name="weakness" class="form-control" [(ngModel)]="superHeroForm.weakness">
         <p></p>
 
         <button type="submit" class="btn btn-success">CREATE SUPERHERO</button>

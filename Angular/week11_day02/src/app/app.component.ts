@@ -24,7 +24,7 @@ export class AppComponent {
   // definizione NgForm
   form!: NgForm;
 
-  // definizione oggetto per gestire i dati del form
+  // definizione oggetto per gestire i dati nel form
   superHeroForm = {
     name: '',
     alterego: '',
@@ -46,13 +46,12 @@ export class AppComponent {
 
   // definizione metodo creazione oggetto
   createHero() {
-    this.superHero.name = this.form.value.name;
-    this.superHero.alterego = this.form.value.alterego;
-    this.superHero.power = this.form.value.alterego;
-    this.superHero.enemy = this.form.value.enemy;
-    this.superHero.planet = this.form.value.planet;
-    this.superHero.weakness = this.form.value.weakness;
-    this.form.reset()
+    this.superHero.name = this.superHeroForm.name;
+    this.superHero.alterego = this.superHeroForm.alterego;
+    this.superHero.power = this.superHeroForm.power;
+    this.superHero.enemy = this.superHeroForm.enemy;
+    this.superHero.planet = this.superHeroForm.planet;
+    this.superHero.weakness = this.superHeroForm.weakness;
     console.log(this.superHero)
   }
 
