@@ -1,52 +1,56 @@
 <div class="container">
-
-
-
-
-  <!-- TEMPLATE DRIVEN FORM  -->
-  <div class="row mb-5">
+  <div class="row">
     <div class="col">
-      <h2>TEMPLATE DRIVEN FORM</h2><hr>
-
-      <!-- FORM -->
-      <form (ngSubmit)="createHero()">
-
-        <label for="name">NAME</label>
-        <input type="text" id="name" name="name" class="form-control" required [(ngModel)]="superHeroForm.name" #name="ngModel">
-        <p *ngIf="name.invalid && name.touched">Campo obbligatorio!</p>
-
-        <label for="alterego">ALTEREGO</label>
-        <input type="text" id="alterego" name="alterego" class="form-control" required [(ngModel)]="superHeroForm.alterego" #alterego="ngModel">
-        <p *ngIf="alterego.invalid && alterego.touched">Campo obbligatorio!</p>
-
-        <label for="power">POWER</label>
-        <select id="power" name="power" class="form-select" required [(ngModel)]="superHeroForm.power" #power="ngModel">
-          <option value=""></option>
-          <option value="superPotereA">Superpotere A</option>
-          <option value="superPotereB">Superpotere B</option>
-          <option value="superPotereC">Superpotere C</option>
-          <option value="superPotereD">Superpotere D</option>
-          <option value="superPotereE">Superpotere E</option>
-        </select>
-        <p *ngIf="power.invalid && power.touched">Campo obbligatorio. Scegliere un superpotere!</p>
-
-        <label for="enemy">ENEMY</label>
-        <input type="text" id="enemy" name="enemy" class="form-control" required [(ngModel)]="superHeroForm.enemy" #enemy="ngModel">
-        <p *ngIf="enemy.invalid && enemy.touched">Campo obbligatorio con lunghezza massima di 10 caratteri!</p>
-
-        <label for="planet">PLANET</label>
-        <input type="text" id="planet" name="planet" class="form-control" required [(ngModel)]="superHeroForm.planet" #planet="ngModel">
-        <p *ngIf="planet.invalid && planet.touched">Campo obbligatorio con lunghezza minima di 5 caratteri!</p>
-
-        <label for="weakness">WEAKNESS</label>
-        <input type="text" id="weakness" name="weakness" class="form-control" [(ngModel)]="superHeroForm.weakness">
-        <p></p>
-
-        <button type="submit" class="btn btn-success" [disabled]="form.invalid">CREATE SUPERHERO</button>
-
-      </form>
-
+      <h2>TEMPLATE DRIVEN FORM</h2>
     </div>
   </div>
-
+  <div class="row">
+      <div class="col">
+          <form (ngSubmit)="createHero()">
+              <div class="mb-3">
+                  <label for="name" class="form-label">NOME</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Inserisci nome supereroe"
+                      aria-describedby="name" required [(ngModel)]="superHeroForm.name" #name="ngModel">
+                  <div class="form-text text-danger" *ngIf="name.invalid && name.touched">Campo obbligatorio</div>
+              </div>
+              <div class="mb-3">
+                  <label for="alterego" class="form-label">ALTEREGO</label>
+                  <input type="text" class="form-control" id="alterego" name="alterego" placeholder="Inserisci alterego"
+                      aria-describedby="alterego" required [(ngModel)]="superHeroForm.alterego" #alterego="ngModel">
+                  <div class="form-text text-danger" *ngIf="alterego.invalid && alterego.touched">Campo obbligatorio</div>
+              </div>
+              <div class="mb-3">
+                  <label for="power" class="form-label">SUPERPOTERE</label>
+                  <select id="power" name="power" class="form-select" required [(ngModel)]="superHeroForm.power" #power="ngModel">
+                    <option value=""></option>
+                    <option value="superPotereA">Superpotere A</option>
+                    <option value="superPotereB">Superpotere B</option>
+                    <option value="superPotereC">Superpotere C</option>
+                    <option value="superPotereD">Superpotere D</option>
+                    <option value="superPotereE">Superpotere E</option>
+                  </select>
+                  <div class="form-text text-danger" *ngIf="power.invalid && power.touched">Campo obbligatorio, scegliere un superpotere</div>
+              </div>
+              <div class="mb-3">
+                  <label for="enemy" class="form-label">NEMICO</label>
+                  <input type="text" class="form-control" id="enemy" name="enemy" placeholder="Inserisci nemico"
+                      aria-describedby="enemy" required [(ngModel)]="superHeroForm.enemy" #enemy="ngModel">
+                  <div class="form-text text-danger" *ngIf="enemy.invalid && enemy.touched">Campo obbligatorio con lunghezza massima di 10 caratteri</div>
+              </div>
+              <div class="mb-3">
+                  <label for="planet" class="form-label">PIANETA</label>
+                  <input type="text" class="form-control" id="planet" name="planet" aria-describedby="planet" placeholder="Inserisci pianeta" required [(ngModel)]="superHeroForm.planet" #planet="ngModel">
+                  <div class="form-text text-danger" *ngIf="planet.invalid && planet.touched">Campo obbligatorio con lunghezza minima di 5 caratteri</div>
+              </div>
+              <div class="mb-3">
+                <label for="weakness" class="form-label">PUNTO DEBOLE</label>
+                <input type="text" class="form-control" id="weakness" name="weakness" aria-describedby="weakness" placeholder="Inserisci punto debole" required [(ngModel)]="superHeroForm.weakness" #planet="ngModel">
+                <div class="form-text text-danger"></div>
+              </div>
+              <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-success me-auto" [disabled]="form.invalid">CREA SUPEREROE</button>
+              </div>
+          </form>
+      </div>
+  </div>
 </div>
