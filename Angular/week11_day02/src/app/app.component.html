@@ -1,28 +1,63 @@
 <div class="container m-5">
 
-  <div class="row">
+  <div class="row mb-5">
     <div class="col">
-      <h1 class="mb-5">WEEK11_DAY02</h1>
+      <h1>WEEK11_DAY02</h1>
     </div>
   </div>
 
 
   <!-- TEMPLATE DRIVEN FORM  -->
-  <div class="row">
+  <div class="row mb-5">
     <div class="col">
-      <h2>TEMPLATE DRIVEN FORM</h2><hr class="mb-5">
+      <h2>TEMPLATE DRIVEN FORM</h2><hr>
 
       <!-- FORM -->
+      <form>
 
+        <label for="name">NAME</label>
+        <input type="text" id="name" name="name" class="form-control" required>
+        <p>Campo obbligatorio</p>
+
+        <label for="alterego">ALTEREGO</label>
+        <input type="text" id="alterego" name="alterego" class="form-control" required>
+        <p>Campo obbligatorio</p>
+
+        <label for="power">POWER</label>
+        <select id="power" name="power" class="form-select" required>
+          <option value=""></option>
+          <option value="superPotereA">Superpotere A</option>
+          <option value="superPotereB">Superpotere B</option>
+          <option value="superPotereC">Superpotere C</option>
+          <option value="superPotereD">Superpotere D</option>
+          <option value="superPotereE">Superpotere E</option>
+        </select>
+        <p>Campo obbligatorio. Scegliere un superpotere.</p>
+
+        <label for="enemy">ENEMY</label>
+        <input type="text" id="enemy" name="enemy" class="form-control" required>
+        <p>Campo obbligatorio con lunghezza massima di 10 caratteri</p>
+
+        <label for="planet">PLANET</label>
+        <input type="text" id="planet" name="planet" class="form-control" required>
+        <p>Campo obbligatorio con lunghezza minima di 5 caratteri</p>
+
+        <label for="weakness">WEAKNESS</label>
+        <input type="text" id="weakness" name="weakness" class="form-control">
+        <p></p>
+
+        <button type="submit" class="btn btn-success">CREATE SUPERHERO</button>
+
+      </form>
 
     </div>
   </div>
 
 
   <!-- REACTIVE FORM  -->
-  <div class="row">
+  <div class="row mb-5">
     <div class="col">
-      <h2>REACTIVE FORM</h2><hr class="mb-5">
+      <h2>REACTIVE FORM</h2><hr>
 
       <!-- FORM -->
 
