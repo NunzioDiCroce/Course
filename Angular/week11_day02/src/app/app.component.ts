@@ -18,4 +18,44 @@ import { FormBuilder, FormControl, FormGroup, Validators, FormArray } from '@ang
 })
 export class AppComponent {
   title = 'week11_day02';
+
+  // - - - - - - - - - - - - - - - - - - - - TEMPLATE DRIVEN FORM - - - - - - - - - - - - - - - - - - - -
+
+  // definizione NgForm
+  form!: NgForm;
+
+  // definizione oggetto per gestire i dati del form
+  superHeroForm = {
+    name: '',
+    alterego: '',
+    power: '',
+    enemy: '',
+    planet: '',
+    weakness: ''
+  }
+
+  // definizione oggetto per gestire i dati ricevuti dal form
+  superHero = {
+    name: '',
+    alterego: '',
+    power: '',
+    enemy: '',
+    planet: '',
+    weakness: ''
+  }
+
+  // definizione metodo creazione oggetto
+  createHero() {
+    this.superHero.name = this.form.value.name;
+    this.superHero.alterego = this.form.value.alterego;
+    this.superHero.power = this.form.value.alterego;
+    this.superHero.enemy = this.form.value.enemy;
+    this.superHero.planet = this.form.value.planet;
+    this.superHero.weakness = this.form.value.weakness;
+    this.form.reset()
+    console.log(this.superHero)
+  }
+
+  // - - - - - - - - - - - - - - - - - - - - REACTIVE FORM - - - - - - - - - - - - - - - - - - - -
+
 }
