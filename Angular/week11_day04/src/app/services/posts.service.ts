@@ -61,7 +61,7 @@ export class PostsService {
 
   // definzione metodo per aggiornamento della proprietà "type" dell'oggetto post
   aggiornaPost( _data: Partial<Post> , _id:number ) {
-    this.posts = this.posts.map((_post) => {_post.id === _id ? {..._post, ..._data} : _post});
+    //this.posts = this.posts.map((_post) => {_post.id === _id ? {..._post, ..._data} : _post});
     return this.posts.find((_post) => {_post.id === _id}) as Post
   }
 }
