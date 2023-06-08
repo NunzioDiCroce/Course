@@ -20,6 +20,7 @@ export class ActivePostsComponent implements OnInit {
   constructor( private postsSrv: PostsService ) { } // inserimento postsSrv come parametro costruttore
 
   ngOnInit(): void {
+
     // definizione metodo del COMPONENT di recupero dei posts con invocazione metodo del SERVICE
     this.posts = this.postsSrv.recuperaPosts()
   }
