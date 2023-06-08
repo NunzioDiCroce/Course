@@ -3,5 +3,6 @@
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let user of users" [routerLink]="[user.id]" routerLinkActive="active">Name: {{ user.name }} | Surname: {{ user.surname }} | mail: {{ user.email }} </li>
   </ul>
+  <hr>
   <router-outlet></router-outlet>
 </div>
