@@ -1,2 +1,6 @@
 
+<ng-container *ngIf="user else altroTemplate">
+  <h4>Name: {{ user.name }} | Surname: {{ user.surname }} | mail: {{ user.email }} </h4>
+</ng-container>
 
+<ng-template #altroTemplate><p>User not found!</p></ng-template>

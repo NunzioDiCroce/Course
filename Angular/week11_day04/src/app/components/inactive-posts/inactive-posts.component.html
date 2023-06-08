@@ -4,8 +4,8 @@
     <app-post-card *ngIf="!post.active" [postInviato]="post"> <!-- proietto post-card component in active post -->
 
       <!-- i bottoni non appartengono a post-card e quindi non li proietto. Sono in active-post -->
-      <button (click)="disattivaPost(post.id, _arrayIndex)" class="btn btn-danger me-2">Disattiva</button>
-      <button [routerLink]="['/activePosts', post.id]" routerLinkActive="router-link-active" class="btn btn-info">Dettagli</button>
+      <button (click)="disattivaPost(post.id, _arrayIndex)" class="btn btn-success me-2">Activate</button>
+      <button [routerLink]="['/activePosts', post.id]" routerLinkActive="router-link-active" class="btn btn-info">Details</button>
     </app-post-card>
   </div>
 </div>
