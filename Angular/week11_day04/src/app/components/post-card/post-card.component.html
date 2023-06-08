@@ -1,1 +1,9 @@
-<p>post-card works!</p>
+
+<div [ngClass]="{'bg-warning':postInviato.type=='news', 'bg-secondary':postInviato.type=='politic', 'bg-light':postInviato.type=='education'}" class="card mb-4">
+  <h5 class="card-header">Post</h5>
+  <div class="card-body">
+    <h5 class="card-title">{{ postInviato.title }}</h5>
+    <p class="card-text">{{ postInviato.body }}</p>
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -17,10 +17,17 @@ export class ActivePostsComponent implements OnInit {
   // definizione posts
   posts!: Post[];
 
-  constructor( postsSrv: PostsService ) { } // inserimento postsSrv come parametro costruttore
+  constructor( private postsSrv: PostsService ) { } // inserimento postsSrv come parametro costruttore
 
   ngOnInit(): void {
+    // definizione metodo del COMPONENT di recupero dei posts con invocazione metodo del SERVICE
+    this.posts = this.postsSrv.recuperaPosts()
+  }
 
+  // metodo COMPONENT per modifica proprietà "active" oggetto post invocando metodo SERVICE
+  disattivaPost(_id:number, _arrayIndex:number) {
+    this.postsSrv.aggiornaPost({ active: false }, _id);
+    this.posts.splice(_arrayIndex, 1)
   }
 
 }
