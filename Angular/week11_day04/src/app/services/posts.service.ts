@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 // interface import
 import { Post } from '../models/post.interface';
 
+// environment import
+import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })

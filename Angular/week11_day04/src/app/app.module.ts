@@ -13,6 +13,8 @@ import { ActivePostsComponent } from './components/active-posts/active-posts.com
 import { InactivePostsComponent } from './components/inactive-posts/inactive-posts.component';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 // definizione rotte
 const routes: Route[] = [
@@ -47,6 +49,14 @@ const routes: Route[] = [
     ]
   },
   {
+    path:'login',
+    component:LoginComponent
+  },
+  {
+    path:'register',
+    component:RegisterComponent
+  },
+  {
     path:'**',
     redirectTo:''
   }
@@ -63,7 +73,9 @@ const routes: Route[] = [
     ActivePostsComponent,
     InactivePostsComponent,
     PostCardComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
