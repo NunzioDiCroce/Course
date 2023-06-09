@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
+
+// !!!!!!!!!! AGGIUNTO Router !!!!!!!!!!
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 
 // !!!!!!!!!! IMPORTS NECESSARI !!!!!!!!!!
