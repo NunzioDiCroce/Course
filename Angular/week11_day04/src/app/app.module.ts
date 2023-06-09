@@ -16,6 +16,9 @@ import { PostDetailsComponent } from './components/post-details/post-details.com
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 
+// !!!!!!!!!! IMPORTS NECESSARI !!!!!!!!!!
+import { AuthGuard } from './auth/auth.guard';
+
 // definizione rotte
 const routes: Route[] = [
   {
@@ -50,11 +53,13 @@ const routes: Route[] = [
   },
   {
     path:'login',
-    component:LoginComponent
+    component:LoginComponent,
+    canActivate: [AuthGuard]
   },
   {
     path:'register',
-    component:RegisterComponent
+    component:RegisterComponent,
+    canActivate: [AuthGuard]
   },
   {
     path:'**',
