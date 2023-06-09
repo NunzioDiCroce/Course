@@ -19,6 +19,13 @@ import { RegisterComponent } from './auth/register/register.component';
 // !!!!!!!!!! IMPORTS NECESSARI !!!!!!!!!!
 import { AuthGuard } from './auth/auth.guard';
 
+// FormsModule import
+import { FormsModule } from '@angular/forms';
+
+// HttpClientModule import
+import { HttpClientModule } from '@angular/common/http';
+
+
 // definizione rotte
 const routes: Route[] = [
   {
@@ -85,7 +92,12 @@ const routes: Route[] = [
   imports: [
     BrowserModule,
     // metodo forRoot su RouterModule con parametro (routes)
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    // FormsModule import
+    FormsModule,
+    // HttpClientModule import
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
