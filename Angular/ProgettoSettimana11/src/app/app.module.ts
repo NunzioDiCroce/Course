@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 import { Route, RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
@@ -58,7 +59,8 @@ const routes: Route[] = [
     BrowserModule,
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   ],
