@@ -13,6 +13,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -29,16 +31,16 @@ const routes: Route[] = [
     path: 'profile',
     component: ProfileComponent,
   },
-  /*{
+  {
     path:'login',
     component:LoginComponent,
-    canActivate: [AuthGuard]
+    //canActivate: [AuthGuard]
   },
   {
     path:'register',
     component:RegisterComponent,
-    canActivate: [AuthGuard]
-  },*/
+    //canActivate: [AuthGuard]
+  },
   {
     path:'**',
     redirectTo:''
@@ -53,7 +55,9 @@ const routes: Route[] = [
     NavbarComponent,
     MoviesComponent,
     ProfileComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
