@@ -1,1 +1,25 @@
-<p>movies works!</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-3 mb-5" *ngFor="movie of movies">
+
+      <div class="card" style="width: 18rem;">
+        <img src="movie.poster_path" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">movie.title</h5>
+          <p class="card-text">movie.overview</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">movie.release_date</li>
+          <li class="list-group-item">Language: movie.original_language</li>
+          <li class="list-group-item">Likes: movie.popularity</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link"><img src="../../../assets/thumb_up_FILL0_wght100_GRAD0_opsz48.svg" width="30rem"></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
