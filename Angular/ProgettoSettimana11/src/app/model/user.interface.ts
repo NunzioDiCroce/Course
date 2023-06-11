@@ -1,9 +1,10 @@
-export interface Favorite {
+export interface User {
 
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  movieId: number,
-  userId: number,
+  email: string,
+  password: string,
+  name: string,
   id: number
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
