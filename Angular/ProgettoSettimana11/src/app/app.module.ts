@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Route, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AuthGuard } from './auth/auth.guard';
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
@@ -27,20 +28,20 @@ const routes: Route[] = [
   {
     path: 'movies',
     component: MoviesComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'profile',
     component: ProfileComponent,
+    canActivate: [AuthGuard]
   },
   {
     path:'login',
     component:LoginComponent,
-    //canActivate: [AuthGuard]
   },
   {
     path:'register',
     component:RegisterComponent,
-    //canActivate: [AuthGuard]
   },
   {
     path:'**',
