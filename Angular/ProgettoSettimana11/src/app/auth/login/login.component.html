@@ -13,8 +13,8 @@
       <input class="control-form" type="password" id="password" name="password" required ngModel>
     </div>
 
-  </form>
+    <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Log in</button>
 
-  <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Log in</button>
+  </form>
 
 </div>
