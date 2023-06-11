@@ -24,7 +24,7 @@ export class TokenInterceptor implements HttpInterceptor {
   newReq!: HttpRequest<any>;
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    return this.authSrv.user$.pipe(take(1), switchMap(user => {
+    return this.authSrv.user$.pipe(take(1), switchMap((user) => {
       if(!user) {
         console.log(request);
         console.log(this.newReq);
