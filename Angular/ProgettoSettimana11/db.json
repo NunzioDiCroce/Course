@@ -41,6 +41,12 @@
       "email": "test@test.com",
       "password": "111111",
       "id": 7
+    },
+    {
+      "email": "myTest@myTest.com",
+      "password": "$2a$10$Clm.K8hR/iPRickZVVSKUe4bNssdH8LeyW6WcC/ne4O5sSrAbZZ/u",
+      "name": "myTest",
+      "id": 8
     }
   ],
   "favorites": [
