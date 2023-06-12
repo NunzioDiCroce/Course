@@ -32,10 +32,6 @@ export class MoviesService {
   deleteLike(_id:number) {
     return this.http.delete(`http://localhost:3000/favorites/${_id}`)
   }
-
-  getMovieById(_id:number) {
-    return this.http.get<Movie>(`http://localhost:3000/movies-popular/${_id}`)
-  }
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
