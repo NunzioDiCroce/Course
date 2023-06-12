@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "backend": "json-server --watch db.json --routes routes.json --port 3000 --delay: 1000",
+    "backend": "json-server --watch db.json --routes routes.json --port 4200 --delay: 1000",
     "fullstack": "concurrently \"npm run backend\" \"npm run start\""
   },
   "private": true,
