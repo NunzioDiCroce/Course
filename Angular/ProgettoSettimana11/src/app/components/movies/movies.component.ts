@@ -72,7 +72,7 @@ export class MoviesComponent implements OnInit {
     }
   }
 
-  likedMovie(_movieId:number) {
+  likedMovie(_movieId:number):boolean {
     return this.favoriteMovies?.some((_favorite) => {
       _favorite.movieId === _movieId}) || false
   }
