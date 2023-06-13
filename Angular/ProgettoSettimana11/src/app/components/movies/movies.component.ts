@@ -43,7 +43,7 @@ export class MoviesComponent implements OnInit {
       console.log(this.movies)
     });
 
-    this.favoriteSub = this.moviesSrv.getFavorites(this.user?.user.id!).subscribe((_favoriteMovies:Favorite[]) => {
+    this.favoriteSub = this.moviesSrv.getFavorites(this.user?.user?.id ?? 0).subscribe((_favoriteMovies:Favorite[]) => {
       this.favoriteMovies = _favoriteMovies;
       console.log(this.favoriteMovies)
     })
@@ -52,9 +52,9 @@ export class MoviesComponent implements OnInit {
 
   iLikeMovie(_movieId:number, _userId:number) {
     const liked = this.likedMovie(_movieId);
-    const favoriteMovieId = this.favoriteMovies?.find((_favorite) => {
+    const favoriteMovieId = this.favoriteMovies?.find((_favorite) =>
       _favorite.movieId === _movieId
-    })?.id;
+    )?.id;
 
     this.favoriteMovie = {movieId: _movieId, userId: _userId, id: favoriteMovieId}
 
@@ -70,11 +70,12 @@ export class MoviesComponent implements OnInit {
         this.favoriteMovies?.push(_newFavoriteMovie)
       })
     }
+    console.log(this.favoriteMovies)
   }
 
   likedMovie(_movieId:number):boolean {
-    return this.favoriteMovies?.some((_favorite) => {
-      _favorite.movieId === _movieId}) || false
+    return this.favoriteMovies?.some((_favorite) =>
+      _favorite.movieId === _movieId) || false;
   }
 
   ngOnDestroy():void {
