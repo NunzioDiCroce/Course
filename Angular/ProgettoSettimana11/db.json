@@ -11,6 +11,18 @@
       "password": "$2a$10$UtEsNi0kM1q1YaMQ/2yKwe9HiSRE65jk1ugMkAseGEai7B12wXkGC",
       "name": "Paolo",
       "id": 11
+    },
+    {
+      "email": "antonio@outlook.com",
+      "password": "$2a$10$OG60tXM.3Mf.z547PdvWWu0YRn3gbhEYvtEOCliWi3YB3mf3tVa9u",
+      "name": "Antonio",
+      "id": 12
+    },
+    {
+      "email": "giovanni@outlook.com",
+      "password": "$2a$10$A5O0TKMgl.LjdqEoiOoJg..h9ImiYU5lbKzME575pOK4..TvJh506",
+      "name": "Giovanni",
+      "id": 13
     }
   ],
   "favorites": [
