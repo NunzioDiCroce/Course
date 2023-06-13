@@ -23,9 +23,11 @@ export class MoviesComponent implements OnInit {
   user!: AuthData | null;
   movies: Movie[] = [];
   favoriteMovies: Favorite[] = [];
-  favoriteMovie!: Favorite | null;
+  favoriteMovie!: Favorite;
   sub!: Subscription;
   favoriteSub!: Subscription;
+
+
 
   constructor( private moviesSrv:MoviesService, private authSrv:AuthService ) { }
 
@@ -48,13 +50,32 @@ export class MoviesComponent implements OnInit {
 
   }
 
-  likedMovies(_movieId:number) {
+  iLikeMovie(_movieId:number, _userId:number) {
+
+    this.favoriteMovie = {
+      movieId: _movieId,
+      userId: this.user?.user.id!,
+
+    }
+
+    console.log(this.favoriteMovie);
+    for(let i=0; i<this.favoriteMovies.length; i++) {
+      if(_movieId !== this.favoriteMovies[i].movieId && _userId !== this.favoriteMovies[i].userId) {
+        this.moviesSrv.like(this.favoriteMovie).subscribe((_newFavoriteMovie:Favorite) => {
+          this.favoriteMovies.push(_newFavoriteMovie)
+        })
+      }
+    }
+    console.log(this.favoriteMovies)
+  }
+
+  /*likedMovies(_movieId:number) {
     return this.favoriteMovies.some((_favoriteMovie) => {
       _favoriteMovie.id === _movieId
     })
-  }
+  }*/
 
-  iLikeMovie(_movieId:number, _userId:number) {
+  /*iLikeMovie(_movieId:number, _userId:number) {
     const movieWithLike = this.likedMovies(_movieId);
     const favoriteMovieId = this.favoriteMovies.find((_favoriteMovie) => {
       _favoriteMovie.id === _movieId
@@ -62,6 +83,20 @@ export class MoviesComponent implements OnInit {
 
     this.favoriteMovie = {movieId: _movieId, userId: _userId, id: favoriteMovieId!}
 
+
+    if(movieWithLike && this.favoriteMovie.id !== null) {
+      this.moviesSrv.deleteLike(this.favoriteMovie.id).subscribe(() => {
+        this.favoriteMovies = this.favoriteMovies.filter((_favoriteMovie) => {
+          _favoriteMovie.id !== _movieId
+        })
+      })
+    } else {
+        this.moviesSrv.like(this.favoriteMovie).subscribe((_newFavoriteMovie:Favorite) => {
+          this.favoriteMovies.push(_newFavoriteMovie)
+        })
+      }
+
+    /*
     if(movieWithLike) {
       if(this.favoriteMovie.id !== undefined) {
         this.moviesSrv.deleteLike(this.favoriteMovie.id).subscribe(() => {
@@ -75,7 +110,8 @@ export class MoviesComponent implements OnInit {
         })
       }
     }
-  }
+
+  }*/
 
   ngOnDestroy():void {
     if(this.sub) {

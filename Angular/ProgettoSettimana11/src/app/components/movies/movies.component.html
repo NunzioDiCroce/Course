@@ -18,10 +18,17 @@
           <li class="list-group-item"><b>Likes:</b> {{movie.popularity}}</li>
         </ul>
         <div class="card-body">
-          <button class="btn btn-light" (click)="iLikeMovie(movie.id, user?.user?.id!)"><img src="../../../assets/thumb_up_FILL0_wght100_GRAD0_opsz48.svg" width="30rem"></button>
+
+          <button type="button" class="btn btn-success" (click)="iLikeMovie(movie.id, user?.user?.id!)">Like</button>
 
           <!--
-          <button class="btn btn-light" (click)="iLikeMovie(movie.id, user?.user?.id!)"><img src="likedMovies(movie.id) ? ../../../assets/thumb_up_FILL0_wght100_GRAD0_opsz48.svg : ../../../assets/thumb_up_FILL1_wght100_GRAD0_opsz48.svg" width="30rem"></button>
+          <button class="btn btn-light" (click)="iLikeMovie(movie.id, user?.user?.id!)"><img src="../../../assets/thumb_up_FILL0_wght100_GRAD0_opsz48.svg" width="30rem"></button>
+          -->
+
+          <!--
+          <button class="btn btn-light" (click)="iLikeMovie(movie.id, user?.user?.id!)">
+            <img [src]="likedMovies(movie.id) ? '../../../assets/thumb_up_FILL0_wght100_GRAD0_opsz48.svg' : '../../../assets/thumb_up_FILL1_wght100_GRAD0_opsz48.svg'" width="30rem">
+          </button>
           -->
 
         </div>

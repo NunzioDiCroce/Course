@@ -31,18 +31,6 @@
       "id": 5
     },
     {
-      "name": "test",
-      "email": "test@test.com",
-      "password": "111111",
-      "id": 6
-    },
-    {
-      "name": "test",
-      "email": "test@test.com",
-      "password": "111111",
-      "id": 7
-    },
-    {
       "email": "myTest@myTest.com",
       "password": "$2a$10$Clm.K8hR/iPRickZVVSKUe4bNssdH8LeyW6WcC/ne4O5sSrAbZZ/u",
       "name": "myTest",
@@ -54,61 +42,6 @@
       "movieId": 578701,
       "userId": 1,
       "id": 4
-    },
-    {
-      "userId": 1,
-      "movieId": 460465,
-      "id": 5
-    },
-    {
-      "userId": 2,
-      "movieId": 460465,
-      "id": 6
-    },
-    {
-      "userId": 2,
-      "movieId": 632357,
-      "id": 8
-    },
-    {
-      "userId": 3,
-      "movieId": 804435,
-      "id": 9
-    },
-    {
-      "userId": 3,
-      "movieId": 399566,
-      "id": 10
-    },
-    {
-      "userId": 4,
-      "movieId": 813258,
-      "id": 11
-    },
-    {
-      "userId": 4,
-      "movieId": 823855,
-      "id": 12
-    },
-    {
-      "userId": 5,
-      "movieId": 399566,
-      "id": 13
-    },
-    {
-      "userId": 5,
-      "movieId": 635302,
-      "id": 14
-    },
-    {
-      "userId": 5,
-      "movieId": 726684,
-      "id": 15
-    },
-    {
-      "userId": 5,
-      "movieId": 460465,
-      "id": 16
     }
   ],
   "genres": [
