@@ -1,119 +1,27 @@
 {
   "users": [
     {
-      "email": "n@p.com",
-      "password": "$2a$10$SmgrR2x18eeoJMFtk9N9FORmSTDG0ToOtqOS0Ik0jgiRWoAqe7sT2",
-      "name": "nicola toledo",
-      "id": 1
-    },
-    {
-      "email": "dario@dario.com",
-      "password": "$2a$10$ZLY63quWnMVo0lO951uFdOJRfUxeo8U6YJ/Cue06Vgp4Ad8S/CjaC",
-      "name": "Dario",
-      "id": 2
-    },
-    {
-      "email": "mario@rossi.com",
-      "password": "$2a$10$RsIosJKYgHyT8uo.bosI5uYpN0PVmA6xdnhjT4jIFcbKbVS2RsiRC",
-      "name": "Mario Rossi",
-      "id": 3
-    },
-    {
-      "email": "luca@iannice.gov",
-      "password": "$2a$10$5w60AiRs216q6mE4yxS5geckgGmD93VpzJP72A07rLlWL0bEH8mgO",
-      "name": "Luca Iannice",
-      "id": 4
-    },
-    {
-      "email": "gabriel@toncelli.com",
-      "password": "$2a$10$dUc3jYtuRxxmnln0QZn.ZeJPDfdXmW/QCPKLmVJ31FiOXe1wZoir2",
-      "name": "Gabriel",
-      "id": 5
-    },
-    {
-      "email": "myTest@myTest.com",
-      "password": "$2a$10$Clm.K8hR/iPRickZVVSKUe4bNssdH8LeyW6WcC/ne4O5sSrAbZZ/u",
-      "name": "myTest",
-      "id": 8
-    },
-    {
-      "email": "myTest2@myTest2.com",
-      "password": "$2a$10$q3WA7W//aQwX8EKaqAbDGOkGma7rQ1pxJq.7qsnekYyQERt6HcYqG",
-      "name": "myTest2",
-      "id": 9
-    },
-    {
-      "email": "test3@test3.com",
-      "password": "$2a$10$F1raeIio.C/xH4eL/uantehSE9UE83e5meq6nG87Hdj2Id/hLpTcu",
-      "name": "test3",
+      "email": "mario@outlook.com",
+      "password": "$2a$10$.hQ9FH3Wj4m/mlONLpX1IuSU9HU6ERHnLIKCMaZyhtJXqGrNvJaw.",
+      "name": "Mario",
       "id": 10
     }
   ],
   "favorites": [
     {
-      "movieId": 578701,
-      "userId": 1,
-      "id": 4
-    },
-    {
       "movieId": 460465,
-      "userId": 8,
-      "id": 6
-    },
-    {
-      "movieId": 460465,
-      "userId": 8,
-      "id": 7
-    },
-    {
-      "movieId": 460465,
-      "userId": 8,
-      "id": 8
+      "userId": 10,
+      "id": 18
     },
     {
       "movieId": 567189,
-      "userId": 8,
-      "id": 9
-    },
-    {
-      "movieId": 578701,
-      "userId": 8,
-      "id": 10
+      "userId": 10,
+      "id": 19
     },
     {
       "movieId": 632357,
-      "userId": 8,
-      "id": 11
-    },
-    {
-      "movieId": 460465,
-      "userId": 9,
-      "id": 12
-    },
-    {
-      "movieId": 399566,
-      "userId": 9,
-      "id": 13
-    },
-    {
-      "movieId": 635302,
-      "userId": 9,
-      "id": 14
-    },
-    {
-      "movieId": 726684,
-      "userId": 9,
-      "id": 15
-    },
-    {
-      "movieId": 813258,
-      "userId": 9,
-      "id": 16
-    },
-    {
-      "movieId": 567189,
-      "userId": 9,
-      "id": 17
+      "userId": 10,
+      "id": 21
     }
   ],
   "genres": [
