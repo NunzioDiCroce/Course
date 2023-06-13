@@ -21,15 +21,15 @@ export class MoviesService {
     return this.http.get<Movie[]>('http://localhost:4201/movies-popular')
   }
 
-  like(favoriteMovie:Favorite) {
-    return this.http.post<Favorite>('http://localhost:4201/favorites',favoriteMovie)
+  like(_favoriteMovie:Favorite) {
+    return this.http.post<Favorite>('http://localhost:4201/favorites',_favoriteMovie)
   }
 
   getFavorites(_id:number) {
     return this.http.get<Favorite[]>(`http://localhost:4201/favorites?userId=${_id}`)
   }
 
-  deleteLike(_id:number) {
+  deleteFavorite(_id:number) {
     return this.http.delete(`http://localhost:4201/favorites/${_id}`)
   }
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

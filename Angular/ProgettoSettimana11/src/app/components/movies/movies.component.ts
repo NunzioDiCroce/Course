@@ -8,6 +8,7 @@ import { AuthData } from 'src/app/auth/auth-data.interface';
 import { AuthService } from 'src/app/auth/auth.service';
 import { Subscription } from 'rxjs';
 import { Favorite } from 'src/app/model/favorite.interface';
+//import { Router } from '@angular/router';
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
@@ -21,12 +22,11 @@ export class MoviesComponent implements OnInit {
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   user!: AuthData | null;
-  movies: Movie[] = [];
-  favoriteMovies: Favorite[] = [];
-  favoriteMovie!: Favorite;
+  movies: Movie[] | undefined;
+  favoriteMovies: Favorite[] | undefined;
+  favoriteMovie!: Favorite | null;
   sub!: Subscription;
   favoriteSub!: Subscription;
-
 
 
   constructor( private moviesSrv:MoviesService, private authSrv:AuthService ) { }
@@ -34,89 +34,55 @@ export class MoviesComponent implements OnInit {
   ngOnInit(): void {
 
     this.authSrv.user$.subscribe((_user) => {
-      this.user = _user
+      this.user = _user;
+      console.log(this.user)
     });
-    console.log(this.user);
 
-    this.moviesSrv.getMovies().subscribe((_movies:Movie[]) => {
-      this.movies = _movies
+    this.sub = this.moviesSrv.getMovies().subscribe((_movies:Movie[]) => {
+      this.movies = _movies;
+      console.log(this.movies)
     });
-    console.log(this.movies);
 
-    this.moviesSrv.getFavorites(this.user?.user.id!).subscribe((_favoriteMovies:Favorite[]) => {
-      this.favoriteMovies = _favoriteMovies
-    });
-    console.log(this.favoriteMovies)
+    this.favoriteSub = this.moviesSrv.getFavorites(this.user?.user.id!).subscribe((_favoriteMovies:Favorite[]) => {
+      this.favoriteMovies = _favoriteMovies;
+      console.log(this.favoriteMovies)
+    })
 
   }
 
   iLikeMovie(_movieId:number, _userId:number) {
-
-    this.favoriteMovie = {
-      movieId: _movieId,
-      userId: this.user?.user.id!,
-
-    }
-
-    console.log(this.favoriteMovie);
-    for(let i=0; i<this.favoriteMovies.length; i++) {
-      if(_movieId !== this.favoriteMovies[i].movieId && _userId !== this.favoriteMovies[i].userId) {
-        this.moviesSrv.like(this.favoriteMovie).subscribe((_newFavoriteMovie:Favorite) => {
-          this.favoriteMovies.push(_newFavoriteMovie)
-        })
-      }
-    }
-    console.log(this.favoriteMovies)
-  }
-
-  /*likedMovies(_movieId:number) {
-    return this.favoriteMovies.some((_favoriteMovie) => {
-      _favoriteMovie.id === _movieId
-    })
-  }*/
-
-  /*iLikeMovie(_movieId:number, _userId:number) {
-    const movieWithLike = this.likedMovies(_movieId);
-    const favoriteMovieId = this.favoriteMovies.find((_favoriteMovie) => {
-      _favoriteMovie.id === _movieId
+    const liked = this.likedMovie(_movieId);
+    const favoriteMovieId = this.favoriteMovies?.find((_favorite) => {
+      _favorite.movieId === _movieId
     })?.id;
 
-    this.favoriteMovie = {movieId: _movieId, userId: _userId, id: favoriteMovieId!}
+    this.favoriteMovie = {movieId: _movieId, userId: _userId, id: favoriteMovieId}
 
-
-    if(movieWithLike && this.favoriteMovie.id !== null) {
-      this.moviesSrv.deleteLike(this.favoriteMovie.id).subscribe(() => {
-        this.favoriteMovies = this.favoriteMovies.filter((_favoriteMovie) => {
-          _favoriteMovie.id !== _movieId
-        })
-      })
-    } else {
-        this.moviesSrv.like(this.favoriteMovie).subscribe((_newFavoriteMovie:Favorite) => {
-          this.favoriteMovies.push(_newFavoriteMovie)
-        })
-      }
-
-    /*
-    if(movieWithLike) {
+    if(liked) {
       if(this.favoriteMovie.id !== undefined) {
-        this.moviesSrv.deleteLike(this.favoriteMovie.id).subscribe(() => {
-          this.favoriteMovies = this.favoriteMovies.filter((_favoriteMovie) => {
-            _favoriteMovie.id !== _movieId
-          })
-        })
-      } else {
-        this.moviesSrv.like(this.favoriteMovie).subscribe((_newFavoriteMovie:Favorite) => {
-          this.favoriteMovies.push(_newFavoriteMovie)
+        this.moviesSrv.deleteFavorite(this.favoriteMovie.id).subscribe(() => {
+          this.favoriteMovies = this.favoriteMovies?.filter(_favorite =>
+            _favorite.movieId !== _movieId)
         })
       }
+    } else {
+      this.moviesSrv.like(this.favoriteMovie).subscribe((_newFavoriteMovie:Favorite) => {
+        this.favoriteMovies?.push(_newFavoriteMovie)
+      })
     }
+  }
 
-  }*/
+  likedMovie(_movieId:number) {
+    return this.favoriteMovies?.some((_favorite) => {
+      _favorite.movieId === _movieId}) || false
+  }
 
   ngOnDestroy():void {
+
     if(this.sub) {
       this.sub.unsubscribe()
     }
+
     if(this.favoriteSub) {
       this.favoriteSub.unsubscribe()
     }

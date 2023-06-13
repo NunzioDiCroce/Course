@@ -5,7 +5,7 @@
     <div class="col-3 mb-5" *ngFor="let movie of movies">
 
       <div class="card" style="width: 18rem;">
-        <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top" alt="...">
+        <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top" alt="moviePosterPath">
         <!--
         <div class="card-body">
           <h1></h1>
@@ -19,17 +19,9 @@
         </ul>
         <div class="card-body">
 
-          <button type="button" class="btn btn-success" (click)="iLikeMovie(movie.id, user?.user?.id!)">Like</button>
-
-          <!--
-          <button class="btn btn-light" (click)="iLikeMovie(movie.id, user?.user?.id!)"><img src="../../../assets/thumb_up_FILL0_wght100_GRAD0_opsz48.svg" width="30rem"></button>
-          -->
-
-          <!--
-          <button class="btn btn-light" (click)="iLikeMovie(movie.id, user?.user?.id!)">
-            <img [src]="likedMovies(movie.id) ? '../../../assets/thumb_up_FILL0_wght100_GRAD0_opsz48.svg' : '../../../assets/thumb_up_FILL1_wght100_GRAD0_opsz48.svg'" width="30rem">
-          </button>
-          -->
+          <a (click)="iLikeMovie(movie.id, user?.user?.id!)">
+            <img [src]="likedMovie(movie.id) ? '../../../assets/thumb_up_FILL1_wght100_GRAD0_opsz48.svg' : '../../../assets/thumb_up_FILL0_wght100_GRAD0_opsz48.svg'" alt="like" width="30rem">
+          </a>
 
         </div>
       </div>
@@ -37,4 +29,3 @@
     </div>
   </div>
 </div>
-
