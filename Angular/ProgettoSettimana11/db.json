@@ -2,49 +2,37 @@
   "users": [
     {
       "email": "mario@outlook.com",
-      "password": "$2a$10$.hQ9FH3Wj4m/mlONLpX1IuSU9HU6ERHnLIKCMaZyhtJXqGrNvJaw.",
+      "password": "$2a$10$onb9.KahrwpfdY15fPA0cuGme.oNu5J6DxXBaxxJYPz2q2WXM/nBy",
       "name": "Mario",
-      "id": 10
+      "id": 14
     },
     {
       "email": "paolo@outlook.com",
-      "password": "$2a$10$UtEsNi0kM1q1YaMQ/2yKwe9HiSRE65jk1ugMkAseGEai7B12wXkGC",
+      "password": "$2a$10$kbPNoLQ3stOqoSNut99KTODmdm.30deUVJTz8.RQcrLSrUPiSUzEm",
       "name": "Paolo",
-      "id": 11
-    },
-    {
-      "email": "antonio@outlook.com",
-      "password": "$2a$10$OG60tXM.3Mf.z547PdvWWu0YRn3gbhEYvtEOCliWi3YB3mf3tVa9u",
-      "name": "Antonio",
-      "id": 12
-    },
-    {
-      "email": "giovanni@outlook.com",
-      "password": "$2a$10$A5O0TKMgl.LjdqEoiOoJg..h9ImiYU5lbKzME575pOK4..TvJh506",
-      "name": "Giovanni",
-      "id": 13
+      "id": 15
     }
   ],
   "favorites": [
     {
-      "movieId": 632357,
-      "userId": 10,
-      "id": 21
-    },
-    {
-      "movieId": 460465,
-      "userId": 11,
-      "id": 22
-    },
-    {
       "movieId": 567189,
-      "userId": 11,
-      "id": 23
+      "userId": 14,
+      "id": 2
     },
     {
       "movieId": 578701,
-      "userId": 10,
-      "id": 24
+      "userId": 15,
+      "id": 9
+    },
+    {
+      "movieId": 632357,
+      "userId": 15,
+      "id": 10
+    },
+    {
+      "movieId": 460465,
+      "userId": 14,
+      "id": 11
     }
   ],
   "genres": [

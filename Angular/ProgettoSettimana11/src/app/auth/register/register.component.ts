@@ -24,15 +24,16 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // metodo di registrazione CON gestione degli errori
+  // metodo di registrazione GESTIONE ERRORI SI
   registra(form:NgForm) {
     this.isLoading = true;
     console.log(form.value);
     try {
       this.authSrv.signup(form.value).subscribe(
         () => {
-          this.router.navigate(['/login']);
-          this.isLoading = false
+          this.isLoading = false;
+          alert('Registration success!');
+          this.router.navigate(['/login'])
         },
         (error) => {
           console.error(error.error);
@@ -52,7 +53,7 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  // metodo di registrazione SENZA gestione errori
+  // metodo di registrazione GESTIONE ERRORI NO
   /*registra(form:NgForm) {
     this.isLoading = true;
     console.log(form.value);

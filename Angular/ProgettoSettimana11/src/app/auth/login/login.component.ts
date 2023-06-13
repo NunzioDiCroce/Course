@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+    // metodo di login GESTIONE ERRORI SI
     accedi(form:NgForm) {
     this.isLoading = true;
     console.log(form.value);
@@ -49,6 +50,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  // metodo di login GESTIONE ERRORI NO
   /*accedi(form:NgForm) {
     this.isLoading = true;
     console.log(form.value);
@@ -63,7 +65,6 @@ export class LoginComponent implements OnInit {
     }
     this.router.navigate(['/']);
   }*/
-
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
