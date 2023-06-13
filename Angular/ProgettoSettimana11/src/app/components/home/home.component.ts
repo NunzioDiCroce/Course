@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 import { Router } from '@angular/router';
+import { AuthData } from 'src/app/auth/auth-data.interface';
+import { AuthService } from 'src/app/auth/auth.service';
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 @Component({
@@ -14,15 +16,13 @@ export class HomeComponent implements OnInit {
 
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  constructor( private router: Router ) { }
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  user!: AuthData | null;
 
+  constructor( private router: Router, private authSrv:AuthService ) { }
 
   ngOnInit(): void {
+    this.authSrv.user$.subscribe((_user) => {this.user = _user})
   }
-
-
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   goToLogin() {
     this.router.navigate(['login'])
@@ -30,6 +30,10 @@ export class HomeComponent implements OnInit {
 
   goToRegister() {
     this.router.navigate(['register'])
+  }
+
+  goToMovies() {
+    this.router.navigate(['movies'])
   }
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
