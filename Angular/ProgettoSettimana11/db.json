@@ -41,6 +41,12 @@
       "password": "$2a$10$q3WA7W//aQwX8EKaqAbDGOkGma7rQ1pxJq.7qsnekYyQERt6HcYqG",
       "name": "myTest2",
       "id": 9
+    },
+    {
+      "email": "test3@test3.com",
+      "password": "$2a$10$F1raeIio.C/xH4eL/uantehSE9UE83e5meq6nG87Hdj2Id/hLpTcu",
+      "name": "test3",
+      "id": 10
     }
   ],
   "favorites": [

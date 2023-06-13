@@ -36,9 +36,11 @@ export class LoginComponent implements OnInit {
       alert('Wrong login!');
       console.log(error)
     }
+    this.router.navigate(['/']);
   }
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 
 
 }
