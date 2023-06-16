@@ -11,6 +11,12 @@
       "password": "$2a$10$kbPNoLQ3stOqoSNut99KTODmdm.30deUVJTz8.RQcrLSrUPiSUzEm",
       "name": "Paolo",
       "id": 15
+    },
+    {
+      "email": "antonio@outlook.com",
+      "password": "$2a$10$GDZ7OrzUM7DY6/7w9irKqeA.jyW1/iJqTDDf2Z38Z9rrAY725VVVK",
+      "name": "Antonio",
+      "id": 16
     }
   ],
   "favorites": [
@@ -20,19 +26,29 @@
       "id": 2
     },
     {
+      "movieId": 460465,
+      "userId": 14,
+      "id": 11
+    },
+    {
       "movieId": 578701,
       "userId": 15,
-      "id": 9
+      "id": 12
     },
     {
       "movieId": 632357,
       "userId": 15,
-      "id": 10
+      "id": 13
     },
     {
-      "movieId": 460465,
-      "userId": 14,
-      "id": 11
+      "movieId": 567189,
+      "userId": 16,
+      "id": 15
+    },
+    {
+      "movieId": 578701,
+      "userId": 16,
+      "id": 16
     }
   ],
   "genres": [
