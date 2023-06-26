@@ -105,8 +105,7 @@ public static void main (String[] args)
 		String terzoLato = triangolo.nextLine();
 		int terzoLatoInt = Integer.parseInt(terzoLato);
 		
-		//System.out.println("L'area del triangolo è: " + areaTriangolo(primoLatoInt, secondoLatoInt, terzoLatoInt));
-		
+		System.out.println("L'area del triangolo è: " + areaTriangolo(primoLatoInt, secondoLatoInt, terzoLatoInt));
 		}
 
 
@@ -146,9 +145,9 @@ public static int perimetroRettangolo(int _base, int _altezza) {
 	return _base *2 + _altezza *2;
 }
 
-/*public static double areaTriangolo(int _a, int _b, int _c) {
-	return Math.sqrt((_a+_b+_c)*((-1*_a)+_b+_c)*((_a-_b+_c)*(_a+_b-_c))/(4);
-}*/
+public static double areaTriangolo(int _a, int _b, int _c) {
+	return Math.sqrt((_a+_b+_c)*(_b+_c-_a)*(_a-_b+_c)*(_a+_b-_c))/4;
+}
 
 
 }
