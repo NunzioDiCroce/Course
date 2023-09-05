@@ -23,7 +23,17 @@ export class UsersComponent implements OnInit {
   ngOnInit(): void {
 
     // definizione metodo COMPONENT per recuperare gli users invocando il metodo SERVICE
-    this.users = this.usersSrv.recuperaUsers();
+    // this.users = this.usersSrv.recuperaUsers();
+
+    this.usersSrv.recuperaUsers().subscribe(
+      (data: User[]) => {
+        this.users = data;
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+
   }
 
 }
